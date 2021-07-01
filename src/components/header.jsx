@@ -17,13 +17,10 @@ const Header = () => {
             <a href="/credit" className="header__link">Рассчитать кредит</a>
           </li>
           <li className="header__nav-item">
-            <a href="/converter" className="header__link header__link--active">Конвертер валют</a>
+            <a href="/converter" className="header__link">Конвертер валют</a>
           </li>
           <li className="header__nav-item">
             <a href="/contacts" className="header__link">Контакты</a>
-          </li>
-          <li className="header__nav-item">
-            <a href="/ask" className="header__link">Задать вопрос</a>
           </li>
           <li className="header__nav-item">
             <a href="/login" className="header__link header__link--login">Войти в Интернет-банк</a>

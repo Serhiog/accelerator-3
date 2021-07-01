@@ -1,197 +1,197 @@
 .footer {
     background: #F6F7FF;
     margin-top: 110px;
+}
 
-    &__wrapper {
-        @include flex;
-        justify-content: flex-start;
-        align-items    : flex-start;
-        padding-top    : 60px;
-        padding-bottom : 60px;
-        max-width      : 1170px;
-        min-width     : 1170px;
-        margin         : 0 auto;
+.footer__wrapper {
+    @include flex;
+    justify-content: flex-start;
+    align-items    : flex-start;
+    padding-top    : 60px;
+    padding-bottom : 60px;
+    max-width      : 1170px;
+    min-width      : 1170px;
+    margin         : 0 auto;
+}
+
+.footer__logo {
+    max-width: 252px;
+    @include flex;
+    justify-content: flex-start;
+    flex-wrap      : wrap;
+}
+
+.footer__img {}
+
+.footer__title {
+    margin-left: 9px;
+    font-family: $work;
+    font-weight: bold;
+    font-size  : 20px;
+}
+
+.footer__title-about {
+    font-family: $robo;
+    font-size  : 12px;
+    color      : #707C87;
+    margin-top : 20px;
+    line-height: 140%;
+}
+
+.footer__list {
+    margin-left: 81px;
+}
+
+.footer__item {
+    font-family  : $robo;
+    font-weight  : 500;
+    font-size    : 16px;
+    color        : #1F1E25;
+    margin-bottom: 20px;
+
+    .footer:nth-child(4) {
+        margin-bottom: 0px;
     }
+}
 
-    &__logo {
-        max-width: 252px;
-        @include flex;
-        justify-content: flex-start;
-        flex-wrap      : wrap;
+.footer__short-call {
+    max-width  : 167px;
+    margin-left: 81px;
+}
+
+.footer__short-number {
+    font-family: $robo;
+    font-weight: 500;
+    font-size  : 16px;
+    color      : #1F1E25;
+    position   : relative;
+
+    &::before {
+        content          : '';
+        position         : absolute;
+        background       : url("img/short-call.svg");
+        background-repeat: no-repeat;
+        width            : 16px;
+        height           : 16px;
+        left             : -22px;
+        top              : 2px;
     }
+}
 
-    &__img {}
+.footer__short-call-info {
+    font-family: $robo;
+    font-size  : 12px;
+    color      : #707C87;
+    margin-top : 10px;
+    line-height: 140%;
+}
 
-    &__title {
-        margin-left: 9px;
-        font-family: $work;
-        font-weight: bold;
-        font-size  : 20px;
+.footer__free-call {
+    font-family: $robo;
+    font-weight: 500;
+    font-size  : 16px;
+    color      : #1F1E25;
+    max-width  : 122px;
+    margin-left: 113px;
+}
+
+.footer__free-number {
+    font-family: $robo;
+    font-weight: 500;
+    font-size  : 16px;
+    color      : #1F1E25;
+    position   : relative;
+
+    &::before {
+        content          : '';
+        position         : absolute;
+        background       : url("img/free-call.svg");
+        background-repeat: no-repeat;
+        width            : 16px;
+        height           : 16px;
+        left             : -28px;
+        top              : 2px;
     }
+}
 
-    &__title-about {
-        font-family: $robo;
-        font-size  : 12px;
-        color      : #707C87;
-        margin-top : 20px;
-        line-height: 140%;
+.footer__free-call-info {
+    font-family: $robo;
+    font-size  : 12px;
+    color      : #707C87;
+    margin-top : 10px;
+    line-height: 140%;
+}
+
+.footer__media-links {
+    @include flex;
+    justify-content: flex-start;
+    margin-left    : 86px;
+}
+
+.footer__item-media {
+    margin-left: 30px;
+}
+
+.footer__list-link {
+    color: #1F1E25;
+}
+
+.footer__fb {
+    position: relative;
+
+    &::before {
+        content          : '';
+        position         : absolute;
+        background       : url("img/fb.svg");
+        background-repeat: no-repeat;
+        width            : 16px;
+        height           : 16px;
+        right            : 0px;
+        top              : 0px;
     }
+}
 
-    &__list {
-        margin-left: 81px;
+.footer__insta {
+    position: relative;
+
+    &::before {
+        content          : '';
+        position         : absolute;
+        background       : url("img/insta.svg");
+        background-repeat: no-repeat;
+        width            : 16px;
+        height           : 16px;
+        right            : 0px;
+        top              : 0px;
     }
+}
 
-    &__item {
-        font-family  : $robo;
-        font-weight  : 500;
-        font-size    : 16px;
-        color        : #1F1E25;
-        margin-bottom: 20px;
+.footer__twitter {
+    position: relative;
 
-        &:nth-child(4) {
-            margin-bottom: 0px;
-        }
+    &::before {
+        content          : '';
+        position         : absolute;
+        background       : url("img/twitter.svg");
+        background-repeat: no-repeat;
+        width            : 16px;
+        height           : 16px;
+        right            : 0px;
+        top              : 0px;
     }
+}
 
-    &__short-call {
-        max-width  : 167px;
-        margin-left: 81px;
-    }
+.footer__youtube {
+    position: relative;
 
-    &__short-number {
-        font-family: $robo;
-        font-weight: 500;
-        font-size  : 16px;
-        color      : #1F1E25;
-        position   : relative;
-
-        &::before {
-            content          : '';
-            position         : absolute;
-            background       : url("img/short-call.svg");
-            background-repeat: no-repeat;
-            width            : 16px;
-            height           : 16px;
-            left             : -22px;
-            top              : 2px;
-        }
-    }
-
-    &__short-call-info {
-        font-family: $robo;
-        font-size  : 12px;
-        color      : #707C87;
-        margin-top : 10px;
-        line-height: 140%;
-    }
-
-    &__free-call {
-        font-family: $robo;
-        font-weight: 500;
-        font-size  : 16px;
-        color      : #1F1E25;
-        max-width  : 122px;
-        margin-left: 113px;
-    }
-
-    &__free-number {
-        font-family: $robo;
-        font-weight: 500;
-        font-size  : 16px;
-        color      : #1F1E25;
-        position   : relative;
-
-        &::before {
-            content          : '';
-            position         : absolute;
-            background       : url("img/free-call.svg");
-            background-repeat: no-repeat;
-            width            : 16px;
-            height           : 16px;
-            left             : -28px;
-            top              : 2px;
-        }
-    }
-
-    &__free-call-info {
-        font-family: $robo;
-        font-size  : 12px;
-        color      : #707C87;
-        margin-top : 10px;
-        line-height: 140%;
-    }
-
-    &__media-links {
-        @include flex;
-        justify-content: flex-start;
-        margin-left    : 86px;
-    }
-
-    &__item-media {
-        margin-left: 30px;
-    }
-
-    &__list-link {
-        color: #1F1E25;
-    }
-
-    &__fb {
-        position: relative;
-
-        &::before {
-            content          : '';
-            position         : absolute;
-            background       : url("img/fb.svg");
-            background-repeat: no-repeat;
-            width            : 16px;
-            height           : 16px;
-            right            : 0px;
-            top              : 0px;
-        }
-    }
-
-    &__insta {
-        position: relative;
-
-        &::before {
-            content          : '';
-            position         : absolute;
-            background       : url("img/insta.svg");
-            background-repeat: no-repeat;
-            width            : 16px;
-            height           : 16px;
-            right            : 0px;
-            top              : 0px;
-        }
-    }
-
-    &__twitter {
-        position: relative;
-
-        &::before {
-            content          : '';
-            position         : absolute;
-            background       : url("img/twitter.svg");
-            background-repeat: no-repeat;
-            width            : 16px;
-            height           : 16px;
-            right            : 0px;
-            top              : 0px;
-        }
-    }
-
-    &__youtube {
-        position: relative;
-
-        &::before {
-            content          : '';
-            position         : absolute;
-            background       : url("img/youtube.svg");
-            background-repeat: no-repeat;
-            width            : 16px;
-            height           : 16px;
-            right            : 0px;
-            top              : 0px;
-        }
+    &::before {
+        content          : '';
+        position         : absolute;
+        background       : url("img/youtube.svg");
+        background-repeat: no-repeat;
+        width            : 16px;
+        height           : 16px;
+        right            : 0px;
+        top              : 0px;
     }
 }

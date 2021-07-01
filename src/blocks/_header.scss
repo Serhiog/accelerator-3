@@ -1,61 +1,64 @@
-.header {
+.header {}
 
+.header__inner {
+    @include flex;
+    padding-top    : 38px;
+    padding-bottom : 39px;
+    margin         : 0 auto;
+    max-width      : 1170px;
+    min-width      : 1170px;
+    align-items    : flex-end;
+    justify-content: flex-start
+}
 
-    &__inner {
-        @include flex;
-        padding-top   : 38px;
-        padding-bottom: 39px;
-        margin        : 0 auto;
-        max-width     : 1170px;
-        min-width     : 1170px;
-        align-items   : flex-end;
-    }
+.header__logo-container {
+    @include flex;
+    align-items: flex-end;
+}
 
-    &__logo-container {
-        @include flex;
-        align-items: flex-end;
-    }
+.header__img {}
 
-    &__img {}
+.header__logo-text {
+    margin-left   : 9px;
+    font-family   : $work;
+    font-weight   : bold;
+    font-size     : 20px;
+    margin-left   : 10px;
+    margin-bottom : -3px;
+    letter-spacing: 0.4px;
+}
 
-    &__logo-text {
-        margin-left: 9px;
-        font-family: $work;
-        font-weight: bold;
-        font-size  : 20px;
-    }
+.header__nav {
+    @include flex;
+    margin-left: 86px;
+}
 
-    &__nav {
-        @include flex;
-    }
+.header__nav-item {
+    margin-left: 25px;
+}
 
-    &__nav-item {
-        margin-left: 25px;
-    }
+.header__link {
+    font-family: $robo;
+    font-size  : 16px;
+    color      : #1F1E25;
+}
 
-    &__link {
-        font-family: $robo;
-        font-size  : 16px;
-        color      : #1F1E25;
-    }
+.header__link--active {
+    color: #2C36F2;
+}
 
-    &__link--active {
-        color: #2C36F2;
-    }
+.header__link--login {
+    margin-left: 240px;
+    position   : relative;
 
-    &__link--login {
-        margin-left: 155px;
-        position   : relative;
-
-        &::before {
-            content          : '';
-            position         : absolute;
-            width            : 20px;
-            height           : 22px;
-            background-image : url("img/login.svg");
-            background-repeat: no-repeat;
-            left             : -28px;
-            bottom           : -2px;
-        }
+    &::before {
+        content          : '';
+        position         : absolute;
+        width            : 20px;
+        height           : 22px;
+        background-image : url("img/login.svg");
+        background-repeat: no-repeat;
+        left             : -28px;
+        bottom           : -2px;
     }
 }

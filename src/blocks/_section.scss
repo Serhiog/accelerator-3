@@ -1,87 +1,89 @@
 .section {
     background: #2C36F2;
+}
 
-    &__wrapper {
-        background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027B3 99.79%);
+.section__wrapper {
+    background  : linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027B3 99.79%);
+    padding-left: 99px;
+}
+
+.section__inner {
+    background: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841FF 97.14%);
+    width     : 917px;
+}
+
+.section__container {
+    @include flex;
+    margin         : 0 auto;
+    justify-content: flex-start;
+    background     : #2C36F2;
+    width          : 497px;
+    justify-content: space-between;
+}
+
+.section__left {
+    padding-bottom: 115px;
+    margin-left   : -91px;
+}
+
+.section__title {
+    font-family: $robo;
+    font-style : normal;
+    font-weight: bold;
+    font-size  : 54px;
+    color      : #F6F7FF;
+    width      : 259px;
+    @include m0p0;
+    padding-top   : 115px;
+    padding-bottom: 13px;
+    margin-top    : -8px;
+}
+
+.section__text {
+    font-family: $robo;
+    font-size  : 22px;
+    color      : #E0E1EA;
+    @include m0p0;
+    padding-bottom: 37px;
+    width         : 275px;
+}
+
+.section__button {
+    position     : relative;
+    background   : #F6F7FF;
+    font-family  : $robo;
+    font-weight  : 500;
+    font-size    : 18px;
+    color        : #1F1E25;
+    border-radius: 4px;
+    width        : 234px;
+    display      : block;
+    text-align   : center;
+    padding      : 17px 16px;
+}
+
+.section__right {
+    position: relative;
+
+    &::before {
+        content          : '';
+        position         : absolute;
+        width            : 315px;
+        height           : 202px;
+        background-image : url("img/white-card.png");
+        background-repeat: no-repeat;
+        top              : -138px;
+        right            : -265px;
     }
 
-    &__inner {
-        margin    : 0 auto;
-        background: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841FF 97.14%);
-        width     : 917px;
-        min-width     : 917px;
-    }
-
-    &__container {
-        @include flex;
-        margin         : 0 auto;
-        justify-content: flex-start;
-        background     : #2C36F2;
-        width          : 497px;
-        justify-content: space-between;
-    }
-
-    &__left {
-        padding-bottom: 114px;
-        margin-left   : -35px;
-    }
-
-    &__title {
-        font-family: $robo;
-        font-style : normal;
-        font-weight: bold;
-        font-size  : 54px;
-        color      : #F6F7FF;
-        width      : 259px;
-        @include m0p0;
-        padding-top   : 115px;
-        padding-bottom: 25px;
-    }
-
-    &__text {
-        font-family: $robo;
-        font-size  : 22px;
-        color      : #E0E1EA;
-        @include m0p0;
-        padding-bottom: 52px;
-        width         : 275px;
-    }
-
-    &__button {
-        position     : relative;
-        padding      : 19px 36px 21px 36px;
-        background   : #F6F7FF;
-        font-family  : $robo;
-        font-weight  : 500;
-        font-size    : 18px;
-        color        : #1F1E25;
-        border-radius: 4px;
-    }
-
-    &__right {
-        width   : 330px;
-        position: relative;
-
-        &::before {
-            content          : '';
-            position         : absolute;
-            width            : 315px;
-            height           : 202px;
-            background-image : url("img/white-card.png");
-            background-repeat: no-repeat;
-            top              : -125px;
-            right            : -260px;
-        }
-
-        &::after {
-            content          : '';
-            position         : absolute;
-            width            : 315px;
-            height           : 202px;
-            background-image : url("img/black-card.png");
-            background-repeat: no-repeat;
-            top              : -66px;
-            right            : -150px;
-        }
+    &::after {
+        content          : '';
+        position         : absolute;
+        width            : 315px;
+        height           : 202px;
+        background-image : url("img/black-card.png");
+        background-repeat: no-repeat;
+        top              : -80px;
+        right            : -156px;
     }
 }
