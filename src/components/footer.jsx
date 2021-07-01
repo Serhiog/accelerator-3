@@ -5,7 +5,7 @@ const Footer = () => {
     <section className="footer">
       <div className="footer__wrapper">
         <div className="footer__logo">
-          <img src="../img/logo.svg" alt="Лига БАНК" className="footer__img" width={28}
+          <img src="img/logo.svg" alt="Лига БАНК" className="footer__img" width={28}
             height={25} />
           <h3 className="footer__title">ЛИГА Банк</h3>
           <p className="footer__title-about">150015, г. Москва, ул. Московская, д. 32

@@ -1,12 +1,11 @@
 {
-  "name": "practice1",
+  "name": "accelerator-3",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.0",
-    "eslint-config-htmlacademy": "^2.1.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -24,12 +23,7 @@
     "eject": "react-scripts eject",
     "eslint": "eslint --ext .jsx --ext .js src/"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
+
   "browserslist": {
     "production": [
       ">0.2%",
