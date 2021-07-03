@@ -1,14 +1,15 @@
-.header {}
+.header {
+    padding: 0 98px;
+}
 
 .header__inner {
     @include flex;
     padding-top    : 38px;
     padding-bottom : 39px;
-    margin         : 0 auto;
-    max-width      : 1170px;
-    min-width      : 1170px;
+    width          : 1170px;
     align-items    : flex-end;
-    justify-content: flex-start
+    justify-content: flex-start;
+    margin: 0 auto
 }
 
 .header__logo-container {

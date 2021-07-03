@@ -9,7 +9,6 @@
 
 .section__inner {
     background: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841FF 97.14%);
-    width     : 917px;
 }
 
 .section__container {
@@ -86,4 +85,12 @@
         top              : -80px;
         right            : -156px;
     }
+}
+
+.section__common {
+    width     : 1170px;
+    padding   : 0 205px 0 52px;
+    background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027B3 99.79%), #2C36F2;
+    margin    : 0 auto;
+
 }

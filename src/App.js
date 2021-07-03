@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./components/header";
-import Slider from "./components/slider";
-import Footer from "./components/footer";
+import Header from "./components/header/header";
+import Slider from "./components/slider/slider";
+import Footer from "./components/footer/footer";
 
 const App = () => {
   return (
