@@ -1,5 +1,4 @@
 .header {
-    //padding: 0 98px;
 }
 
 .header__inner {
@@ -15,7 +14,7 @@
 .header__logo-container {
     @include flex;
     align-items: flex-end;
-    margin-right: 110px;
+    margin-right: 112px;
 }
 
 .header__img {
@@ -35,6 +34,7 @@
 
 .header__nav {
     @include flex;
+    margin-bottom: -2px;
 }
 
 .header__nav-item {

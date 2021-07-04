@@ -470,7 +470,7 @@ template {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-right: 110px;
+  margin-right: 112px;
 }
 
 .header__img {
@@ -503,6 +503,7 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: -2px;
 }
 
 .header__nav-item {
@@ -543,15 +544,20 @@ template {
 }
 
 .section {
-  background: #2C36F2;
+  background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027B3 99.79%), #2C36F2;
+  padding-left: 151px;
 }
 
 .section__wrapper {
-  background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027B3 99.79%);
+  background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027B3 99.79%), #2C36F2;
+  width: 1215px;
+  padding: 0px 300px 0px 0px;
+  margin: 0 auto;
 }
 
 .section__inner {
   background: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841FF 97.14%);
+  padding: 0px 269px 0px 149px;
 }
 
 .section__container {
@@ -570,18 +576,16 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 auto;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   background: #2C36F2;
-  width: 497px;
   justify-content: space-between;
 }
 
 .section__left {
   padding-bottom: 115px;
-  margin-left: -91px;
+  margin-left: -33px;
 }
 
 .section__title {
@@ -634,7 +638,7 @@ template {
   background-image: url("img/white-card.png");
   background-repeat: no-repeat;
   top: -138px;
-  right: -265px;
+  right: -325px;
 }
 
 .section__right::after {
@@ -645,14 +649,7 @@ template {
   background-image: url("img/black-card.png");
   background-repeat: no-repeat;
   top: -80px;
-  right: -156px;
-}
-
-.section__common {
-  width: 1170px;
-  padding: 0 205px 0 52px;
-  background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027B3 99.79%), #2C36F2;
-  margin: 0 auto;
+  right: -216px;
 }
 
 .footer {
