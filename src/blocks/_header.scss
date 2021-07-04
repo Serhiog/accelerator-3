@@ -1,41 +1,44 @@
 .header {
-    padding: 0 98px;
+    //padding: 0 98px;
 }
 
 .header__inner {
     @include flex;
-    padding-top    : 38px;
-    padding-bottom : 39px;
-    width          : 1170px;
+    padding        : 27px 100px;
+    width          : 1370px;
     align-items    : flex-end;
     justify-content: flex-start;
-    margin: 0 auto
+    margin         : 0 auto;
+    padding-bottom: 40px;
 }
 
 .header__logo-container {
     @include flex;
     align-items: flex-end;
+    margin-right: 110px;
 }
 
-.header__img {}
+.header__img {
+    margin-right   : 1px;
+    margin-left: -2px;
+
+}
 
 .header__logo-text {
     margin-left   : 9px;
     font-family   : $work;
     font-weight   : bold;
     font-size     : 20px;
-    margin-left   : 10px;
     margin-bottom : -3px;
     letter-spacing: 0.4px;
 }
 
 .header__nav {
     @include flex;
-    margin-left: 86px;
 }
 
 .header__nav-item {
-    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .header__link {
@@ -49,7 +52,6 @@
 }
 
 .header__link--login {
-    margin-left: 240px;
     position   : relative;
 
     &::before {
@@ -62,4 +64,12 @@
         left             : -28px;
         bottom           : -2px;
     }
+}
+
+.header__nav-item--contacts{
+    margin-right: 266px;
+}
+
+.header__nav-item--enter{
+    margin-right: 0;
 }

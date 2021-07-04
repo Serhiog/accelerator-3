@@ -20,18 +20,18 @@ const Slider = () => {
   };
 
   return (
-
-    <Sliders {...settings} style={{ position: "relative" }}>
-      <div>
-        <Slider1 />
-      </div>
-      <div>
-        <Slider2 />
-      </div>
-      <div>
-        <Slider3 />
-      </div>
-    </Sliders>
+<Slider1 />
+    // <Sliders {...settings} style={{ position: "relative" }}>
+    //   <div>
+    //     <Slider1 />
+    //   </div>
+    //   <div>
+    //     <Slider2 />
+    //   </div>
+    //   <div>
+    //     <Slider3/>
+    //   </div>
+    // </Sliders>
 
 
 

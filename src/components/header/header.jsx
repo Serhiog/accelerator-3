@@ -19,14 +19,13 @@ const Header = () => {
           <li className="header__nav-item">
             <a href="/converter" className="header__link">Конвертер валют</a>
           </li>
-          <li className="header__nav-item">
+          <li className="header__nav-item header__nav-item--contacts">
             <a href="/contacts" className="header__link">Контакты</a>
           </li>
-          <li className="header__nav-item">
+          <li className="header__nav-item header__nav-item--enter">
             <a href="/login" className="header__link header__link--login">Войти в Интернет-банк</a>
           </li>
         </ul>
-
       </div>
     </header>
   );
