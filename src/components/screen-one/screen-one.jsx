@@ -1,4 +1,4 @@
-const Slider1 = () => {
+const ScreenOne = () => {
     return (
         <section className="section">
             <div className="section__wrapper">
@@ -18,4 +18,4 @@ const Slider1 = () => {
     )
 }
 
-export default Slider1
+export default ScreenOne

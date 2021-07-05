@@ -953,4 +953,214 @@ template {
 .slider__dots li.slick-active button:before {
   color: #F6F7FF;
 }
+
+.slider2 {
+  position: relative;
+}
+
+.slider2__inner {
+  background: url("img/slider-2.png") 50%/auto auto no-repeat;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider2__inner-left {
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, right top, color-stop(49%, #dde2ec), color-stop(49%, #f6fcff));
+  background: linear-gradient(90deg, #dde2ec 49%, #f6fcff 49%);
+  position: absolute;
+  left: 0;
+}
+
+.slider2__inner-right {
+  width: 50%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f6fcff), to(#f1f6ff));
+  background: linear-gradient(0deg, #f6fcff 0%, #f1f6ff 100%);
+  z-index: -1;
+  position: absolute;
+  right: 0;
+}
+
+.slider2__inner-title {
+  font-family: Roboto-Regular, Helvetica, Arial, sans-serif;
+  font-size: 54px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.slider2__inner-text {
+  font-family: Roboto-Regular, Helvetica, Arial, sans-serif;
+  font-size: 22px;
+}
+
+.slider2__inner-wrapper {
+  position: absolute;
+  right: 51.5%;
+  top: 26.5%;
+}
+
+.slider2__inner-title {
+  margin-bottom: 14px;
+}
+
+.slider3 {
+  position: relative;
+}
+
+.slider3__inner {
+  background: url("img/slider-3.png") 50%/auto auto no-repeat;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider3__inner-left {
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  background: #e6f1fe;
+  position: absolute;
+  left: 0;
+}
+
+.slider3__inner-right {
+  width: 50%;
+  height: 100%;
+  background: #e6f1fe;
+  z-index: -1;
+  position: absolute;
+  right: 0;
+}
+
+.slider3__inner-title {
+  font-family: Roboto-Regular, Helvetica, Arial, sans-serif;
+  font-size: 54px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.slider3__inner-text {
+  font-family: Roboto-Regular, Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  margin-bottom: 35px;
+}
+
+.slider3__inner-wrapper {
+  position: absolute;
+  right: 58.6%;
+  top: 26.5%;
+}
+
+.slider3__inner-title {
+  margin-bottom: 14px;
+}
+
+.slider__inner-btn {
+  position: relative;
+  background: #2c36f2;
+  font-family: Roboto-Regular, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #F6F7FF;
+  border-radius: 4px;
+  width: 243px;
+  display: block;
+  text-align: center;
+  padding: 17px 16px;
+}
+
+.services-list-inner {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.services-list-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.services-list-item {
+  font-family: Roboto-Regular, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 37px 70px;
+  background-color: #f6f7ff;
+  border-radius: 5px 5px 0 0;
+}
+
+.services-list-item-link {
+  color: #4C4B51;
+  padding-left: 45px;
+}
+
+.services-list-link--deposits {
+  position: relative;
+}
+
+.services-list-link--deposits::before {
+  content: url("img/deposits.svg");
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+
+.services-list-link--credits {
+  position: relative;
+}
+
+.services-list-link--credits::before {
+  content: url("img/credits.svg");
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+
+.services-list-link--insurance {
+  position: relative;
+}
+
+.services-list-link--insurance::before {
+  content: url("img/insuranse.svg");
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+
+.services-list-link--online {
+  position: relative;
+}
+
+.services-list-link--online::before {
+  content: url("img/online.svg");
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+
+.depositTab__inner {
+  width: 1170px;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=style.css.map */

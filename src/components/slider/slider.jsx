@@ -1,10 +1,10 @@
 import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Sliders from "react-slick";
-import Slider1 from "../slider1/slider1"
-import Slider2 from "../slider2/slider2"
-import Slider3 from "../slider3/slider3"
+import SliderCarousel from "react-slick";
+import ScreenOne from "../screen-one/screen-one"
+import ScreenTwo from "../screen-two/screen-two"
+import ScreenThree from "../screen-three/screen-three"
 
 const Slider = () => {
 
@@ -16,21 +16,21 @@ const Slider = () => {
     slidesToScroll: 1,
     dotsClass: "slider__dots",
     arrows: false,
-    //autoplay: true
+    autoplay: true
   };
 
   return (
-    <Sliders {...settings} style={{ position: "relative" }}>
+    <SliderCarousel {...settings} style={{ position: "relative", minWidth: "1370px" }}>
       <div>
-        <Slider1 />
+        <ScreenOne />
       </div>
       <div>
-        <Slider2 />
+        <ScreenTwo />
       </div>
       <div>
-        <Slider3 />
+        <ScreenThree />
       </div>
-    </Sliders>
+    </SliderCarousel>
   );
 };
 
