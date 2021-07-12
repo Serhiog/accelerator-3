@@ -20,7 +20,7 @@ const Slider = () => {
   };
 
   return (
-    <SliderCarousel {...settings} style={{ position: "relative", minWidth: "1370px" }}>
+    <SliderCarousel {...settings} style={{ position: "relative", minWidth: "1370px", marginBottom: "50px" }}>
       <div>
         <ScreenOne />
       </div>

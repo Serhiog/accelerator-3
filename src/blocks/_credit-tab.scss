@@ -1,4 +1,4 @@
-.deposit__inner {
+.credit__inner {
     width  : 1170px;
     margin : 0 auto;
     padding: 57px 135px 57px 68px;
@@ -6,7 +6,7 @@
     background: rgba(246, 247, 255, 1);
 }
 
-.deposit__inner-left-title {
+.credit__inner-left-title {
     font-family  : $robo;
     font-weight  : 500;
     font-size    : 22px;
@@ -15,9 +15,9 @@
 
 }
 
-.deposit__inner-left-list {}
+.credit__inner-left-list {}
 
-.deposit__inner-left-list-item {
+.credit__inner-left-list-item {
     font-family  : $robo;
     font-size    : 18px;
     position     : relative;
@@ -29,30 +29,25 @@
         position: absolute;
         left    : 0;
     }
-    &:last-child{
+
+    &:last-child {
         margin-bottom: 35px;
     }
 }
 
-.deposit__inner-left-btn {
-    background   : rgba(44, 54, 242, 1);
-    font-family  : $robo;
-    font-weight  : 500;
-    font-size    : 18px;
-    color        : #F6F7FF;
-    border-radius: 4px;
-    width        : 243px;
-    display      : block;
-    text-align   : center;
-    padding      : 17px 16px;
+.credit__inner-left-info {
+    font-weight: normal;
+    font-size  : 18px;
+    color      : #1F1E25;
+    font-family: $robo;
 }
 
-.deposit__inner-right {
-    background: url("img//tab-1.png") 0 0/auto auto no-repeat;
+.credit__inner-right {
+    background: url("img//tab-2.png") 0 0/auto auto no-repeat;
     width     : 440px;
     height    : 290px;
 }
 
-.deposit__inner-left {
+.credit__inner-left {
     width: 395px;
 }

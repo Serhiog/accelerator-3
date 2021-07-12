@@ -1,3 +1,8 @@
+.services{
+    margin-bottom: 100px;
+}
+
+
 .services-list-inner {
     width : 1170px;
     margin: 0 auto;
@@ -6,6 +11,7 @@
 .services-list-list {
     @include flex;
     justify-content: flex-start;
+    width          : inherit;
 }
 
 
@@ -14,14 +20,20 @@
     font-family     : $robo;
     font-weight     : 500;
     font-size       : 18px;
-    padding         : 37px 70px;
-    background-color: rgba(246, 247, 255, 1);
     border-radius   : 5px 5px 0 0;
+    flex-basis      : 25%;
+    text-align      : center;
+}
+
+.services-list-item--active {
+    background-color: rgba(246, 247, 255, 1);
 }
 
 .services-list-item-link {
     color       : #4C4B51;
     padding-left: 45px;
+    display: block;
+    padding         : 37px 0;
 }
 
 .services-list-link--deposits {
@@ -30,8 +42,9 @@
     &::before {
         content : url("img/deposits.svg");
         position: absolute;
-        left    : 0;
-        top     : -4px;
+        left    : 57px;
+        top     : 30px;
+
     }
 }
 
@@ -41,8 +54,9 @@
     &::before {
         content : url("img/credits.svg");
         position: absolute;
-        left    : 0;
-        top     : -4px;
+        left    : 57px;
+        top     : 30px;
+
     }
 }
 
@@ -52,8 +66,9 @@
     &::before {
         content : url("img/insuranse.svg");
         position: absolute;
-        left    : 0;
-        top     : -4px;
+        left    : 57px;
+        top     : 30px;
+
     }
 }
 
@@ -63,7 +78,8 @@
     &::before {
         content : url("img/online.svg");
         position: absolute;
-        left    : 0;
-        top     : -4px;
+        left    : 46px;
+        top     : 30px;
+
     }
 }

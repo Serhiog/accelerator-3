@@ -1,4 +1,4 @@
-.deposit__inner {
+.online__inner {
     width  : 1170px;
     margin : 0 auto;
     padding: 57px 135px 57px 68px;
@@ -6,7 +6,7 @@
     background: rgba(246, 247, 255, 1);
 }
 
-.deposit__inner-left-title {
+.online__inner-left-title {
     font-family  : $robo;
     font-weight  : 500;
     font-size    : 22px;
@@ -15,9 +15,9 @@
 
 }
 
-.deposit__inner-left-list {}
+.online__inner-left-list {}
 
-.deposit__inner-left-list-item {
+.online__inner-left-list-item {
     font-family  : $robo;
     font-size    : 18px;
     position     : relative;
@@ -29,12 +29,13 @@
         position: absolute;
         left    : 0;
     }
-    &:last-child{
+
+    &:last-child {
         margin-bottom: 35px;
     }
 }
 
-.deposit__inner-left-btn {
+.online__inner-left-btn {
     background   : rgba(44, 54, 242, 1);
     font-family  : $robo;
     font-weight  : 500;
@@ -47,12 +48,12 @@
     padding      : 17px 16px;
 }
 
-.deposit__inner-right {
-    background: url("img//tab-1.png") 0 0/auto auto no-repeat;
+.online__inner-right {
+    background: url("img//tab-4.png") 0 0/auto auto no-repeat;
     width     : 440px;
     height    : 290px;
 }
 
-.deposit__inner-left {
+.online__inner-left {
     width: 395px;
 }
