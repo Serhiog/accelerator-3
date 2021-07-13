@@ -27,6 +27,7 @@
 
 .services-list-item--active {
     background-color: rgba(246, 247, 255, 1);
+    transition: all 0.3s ease-out;
 }
 
 .services-list-item-link {

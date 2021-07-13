@@ -5,7 +5,8 @@ const initialState = {
   creditType: null,
   totalPrice: 2000000,
   firstPay: 200000,
-  motherCapital: false
+  motherCapital: false,
+  creditPeriod: 5,
 };
 
 export default function rootReducer(state = initialState, action) {
@@ -25,6 +26,10 @@ export default function rootReducer(state = initialState, action) {
     case ActionType.SET_MOTHER_CAPITAL:
       return extend(state, {
         motherCapital: action.payload,
+      });
+    case ActionType.SET_CREDIT_PERIOD:
+      return extend(state, {
+        creditPeriod: action.payload,
       });
     default:
       return state;

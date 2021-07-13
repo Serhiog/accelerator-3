@@ -1,0 +1,63 @@
+.offer {
+    background: rgba(246, 247, 255, 1);
+    max-width : 500px;
+}
+
+.offer__inner {
+    padding: 60px;
+}
+
+.offer__title {
+    font-family  : $robo;
+    font-weight  : 600;
+    font-size    : 22px;
+    color        : #1F1E25;
+    margin-bottom: 40px;
+}
+
+.offer__list {
+    @include flex;
+    flex-wrap: wrap;
+}
+
+.offer__item {
+    font-family  : $robo;
+    font-weight  : 600;
+    font-size    : 22px;
+    color        : #1F1E25;
+    margin-bottom: 40px;
+}
+
+.offer__item-about {
+    font-family: $robo;
+    font-size  : 16px;
+    color      : #394959;
+    display    : block;
+    margin-top : 15px;
+    font-weight: 400;
+}
+
+.offer__btn {
+    background   : rgba(44, 54, 242, 1);
+    font-family  : $robo;
+    font-weight  : 500;
+    font-size    : 18px;
+    color        : #F6F7FF;
+    border-radius: 4px;
+    width        : 100%;
+    display      : block;
+    text-align   : center;
+    padding      : 17px 16px;
+}
+
+.offer__error-text {
+    font-family: $robo;
+    font-size  : 16px;
+    color      : #394959;
+    max-width  : 253px;
+    line-height: 140%;
+}
+
+.offer__title--error {
+    line-height: 140%;
+}

@@ -7,6 +7,8 @@
     width : 1170px;
     margin: 0 auto;
     @include flex;
+    justify-content: space-between;
+    flex-wrap      : wrap;
 }
 
 .calculator__title {
@@ -42,14 +44,21 @@
 }
 
 .calulator__value-result-rub {
-
     position   : absolute;
     font-family: $robo;
     right      : 49px;
     top        : 0px;
     font-size  : 18px;
     color      : #1F1E25;
+}
 
+
+.calulator__value-result-year {
+    position   : absolute;
+    font-family: $robo;
+    font-size  : 18px;
+    color      : #1F1E25;
+    right      : 246px;
 }
 
 .calulator__value-result-years {
@@ -57,6 +66,7 @@
     font-weight: 500;
     font-size  : 18px;
     color      : #1F1E25;
+    text-align : center;
 }
 
 .calulator__value-result-error {
