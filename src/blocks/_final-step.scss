@@ -1,12 +1,12 @@
 .final-step {
-    background: rgba(246, 247, 255, 1);
-    padding   : 70px;
-    max-width : 770px;
-    margin-left: auto;
+    background  : rgba(246, 247, 255, 1);
+    padding     : 70px;
+    max-width   : 770px;
+    margin-left : auto;
     margin-right: auto;
-    margin-left: auto;
+    margin-left : auto;
     margin-right: auto;
-    margin-top: 70px;
+    margin-top  : 70px;
 }
 
 .final-step__title {
@@ -41,10 +41,14 @@
 }
 
 .final-step__input {
-    background   : transparent;
-    padding      : 20px;
-    border-radius: 4px;
-    border       : 1px solid #0A1E32;
+    background    : transparent;
+    padding       : 20px;
+    border-radius : 4px;
+    border        : 1px solid #0A1E32;
+    font-family   : $robo;
+    font-size     : 18px;
+    letter-spacing: 0.03em;
+    color         : #707C87;
 
     &::placeholder {
         font-family   : $robo;
@@ -55,7 +59,7 @@
 }
 
 .final-step__name {
-    width: 100%;
+    width        : 100%;
     margin-bottom: 30px;
 }
 
@@ -70,7 +74,7 @@
     display      : block;
     text-align   : center;
     padding      : 17px 16px;
-    flex-basis: 100%
+    flex-basis   : 100%
 }
 
 .final-step__inner {
@@ -93,12 +97,12 @@
 }
 
 .final-step__tel {
-    width: 300px;
-    margin-right: 30px;
+    width        : 300px;
+    margin-right : 30px;
     margin-bottom: 40px;
 }
 
 .final-step__email {
-    width: 300px;
+    width        : 300px;
     margin-bottom: 40px;
 }

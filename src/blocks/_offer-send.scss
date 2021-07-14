@@ -1,0 +1,28 @@
+.offer-send {
+    background: rgba(246, 247, 255, 1);
+    padding   : 60px 67px;
+    max-width : 500px;
+}
+
+.offer-send__title {
+    font-family  : $robo;
+    font-weight  : 600;
+    font-size    : 22px;
+    color        : #1F1E25;
+    margin-bottom: 25px;
+}
+
+.offer-send__text {
+    font-family: $robo;
+    font-size  : 16px;
+    line-height: 140%;
+    color      : #394959;
+    max-width  : 293px;
+    text-align : center;
+}
+
+.offer-send__inner {
+    display        : flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

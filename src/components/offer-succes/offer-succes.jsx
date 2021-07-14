@@ -29,4 +29,5 @@ const OfferSucces = ({ finalPriceValue, percent, monthPayValue, monthSalary, set
     )
 }
 
+
 export default OfferSucces

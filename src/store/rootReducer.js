@@ -7,6 +7,7 @@ const initialState = {
   firstPay: 200000,
   motherCapital: false,
   creditPeriod: 5,
+  isPopup: false,
 };
 
 export default function rootReducer(state = initialState, action) {
@@ -30,6 +31,10 @@ export default function rootReducer(state = initialState, action) {
     case ActionType.SET_CREDIT_PERIOD:
       return extend(state, {
         creditPeriod: action.payload,
+      });
+    case ActionType.SET_POPUP:
+      return extend(state, {
+        isPopup: action.payload,
       });
     default:
       return state;

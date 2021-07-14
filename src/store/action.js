@@ -4,6 +4,7 @@ export const ActionType = {
   SET_FIRST_PAY: "SET_FIRST_PAY",
   SET_MOTHER_CAPITAL: "SET_MOTHER_CAPITAL",
   SET_CREDIT_PERIOD: "SET_CREDIT_PERIOD",
+  SET_POPUP: "SET_POPUP",
 };
 
 export const handleSetCreditType = (payload) => ({
@@ -28,5 +29,10 @@ export const handleMotherCapital = (payload) => ({
 
 export const handleCreditPeriod = (payload) => ({
   type: ActionType.SET_CREDIT_PERIOD,
+  payload,
+});
+
+export const handlePopup = (payload) => ({
+  type: ActionType.SET_POPUP,
   payload,
 });

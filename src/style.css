@@ -2064,6 +2064,10 @@ h1 {
   padding: 20px;
   border-radius: 4px;
   border: 1px solid #0A1E32;
+  font-family: Roboto-Regular, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  color: #707C87;
 }
 
 .final-step__input::-webkit-input-placeholder {
@@ -2182,5 +2186,39 @@ h1 {
 .final-step__email {
   width: 300px;
   margin-bottom: 40px;
+}
+
+.offer-send {
+  background: #f6f7ff;
+  padding: 60px 67px;
+  max-width: 500px;
+}
+
+.offer-send__title {
+  font-family: Roboto-Regular, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #1F1E25;
+  margin-bottom: 25px;
+}
+
+.offer-send__text {
+  font-family: Roboto-Regular, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  color: #394959;
+  max-width: 293px;
+  text-align: center;
+}
+
+.offer-send__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=style.css.map */
