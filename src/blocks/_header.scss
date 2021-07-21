@@ -1,26 +1,35 @@
-.header {
-}
+.header {}
 
 .header__inner {
     @include flex;
-    padding        : 27px 100px;
-    width          : 1370px;
-    align-items    : flex-end;
-    justify-content: flex-start;
-    margin         : 0 auto;
-    padding-bottom: 40px;
+    width      : 1370px;
+    align-items: flex-end;
+    margin     : 0 auto;
+    padding    : 27px 100px 40px 100px;
+
+    @media (max-width: 1023.5px) {
+        width  : 768px;
+        padding: 23px 45px 24px 45px;
+    }
 }
 
 .header__logo-container {
     @include flex;
-    align-items: flex-end;
-    margin-right: 112px;
+    align-items : flex-end;
+    margin-right: 110px;
+
+    @media (max-width: 1023.5px) {
+        margin-right: 66px;
+    }
 }
 
 .header__img {
-    margin-right   : 1px;
-    margin-left: -2px;
+    margin-right: 1px;
 
+    @media (max-width: 1023.5px) {
+        width : 24px;
+        height: 22px;
+    }
 }
 
 .header__logo-text {
@@ -30,21 +39,46 @@
     font-size     : 20px;
     margin-bottom : -3px;
     letter-spacing: 0.4px;
+
+    white-space: nowrap;
+
+    @media (max-width: 1023.5px) {
+        font-size: 18px;
+    }
 }
 
 .header__nav {
     @include flex;
     margin-bottom: -2px;
+    width        : 100%;
+
+    @media (max-width: 1023.5px) {
+        padding-bottom : 2px;
+        justify-content: flex-start;
+    }
 }
 
 .header__nav-item {
     margin-right: 25px;
+
+    @media (max-width: 1023.5px) {
+        margin-right: 21px;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .header__link {
     font-family: $robo;
     font-size  : 16px;
     color      : #1F1E25;
+    white-space: nowrap;
+
+    @media (max-width: 1023.5px) {
+        font-size: 14px;
+    }
 }
 
 .header__link--active {
@@ -52,7 +86,11 @@
 }
 
 .header__link--login {
-    position   : relative;
+    position: relative;
+
+    @media (max-width: 1023.5px) {
+        font-size: 0;
+    }
 
     &::before {
         content          : '';
@@ -61,15 +99,22 @@
         height           : 22px;
         background-image : url("img/login.svg");
         background-repeat: no-repeat;
-        left             : -28px;
-        bottom           : -2px;
+        left             : -30px;
+        bottom           : 0;
+
+        @media (max-width: 1023.5px) {
+            left  : 27px;
+            bottom: -4px;
+        }
     }
 }
 
-.header__nav-item--contacts{
-    margin-right: 266px;
-}
+.header__nav-item--contacts {}
 
-.header__nav-item--enter{
-    margin-right: 0;
+.header__nav-item--enter {
+    margin-left: auto;
+
+    @media (max-width: 1023.5px) {
+        margin: 0
+    }
 }

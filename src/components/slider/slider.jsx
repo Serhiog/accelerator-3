@@ -5,8 +5,11 @@ import SliderCarousel from "react-slick";
 import ScreenOne from "../screen-one/screen-one"
 import ScreenTwo from "../screen-two/screen-two"
 import ScreenThree from "../screen-three/screen-three"
+import { useState } from "react";
+import { useEffect } from "react";
+import { connect } from "react-redux";
 
-const Slider = () => {
+const Slider = ({ width }) => {
 
   const settings = {
     dots: true,
@@ -19,8 +22,18 @@ const Slider = () => {
     autoplay: true
   };
 
+  const [size, setSize] = useState("1370px")
+  const [margin, setMargin] = useState("59px")
+
+  useEffect(() => {
+    if (+width > 1023) { setSize("1370px"), setMargin("59px") }
+    if (+width < 1024) { setSize("772px"), setMargin("0") }
+  })
+
   return (
-    <SliderCarousel {...settings} style={{ position: "relative", minWidth: "1370px", marginBottom: "50px" }}>
+    <SliderCarousel {...settings}
+      style={{ position: "relative", width: size, margin: "0 auto", marginBottom: margin }}
+    >
       <div>
         <ScreenOne />
       </div>
@@ -34,6 +47,8 @@ const Slider = () => {
   );
 };
 
+const mapStateToProps = (state) => ({
+  width: state.width,
+})
 
-export default Slider;
-
+export default connect(mapStateToProps)(Slider);

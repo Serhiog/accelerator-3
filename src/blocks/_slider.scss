@@ -8,6 +8,11 @@
     position  : absolute;
     bottom    : 32px;
     left      : 664px;
+
+    @media (max-width: 1023.5px) {
+        bottom: 3%;
+        left  : 47.5%
+    }
 }
 
 .slider__dots li {
@@ -50,4 +55,15 @@
 
 .slider__dots li.slick-active button:before {
     color: #F6F7FF
+}
+
+.slick-initialized {
+    position     : relative;
+    width        : 1370px;
+    margin-bottom: 59px;
+
+    @media (max-width: 1023.5px) {
+        width : 772px;
+        margin: 0 auto;
+    }
 }

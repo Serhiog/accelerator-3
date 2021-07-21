@@ -1,6 +1,6 @@
 import { createSelector } from "reselect";
 import {} from "../consts";
-import { prettify, delSpaces } from "../utils";
+import { prettify, delSpaces,setOnlyNums } from "../utils";
 
 export const getTotalPrice = (state) => {
   return state.totalPrice;
@@ -18,8 +18,16 @@ export const getActualMotherCapital = (state) => {
   return state.motherCapital;
 };
 
+export const getActualCasco = (state) => {
+  return state.casco;
+};
+
+export const getActualInsurance = (state) => {
+  return state.insurance;
+};
+
 export const getCreditPeriod = (state) => {
-  return state.creditPeriod;
+  return state.yearsRange;
 };
 
 export const getTotalCreditValue = createSelector(
@@ -37,7 +45,9 @@ export const getCreditPercent = createSelector(
   getCreditType,
   getTotalPrice,
   getCreditFirstPay,
-  (creditType, totalPrice, firstPay) => {
+  getActualCasco,
+  getActualInsurance,
+  (creditType, totalPrice, firstPay, casco, insurance) => {
     if (creditType === "mortgage") {
       const percent = totalPrice * 0.15;
       if (+firstPay <= +percent) {
@@ -46,7 +56,24 @@ export const getCreditPercent = createSelector(
         return 8.5;
       }
     } else if (creditType === "autoCredit") {
-      return "needFix";
+      if (totalPrice >= 2000000) {
+        if (casco && insurance) {
+          return "3.5";
+        }
+        if (casco || insurance) {
+          return "8.5";
+        }
+        return 15;
+      }
+      if (totalPrice < 2000000) {
+        if (casco && insurance) {
+          return "3.5";
+        }
+        if (casco || insurance) {
+          return "8.5";
+        }
+        return 16;
+      }
     }
   }
 );
@@ -56,7 +83,7 @@ export const getMonthPayValue = createSelector(
   getCreditPercent,
   getCreditPeriod,
   (totalPrice, percent, creditPeriod) => {
-    percent = percent / 1200;
+    percent = +percent / 1200;
     creditPeriod = creditPeriod * 12;
     return prettify(
       Math.round(
@@ -70,6 +97,6 @@ export const getMonthPayValue = createSelector(
 export const getMonthSalary = createSelector(
   getMonthPayValue,
   (totalMonthPay) => {
-    return prettify(Math.round(+delSpaces(totalMonthPay) * 2.222));
+    return prettify(Math.round(+delSpaces(setOnlyNums(totalMonthPay)) * 2.222));
   }
 );

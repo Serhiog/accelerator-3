@@ -6,8 +6,13 @@ const initialState = {
   totalPrice: 2000000,
   firstPay: 200000,
   motherCapital: false,
-  creditPeriod: 5,
   isPopup: false,
+  percentRange: 0,
+  yearsRange: 0,
+  casco: false,
+  insurance: false,
+  login: false,
+  width: "",
 };
 
 export default function rootReducer(state = initialState, action) {
@@ -28,13 +33,51 @@ export default function rootReducer(state = initialState, action) {
       return extend(state, {
         motherCapital: action.payload,
       });
-    case ActionType.SET_CREDIT_PERIOD:
-      return extend(state, {
-        creditPeriod: action.payload,
-      });
     case ActionType.SET_POPUP:
       return extend(state, {
         isPopup: action.payload,
+      });
+    case ActionType.RESET_INITIAL_VALUES_MORTGAGE:
+      return extend(state, {
+        totalPrice: 2000000,
+        firstPay: 200000,
+        percentRange: 10,
+        yearsRange: 5,
+      });
+    case ActionType.RESET_INITIAL_VALUES_AUTO_CREDIT:
+      return extend(state, {
+        totalPrice: 2000000,
+        firstPay: 200000,
+        percentRange: 20,
+        yearsRange: 1,
+      });
+    case ActionType.SET_PERCENT_RANGE:
+      return extend(state, {
+        percentRange: action.payload,
+      });
+    case ActionType.SET_YEARS_RANGE:
+      return extend(state, {
+        yearsRange: action.payload,
+      });
+    case ActionType.SET_YEARS_RANGE:
+      return extend(state, {
+        casco: action.payload,
+      });
+    case ActionType.SET_CASCO:
+      return extend(state, {
+        casco: action.payload,
+      });
+    case ActionType.SET_INSURANCE:
+      return extend(state, {
+        insurance: action.payload,
+      });
+    case ActionType.SET_LOGIN:
+      return extend(state, {
+        login: action.payload,
+      });
+    case ActionType.SET_WINDOW_WIDTH:
+      return extend(state, {
+        width: action.payload,
       });
     default:
       return state;

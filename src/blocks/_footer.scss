@@ -1,17 +1,32 @@
 .footer {
     background: #F6F7FF;
-    margin-top: 110px;
+
+
 }
 
 .footer__wrapper {
     @include flex;
     justify-content: flex-start;
     align-items    : flex-start;
-    padding-top    : 60px;
-    padding-bottom : 60px;
-    max-width      : 1170px;
-    min-width      : 1170px;
+    width          : 1370px;
     margin         : 0 auto;
+    padding        : 60px 98px;
+    background     : #F6F7FF;
+
+    @media (max-width: 1023.5px) {
+        width    : 560px;
+        padding  : 61px 0;
+        flex-wrap: wrap;
+        margin   : 0;
+    }
+}
+
+.footer__wrapper-inner {
+    @media (max-width: 1023.5px) {
+        width  : 772px;
+        margin : 0 auto;
+        padding: 0 47px;
+    }
 }
 
 .footer__logo {
@@ -19,27 +34,81 @@
     @include flex;
     justify-content: flex-start;
     flex-wrap      : wrap;
+    margin-top     : -5px;
+    position       : relative;
+    margin-right   : 81px;
+
+    @media (max-width: 1023.5px) {
+        margin-right: 250px;
+    }
 }
 
-.footer__img {}
+.footer__img {
+    display   : inline-block;
+    margin-top: -6px;
+    position  : absolute;
+    top       : 1px;
+
+    @media (max-width: 1023.5px) {
+        margin-left: -2px;
+    }
+}
 
 .footer__title {
-    margin-left: 9px;
-    font-family: $work;
-    font-weight: bold;
-    font-size  : 20px;
+    font-family   : $work;
+    font-weight   : bold;
+    font-size     : 20px;
+    padding-top   : 2px;
+    letter-spacing: 1.3px;
+    word-spacing  : -5px;
+    margin-bottom : 14px;
+    padding-left  : 37px;
+
+    @media (max-width: 1023.5px) {
+        font-size  : 18px;
+        margin-left: -6px;
+    }
+
 }
 
 .footer__title-about {
     font-family: $robo;
     font-size  : 12px;
     color      : #707C87;
-    margin-top : 20px;
     line-height: 140%;
+
+    @media (max-width: 1023.5px) {
+        font-size: 0;
+    }
+}
+
+.footer__title-about--tablet {
+
+    font-size: 0;
+
+    @media (max-width: 1023.5px) {
+        font-family : $robo;
+        font-size   : 12px;
+        color       : #707C87;
+        line-height : 140%;
+        width       : 252px;
+        order       : 4;
+        margin-right: 88px;
+
+    }
 }
 
 .footer__list {
-    margin-left: 81px;
+    margin-top  : -2px;
+    margin-right: 111px;
+
+    @media (max-width: 1023.5px) {
+        order        : 2;
+        margin-top   : -11px;
+        margin-right : 245px;
+        margin-bottom: 15px;
+
+    }
 }
 
 .footer__item {
@@ -47,7 +116,7 @@
     font-weight  : 500;
     font-size    : 16px;
     color        : #1F1E25;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     .footer:nth-child(4) {
         margin-bottom: 0px;
@@ -55,16 +124,23 @@
 }
 
 .footer__short-call {
-    max-width  : 167px;
-    margin-left: 81px;
+    max-width   : 167px;
+    margin-right: 113px;
+
+    @media (max-width: 1023.5px) {
+        order : 1;
+        margin: 0;
+    }
 }
 
 .footer__short-number {
-    font-family: $robo;
-    font-weight: 500;
-    font-size  : 16px;
-    color      : #1F1E25;
-    position   : relative;
+    font-family  : $robo;
+    font-weight  : 500;
+    font-size    : 16px;
+    color        : #1F1E25;
+    position     : relative;
+    margin-bottom: 6px;
+    display      : inline-block;
 
     &::before {
         content          : '';
@@ -73,8 +149,12 @@
         background-repeat: no-repeat;
         width            : 16px;
         height           : 16px;
-        left             : -22px;
+        left             : -30px;
         top              : 2px;
+
+        @media (max-width: 1023.5px) {
+            top: -2px;
+        }
     }
 }
 
@@ -82,25 +162,36 @@
     font-family: $robo;
     font-size  : 12px;
     color      : #707C87;
-    margin-top : 10px;
     line-height: 140%;
+    white-space: nowrap;
 }
 
 .footer__free-call {
-    font-family: $robo;
-    font-weight: 500;
-    font-size  : 16px;
-    color      : #1F1E25;
-    max-width  : 122px;
-    margin-left: 113px;
+    font-family : $robo;
+    font-weight : 500;
+    font-size   : 16px;
+    color       : #1F1E25;
+    max-width   : 122px;
+    margin-right: 66px;
+
+    @media (max-width: 1023.5px) {
+        order      : 3;
+        margin     : 0;
+        padding-top: 24px;
+
+    }
+
 }
 
 .footer__free-number {
-    font-family: $robo;
-    font-weight: 500;
-    font-size  : 16px;
-    color      : #1F1E25;
-    position   : relative;
+    font-family  : $robo;
+    font-weight  : 500;
+    font-size    : 16px;
+    color        : #1F1E25;
+    position     : relative;
+    margin-bottom: 4px;
+    white-space  : nowrap;
+    display      : inline-block;
 
     &::before {
         content          : '';
@@ -109,7 +200,7 @@
         background-repeat: no-repeat;
         width            : 16px;
         height           : 16px;
-        left             : -28px;
+        left             : -33px;
         top              : 2px;
     }
 }
@@ -118,14 +209,17 @@
     font-family: $robo;
     font-size  : 12px;
     color      : #707C87;
-    margin-top : 10px;
     line-height: 140%;
 }
 
 .footer__media-links {
     @include flex;
     justify-content: flex-start;
-    margin-left    : 86px;
+
+    @media (max-width: 1023.5px) {
+        order     : 5;
+        margin-top: -26px;
+    }
 }
 
 .footer__item-media {
@@ -133,7 +227,13 @@
 }
 
 .footer__list-link {
-    color: #1F1E25;
+    color      : #1F1E25;
+    white-space: nowrap;
+    font-weight: 600;
+
+    @media (max-width: 1023.5px) {
+        font-size: 16px;
+    }
 }
 
 .footer__fb {
@@ -161,8 +261,12 @@
         background-repeat: no-repeat;
         width            : 16px;
         height           : 16px;
-        right            : 0px;
+        right            : 6px;
         top              : 0px;
+
+        @media (max-width: 1023.5px) {
+            right: 2px;
+        }
     }
 }
 
@@ -176,8 +280,12 @@
         background-repeat: no-repeat;
         width            : 16px;
         height           : 16px;
-        right            : 0px;
-        top              : 0px;
+        right            : 5px;
+        top              : 2px;
+
+        @media (max-width: 1023.5px) {
+            right: -5px;
+        }
     }
 }
 
@@ -191,7 +299,11 @@
         background-repeat: no-repeat;
         width            : 16px;
         height           : 16px;
-        right            : 0px;
-        top              : 0px;
+        right            : 4px;
+        top              : 2px;
+
+        @media (max-width: 1023.5px) {
+            right: -11px;
+        }
     }
 }

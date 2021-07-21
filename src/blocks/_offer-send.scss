@@ -1,7 +1,13 @@
 .offer-send {
     background: rgba(246, 247, 255, 1);
-    padding   : 60px 67px;
+    padding   : 51px 67px;
     max-width : 500px;
+
+    @media (max-width: 1023.5px) {
+        width         : 678px;
+        max-width     : none;
+        padding-bottom: 56px;
+    }
 }
 
 .offer-send__title {
@@ -9,7 +15,9 @@
     font-weight  : 600;
     font-size    : 22px;
     color        : #1F1E25;
-    margin-bottom: 25px;
+    margin-bottom: 16px;
+    margin-left  : -3px;
+
 }
 
 .offer-send__text {
@@ -24,5 +32,39 @@
 .offer-send__inner {
     display        : flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap      : wrap;
+    padding-top    : 5px;
+}
+
+.offer-send__close {
+    cursor  : pointer;
+    float   : right;
+    position: absolute;
+    right   : 44px;
+    top     : 30px;
+
+    @media (max-width: 1023.5px) {
+        right: -129px;
+        top  : 35px;
+    }
+
+}
+
+.offer-send__close:before,
+.offer-send__close:after {
+    content   : "";
+    position  : absolute;
+    width     : 21px;
+    height    : 2px;
+    background: #555;
+}
+
+.offer-send__close:before {
+    webkit-transform: rotate(45deg);
+    transform       : rotate(45deg);
+}
+
+.offer-send__close:after {
+    webkit-transform: rotate(-45deg);
+    transform       : rotate(-45deg);
 }

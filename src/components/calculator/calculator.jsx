@@ -3,30 +3,51 @@ import StepOne from "../step-one/step-one"
 import StepTwo from "../step-two/step-two"
 import Offer from "../offer/offer";
 import FinalStep from "../final-step/final-step";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ScrollableAnchor from 'react-scrollable-anchor'
 
-
-const Calculator = ({ creditType, totalPrice, firstPay, creditPeriod }) => {
+const Calculator = ({ creditType, totalPrice, firstPay, creditPeriod, width }) => {
 
     const [finalStep, setFinalStep] = useState(false)
     const [countForm, setCountForm] = useState(1)
 
+    const [margin, setMargin] = useState("0px")
+
+    useEffect(() => {
+        if (width < 1024) {
+            if (finalStep) {
+                setMargin("38px")
+            } else {
+                setMargin("0")
+            }
+        } else if (width > 1023) {
+            if (finalStep) {
+                setMargin("107px")
+            } else {
+                setMargin("69px")
+            }
+        }
+    }, [finalStep, width])
+
     return (
-        <section className="calculator">
-            <div className="calculator__inner">
-                <div className="calculator__left">
-                    <h3 className="calculator__title">Кредитный калькулятор</h3>
-                    <form>
-                        <StepOne />
-                        {creditType && <StepTwo />}
-                    </form>
+        <ScrollableAnchor id={'section2'}>
+            <section className="calculator" style={{ marginBottom: margin }}>
+                <div className="calculator__inner">
+                    <div className="calculator__left" style={creditType === null && { marginBottom: "0" } || creditType && { marginBottom: "40px" }}>
+                        <h3 className="calculator__title">Кредитный калькулятор</h3>
+                        <p className="calculator__title-about">Шаг 1. Цель кредита</p>
+                        <form className="calculator__form">
+                            <StepOne />
+                            {creditType && <StepTwo />}
+                        </form>
+                    </div>
+                    <div className="calculator__right">
+                        {creditType && <Offer setFinalStep={setFinalStep} finalStep={finalStep} setCountForm={setCountForm} countForm={countForm} />}
+                    </div>
+                    {finalStep && <FinalStep countForm={countForm} creditType={creditType} totalPrice={totalPrice} firstPay={firstPay} creditPeriod={creditPeriod} />}
                 </div>
-                <div className="calculator__right">
-                    {creditType && <Offer setFinalStep={setFinalStep} finalStep={finalStep} setCountForm={setCountForm} countForm={countForm}/>}
-                </div>
-                {finalStep && <FinalStep countForm={countForm} creditType={creditType} totalPrice={totalPrice} firstPay={firstPay} creditPeriod={creditPeriod}/>}
-            </div>
-        </section >
+            </section >
+        </ScrollableAnchor >
     )
 }
 
@@ -34,7 +55,8 @@ const mapStateToProps = (state) => ({
     creditType: state.creditType,
     totalPrice: state.totalPrice,
     firstPay: state.firstPay,
-    creditPeriod: state.creditPeriod
+    creditPeriod: state.yearsRange,
+    width: state.width,
 })
 
 export default connect(mapStateToProps)(Calculator)

@@ -23,7 +23,7 @@ const FinalStep = ({ countForm, creditType, totalPrice, firstPay, creditPeriod, 
 
         <div className="final-step">
             <div className="final-step__inner">
-                <h4 className="final-step__title">z заявки</h4>
+                <h4 className="final-step__title">Шаг 3. Оформление заявки</h4>
                 <ul className="final-step__list">
                     <li className="final-step__item">
                         Номер заявки
@@ -38,15 +38,15 @@ const FinalStep = ({ countForm, creditType, totalPrice, firstPay, creditPeriod, 
                         </span>
                     </li>
                     <li className="final-step__item">
-                        Стоимость недвижимости
+                        Стоимость {creditType === "mortgage" && "недвижимости" || creditType === "autoCredit" && "автомобиля"}
                         <span className="final-step__item-about">
-                            {prettify(totalPrice)} рублей
+                            {prettify(totalPrice)}
                         </span>
                     </li>
                     <li className="final-step__item">
                         Первоначальный взнос
                         <span className="final-step__item-about">
-                            {prettify(firstPay)} рублей
+                            {prettify(firstPay)}
                         </span>
                     </li>
                     <li className="final-step__item">

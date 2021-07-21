@@ -1,25 +1,23 @@
-import { useState } from "react"
-import CreditTab from "../credit-tab/credit-tab"
-import DepositsTab from "../deposits-tab/deposits-tab"
-import InsuranceTab from "../insurance-tab/insurance-tab"
-import OnlineTab from "../online-tab/online-tab"
-import ServicesList from "../services-list/services-list"
+import ScrollableAnchor from 'react-scrollable-anchor'
+import TabsSlider from "../tabs-slider/tabs-slider"
+import OnlyTabs from "../only-tabs/only-tabs"
+import { connect } from "react-redux";
 
-const Services = () => {
-
-    const [activeTab, setActiveTab] = useState("deposits")
-
+const Services = ({ width }) => {
 
     return (
-        <section className="services">
-            <ServicesList setActiveTab={setActiveTab} activeTab={activeTab} />
-            {activeTab === "deposits" && <DepositsTab />}
-            {activeTab === "credits" && <CreditTab />}
-            {activeTab === "insurance" && <InsuranceTab />}
-            {activeTab === "online" && <OnlineTab />}
-
-        </section>
+        <ScrollableAnchor id={'section1'}>
+            <section className="services">
+                {+width > 1023 && <OnlyTabs />}
+                {+width < 1024 && <TabsSlider />}
+            </section>
+        </ScrollableAnchor>
     )
 }
 
-export default Services
+
+const mapStateToProps = (state) => ({
+    width: state.width,
+})
+
+export default connect(mapStateToProps)(Services);

@@ -1,30 +1,20 @@
 .slider3 {
-    position: relative;
+    background: linear-gradient(90deg, rgba(230, 241, 254, 1) 38%, rgba(230, 241, 254, 1) 71%);
 }
 
 
 .slider3__inner {
-    background: url("img/slider-3.png") 50%/auto auto no-repeat;
-    height    : 400px;
-    display   : flex;
-}
+    background     : url("img/slider-3.png") 50%/auto auto no-repeat;
+    height         : 400px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
 
-.slider3__inner-left {
-    width     : 50%;
-    height    : 100%;
-    z-index   : -1;
-    background: rgba(230, 241, 254, 1);
-    position  : absolute;
-    left      : 0;
-}
-
-.slider3__inner-right {
-    width     : 50%;
-    height    : 100%;
-    background: rgba(230, 241, 254, 1);
-    z-index   : -1;
-    position  : absolute;
-    right     : 0;
+    @media (max-width: 1023.5px) {
+        background: url("img/tab-slider-3.png") 50%/auto auto no-repeat;
+        height    : 301px;
+        display   : block;
+    }
 }
 
 .slider3__inner-title {
@@ -32,24 +22,44 @@
     font-size  : 54px;
     font-weight: 700;
     z-index    : 1;
+
+    @media (max-width: 1023.5px) {
+        font-size: 46px;
+    }
 }
 
 
 .slider3__inner-text {
-    font-family: $robo;
-    font-size  : 22px;
+    font-family  : $robo;
+    font-size    : 22px;
     margin-bottom: 35px;
+
+    @media (max-width: 1023.5px) {
+        font-size    : 18px;
+        padding-left : 87px;
+        margin-bottom: 33px;
+    }
 }
 
 .slider3__inner-wrapper {
-    position: absolute;
-    right   : 58.6%;
-    top     : 26.5%;
+    margin-left: -571px;
+    margin-top : -10px;
+
+    @media (max-width: 1023.5px) {
+        margin: 0;
+
+    }
 }
 
 
 .slider3__inner-title {
     margin-bottom: 14px;
+
+    @media (max-width: 1023.5px) {
+        margin-bottom: 10px;
+        padding-left : 88px;
+        padding-top  : 70px;
+    }
 }
 
 .slider__inner-btn {
@@ -64,4 +74,14 @@
     display      : block;
     text-align   : center;
     padding      : 17px 16px;
+
+    @media (max-width: 1023.5px) {
+        width         : 206px;
+        padding       : 13px 16px;
+        margin-left   : 87px;
+        letter-spacing: -1px;
+
+    }
+
+
 }

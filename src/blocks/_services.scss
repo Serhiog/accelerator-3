@@ -1,5 +1,10 @@
-.services{
-    margin-bottom: 100px;
+.services {
+    margin-bottom: 109px;
+    padding      : 0 99px;
+
+    @media (max-width: 1023.5px) {
+        margin-bottom: 0px;
+    }
 }
 
 
@@ -17,70 +22,74 @@
 
 
 .services-list-item {
-    font-family     : $robo;
-    font-weight     : 500;
-    font-size       : 18px;
-    border-radius   : 5px 5px 0 0;
-    flex-basis      : 25%;
-    text-align      : center;
+    font-family  : $robo;
+    font-weight  : 500;
+    font-size    : 18px;
+    border-radius: 5px 5px 0 0;
+    flex-basis   : 25%;
+    text-align   : center;
 }
 
 .services-list-item--active {
     background-color: rgba(246, 247, 255, 1);
-    transition: all 0.3s ease-out;
+    transition      : all 0.3s ease-out;
 }
 
 .services-list-item-link {
     color       : #4C4B51;
     padding-left: 45px;
-    display: block;
-    padding         : 37px 0;
+    display     : block;
+    padding     : 37px 0;
 }
 
 .services-list-link--deposits {
-    position: relative;
+    position    : relative;
+    padding-left: 45px;
 
     &::before {
         content : url("img/deposits.svg");
         position: absolute;
-        left    : 57px;
+        left    : 91px;
         top     : 30px;
 
     }
 }
 
 .services-list-link--credits {
-    position: relative;
+    position    : relative;
+    padding-left: 45px;
 
     &::before {
         content : url("img/credits.svg");
         position: absolute;
-        left    : 57px;
+        left    : 87px;
         top     : 30px;
 
     }
 }
 
 .services-list-link--insurance {
-    position: relative;
+    position    : relative;
+    padding-left: 40px;
 
     &::before {
         content : url("img/insuranse.svg");
         position: absolute;
-        left    : 57px;
-        top     : 30px;
+        left    : 73px;
+        top     : 29px;
 
     }
 }
 
 .services-list-link--online {
-    position: relative;
+    position    : relative;
+    padding-left: 30px;
 
     &::before {
         content : url("img/online.svg");
         position: absolute;
-        left    : 46px;
-        top     : 30px;
+        left    : 60px;
+        top     : 29px;
 
     }
 }

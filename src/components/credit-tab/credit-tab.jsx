@@ -10,7 +10,7 @@ const CreditTab = () => {
                         <li className="credit__inner-left-list-item">Потребительский кредит</li>
                     </ul>
                     <p className="credit__inner-left-info">Рассчитайте ежемесячный платеж
-и ставку по кредиту воспользовавшись нашим кредитным калькулятором</p>
+                    <br />и ставку по кредиту воспользовавшись нашим <span className="credit__inner-left-info-calculator">кредитным калькулятором</span></p>
                 </div>
                 <div className="credit__inner-right"></div>
             </div>

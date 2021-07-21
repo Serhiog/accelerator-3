@@ -7,9 +7,6 @@ const ScreenThree = () => {
                     <p className="slider3__inner-text">Всегда рядом</p>
                     <button className="slider__inner-btn">Найти отделение</button>
                 </div>
-                <div className="slider3__inner-left">
-                </div>
-                <div className="slider3__inner-right"></div>
             </div>
         </section>
     )

@@ -1,0 +1,177 @@
+.login {
+    background: rgba(246, 247, 255, 1);
+    padding   : 53px 57px;
+    width     : 538px;
+    height    : 484px;
+
+    @media (max-width: 1023.5px) {
+        width  : 678px;
+        padding: 53px 88px;
+    }
+}
+
+.login__title {
+    font-family: $robo;
+    font-weight: 600;
+    font-size  : 22px;
+    color      : #1F1E25;
+}
+
+.login__text {
+    font-family: $robo;
+    font-size  : 13px;
+    color      : #394959;
+    max-width  : 293px;
+    text-align : center;
+    margin-left: -31px;
+}
+
+.login__inner {}
+
+.login__close {
+    cursor  : pointer;
+    float   : right;
+    position: absolute;
+    right   : 74px;
+    top     : 63px;
+
+    @media (max-width: 1023.5px) {
+        right: 107px;
+        top  : 64px;
+
+    }
+}
+
+.login__close:before,
+.login__close:after {
+    content   : "";
+    position  : absolute;
+    width     : 21px;
+    height    : 2px;
+    background: #555;
+}
+
+.login__close:before {
+    webkit-transform: rotate(45deg);
+    transform       : rotate(45deg);
+}
+
+.login__close:after {
+    webkit-transform: rotate(-45deg);
+    transform       : rotate(-45deg);
+}
+
+.login__label-login {
+    font-family: $robo;
+    font-size  : 16px;
+    color      : #394959;
+}
+
+.login__password-label {
+    font-family: $robo;
+    font-size  : 16px;
+    color      : #394959;
+}
+
+.login__login {
+    border       : 1px solid #1F1E25;
+    box-sizing   : border-box;
+    border-radius: 4px;
+    background   : transparent;
+    width        : 100%;
+    margin-top   : 6px;
+    margin-bottom: 25px;
+    padding      : 20px 77px;
+
+    &::placeholder {
+        font-family: $robo;
+        font-weight: 400;
+        font-size  : 18px;
+        color      : #1F1E25;
+    }
+}
+
+.login-password {
+    border       : 1px solid #1F1E25;
+    box-sizing   : border-box;
+    border-radius: 4px;
+    background   : transparent;
+    width        : 100%;
+    margin-top   : 10px;
+    padding      : 20px 77px;
+
+    &::placeholder {
+        font-family: $robo;
+        font-weight: 400;
+        font-size  : 18px;
+        color      : #1F1E25;
+    }
+}
+
+.login__password-label {
+    position: relative;
+}
+
+.login__password-hide {
+    position  : absolute;
+    background: transparent;
+    top       : 48px;
+    right     : 40px;
+    width     : 5px;
+    height    : 5px;
+
+    &::after {
+        content: url("img/hide-pass.svg");
+        cursor : pointer;
+
+
+    }
+}
+
+.login__password-text {
+    font-family: $robo;
+    font-size  : 12px;
+    color      : #707C87;
+    margin-top : 10px;
+    display    : inline-block;
+    position   : absolute;
+    right      : 0;
+    bottom     : -20px;
+}
+
+.login__password-text-link {
+    color: #707C87;
+}
+
+.login__btn {
+    background   : rgba(44, 54, 242, 1);
+    font-family  : $robo;
+    font-weight  : 500;
+    font-size    : 18px;
+    color        : #F6F7FF;
+    border-radius: 4px;
+    width        : 100%;
+    display      : block;
+    text-align   : center;
+    padding      : 20px 16px;
+}
+
+.login__top-inner {
+    display: inline-block;
+}
+
+.login__top {
+    @include flex;
+    justify-content: flex-start;
+    margin-bottom  : 40px;
+}
+
+.login__password-wrapper {
+    margin-bottom: 49px;
+    position     : relative;
+
+}
+
+.login-logo {
+    margin-right: 7px;
+}

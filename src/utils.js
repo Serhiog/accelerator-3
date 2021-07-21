@@ -1,6 +1,7 @@
 export const prettify = (num) => {
   var n = num.toString();
-  return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + " ");
+  const result = n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + " ");
+  return result + " рублей"
 };
 
 export const delSpaces = (str) => {
@@ -19,3 +20,4 @@ export const extend = (a, b) => {
 export const percentage = (a, b) => {
   return Math.round((+b / +a) * 100);
 };
+

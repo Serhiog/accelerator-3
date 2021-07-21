@@ -1,6 +1,26 @@
 import React from "react";
+import { connect } from "react-redux";
+import { handleSetLogin, handleSetWindowWidth } from "../../store/action"
 
-const Header = () => {
+
+const Header = ({ handleSetLogin, login, handleSetWindowWidth }) => {
+
+
+  const handleLogin = (evt) => {
+    evt.preventDefault()
+    handleSetLogin(!login)
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("resize", updateWidthAndHeight);
+    handleSetWindowWidth(window.innerWidth)
+    return () => window.removeEventListener("resize", updateWidthAndHeight);
+  });
+
+  const updateWidthAndHeight = () => {
+    handleSetWindowWidth(window.innerWidth)
+  };
+
   return (
     <header className="header">
       <div className="header__inner">
@@ -11,19 +31,19 @@ const Header = () => {
         </div>
         <ul className="header__nav">
           <li className="header__nav-item">
-            <a href="/services" className="header__link">Услуги</a>
+            <a href="#section1" className="header__link">Услуги</a>
           </li>
           <li className="header__nav-item">
-            <a href="/credit" className="header__link">Рассчитать кредит</a>
+            <a href="#section2" className="header__link">Рассчитать кредит</a>
           </li>
           <li className="header__nav-item">
-            <a href="/converter" className="header__link">Конвертер валют</a>
+            <a href="!#" className="header__link">Конвертер валют</a>
           </li>
           <li className="header__nav-item header__nav-item--contacts">
-            <a href="/contacts" className="header__link">Контакты</a>
+            <a href="#section3" className="header__link">Контакты</a>
           </li>
           <li className="header__nav-item header__nav-item--enter">
-            <a href="/login" className="header__link header__link--login">Войти в Интернет-банк</a>
+            <a href="/login" className="header__link header__link--login" onClick={handleLogin}>Войти в Интернет-банк</a>
           </li>
         </ul>
       </div>
@@ -31,6 +51,10 @@ const Header = () => {
   );
 };
 
+const mapStateToProps = (state) => ({
+  login: state.login,
+})
 
-export default Header;
+
+export default connect(mapStateToProps, { handleSetLogin, handleSetWindowWidth })(Header);
 
