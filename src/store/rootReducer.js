@@ -13,6 +13,7 @@ const initialState = {
   insurance: false,
   login: false,
   width: "",
+  overflow: false,
 };
 
 export default function rootReducer(state = initialState, action) {
@@ -78,6 +79,10 @@ export default function rootReducer(state = initialState, action) {
     case ActionType.SET_WINDOW_WIDTH:
       return extend(state, {
         width: action.payload,
+      });
+    case ActionType.SET_OVERFLOW:
+      return extend(state, {
+        overflow: action.payload,
       });
     default:
       return state;

@@ -8,6 +8,12 @@
         padding       : 37px 46px;
         padding-bottom: 0;
     }
+
+    @media (max-width: 767.5px) {
+        width      : 320px;
+        padding    : 0;
+        padding-top: 19px;
+    }
 }
 
 .map__title {
@@ -22,6 +28,13 @@
         font-size    : 32px;
         margin-bottom: 41px;
     }
+
+    @media (max-width: 767.5px) {
+        font-size    : 22px;
+        margin-bottom: 32px;
+        padding-left : 16px;
+
+    }
 }
 
 .map {
@@ -30,5 +43,11 @@
     @media (max-width: 1023.5px) {
         margin-bottom: 80px;
     }
+
+    @media (max-width: 767.5px) {
+        margin-bottom: 60px;
+
+    }
 }
 
+.map__wrapper {}

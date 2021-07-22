@@ -14,6 +14,13 @@
         background: url("img/tab-slider-2.png") 50%/auto auto no-repeat;
         height    : 301px;
     }
+
+    @media (max-width: 767.5px) {
+        background : url("img/mobile-slider-3.png") 50%/auto auto no-repeat;
+        height     : 226px;
+        display    : block;
+        padding-top: 1px;
+    }
 }
 
 
@@ -26,6 +33,14 @@
     @media (max-width: 1023.5px) {
         font-size: 46px;
     }
+
+    @media (max-width: 767.5px) {
+        font-size: 38px;
+        @include m0p0;
+        padding-left : 15px;
+        padding-top  : 41px;
+        margin-bottom: 12px;
+    }
 }
 
 
@@ -36,6 +51,17 @@
     @media (max-width: 1023.5px) {
         font-size: 18px;
 
+    }
+
+    @media (max-width: 767.5px) {
+        font-size: 16px;
+        @include m0p0;
+        width        : 157px;
+        margin       : 0px;
+        padding      : 0px;
+        margin-bottom: 26px;
+        padding-left : 15px;
+        line-height  : 110%;
     }
 }
 
@@ -48,10 +74,18 @@
         margin-top : -86px;
     }
 
+    @media (max-width: 767.5px) {
+        @include m0p0;
+    }
 
 }
 
 
 .slider2__inner-title {
     margin-bottom: 14px;
+
+    @media (max-width: 767.5px) {
+
+        margin-bottom: 12px;
+    }
 }

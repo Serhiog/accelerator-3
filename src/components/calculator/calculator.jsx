@@ -14,13 +14,21 @@ const Calculator = ({ creditType, totalPrice, firstPay, creditPeriod, width }) =
     const [margin, setMargin] = useState("0px")
 
     useEffect(() => {
-        if (width < 1024) {
+        if (width < 768) {
+            if (!finalStep) {
+                setMargin("11px")
+            } else {
+                setMargin("38px")
+            }
+        }
+        if (width < 1024 && width > 768) {
             if (finalStep) {
                 setMargin("38px")
             } else {
                 setMargin("0")
             }
-        } else if (width > 1023) {
+        }
+        if (width > 1023) {
             if (finalStep) {
                 setMargin("107px")
             } else {

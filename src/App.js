@@ -9,10 +9,12 @@ import Calculator from "./components/calculator/calculator";
 import OfferSend from "./components/offer-send/offer-send";
 import { connect } from "react-redux";
 import Login from "./components/login/login";
+import ReactBody from "react-body";
 
-const App = ({ isPopup, login }) => {
+const App = ({ isPopup, login, overflow }) => {
   return (
     <>
+      <ReactBody className="inverted" if={overflow} />
       {isPopup && (
         <Popup
           position="right center"
@@ -31,7 +33,7 @@ const App = ({ isPopup, login }) => {
           overlayStyle={{ background: "rgba(0, 0, 0, .5)" }}
           open={login}
           lockScroll={true}
-          closeOnDocumentClick={true}
+          closeOnDocumentClick={false}
         >
           {(close) => <Login close={close} />}
         </Popup>
@@ -49,6 +51,7 @@ const App = ({ isPopup, login }) => {
 const mapStateToProps = (state) => ({
   isPopup: state.isPopup,
   login: state.login,
+  overflow: state.overflow,
 });
 
 export default connect(mapStateToProps)(App);

@@ -28,6 +28,7 @@ const Slider = ({ width }) => {
   useEffect(() => {
     if (+width > 1023) { setSize("1370px"), setMargin("59px") }
     if (+width < 1024) { setSize("772px"), setMargin("0") }
+    if (+width < 768) { setSize("320px"), setMargin("0") }
   })
 
   return (

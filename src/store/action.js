@@ -13,6 +13,7 @@ export const ActionType = {
   SET_INSURANCE: "SET_INSURANCE",
   SET_LOGIN: "SET_LOGIN",
   SET_WINDOW_WIDTH: "SET_WINDOW_WIDTH",
+  SET_OVERFLOW: "SET_OVERFLOW"
 };
 
 export const handleSetCreditType = (payload) => ({
@@ -75,5 +76,10 @@ export const handleSetLogin = (payload) => ({
 
 export const handleSetWindowWidth = (payload) => ({
   type: ActionType.SET_WINDOW_WIDTH,
+  payload,
+});
+
+export const handleBodyOverflow = (payload) => ({
+  type: ActionType.SET_OVERFLOW,
   payload,
 });

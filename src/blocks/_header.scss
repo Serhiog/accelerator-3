@@ -1,3 +1,7 @@
+.inverted {
+    overflow: hidden
+}
+
 .header {}
 
 .header__inner {
@@ -8,8 +12,23 @@
     padding    : 27px 100px 40px 100px;
 
     @media (max-width: 1023.5px) {
-        width  : 768px;
-        padding: 23px 45px 24px 45px;
+        width     : 768px;
+        padding   : 23px 45px 24px 45px;
+        background: rgba(246, 247, 255, 1);
+    }
+
+    @media (max-width: 767.5px) {
+        width   : 320px;
+        padding : 12px 15px 19px 15px;
+        position: relative;
+    }
+}
+
+.header__nav-item--mobile {
+    display: none;
+
+    @media (max-width: 767.5px) {
+        display: block;
     }
 }
 
@@ -21,6 +40,11 @@
     @media (max-width: 1023.5px) {
         margin-right: 66px;
     }
+
+    @media (max-width: 767.5px) {
+        margin-right: 0;
+        padding-left: 47px;
+    }
 }
 
 .header__img {
@@ -29,6 +53,14 @@
     @media (max-width: 1023.5px) {
         width : 24px;
         height: 22px;
+    }
+
+    @media (max-width: 767.5px) {
+        width   : 18px;
+        height  : 17px;
+        position: absolute;
+        bottom  : 16px;
+        left    : 45px;
     }
 }
 
@@ -45,6 +77,11 @@
     @media (max-width: 1023.5px) {
         font-size: 18px;
     }
+
+    @media (max-width: 767.5px) {
+        font-size  : 16px;
+        padding-top: 4px;
+    }
 }
 
 .header__nav {
@@ -55,6 +92,19 @@
     @media (max-width: 1023.5px) {
         padding-bottom : 2px;
         justify-content: flex-start;
+    }
+
+    @media (max-width: 767.5px) {
+        display       : none;
+        flex-direction: row;
+        position      : absolute;
+        top           : 48px;
+        left          : 0;
+        flex-wrap     : wrap;
+        background    : rgba(246, 247, 255, 1);
+        padding       : 29px 15px;
+        height        : 100vh;
+        z-index       : 100;
     }
 }
 
@@ -68,6 +118,22 @@
     &:last-child {
         margin-right: 0;
     }
+
+    @media (max-width: 767.5px) {
+        margin-right  : 21px;
+        display       : block;
+        width         : 100%;
+        border-bottom : 1px solid #C1C2CA;
+        padding-left  : 16px;
+        padding-top   : 25px;
+        padding-bottom: 18px;
+
+        &:first-child {
+            border-top: 1px solid #C1C2CA;
+        }
+    }
+
+
 }
 
 .header__link {
@@ -78,6 +144,30 @@
 
     @media (max-width: 1023.5px) {
         font-size: 14px;
+    }
+
+    @media (max-width: 767.5px) {
+        font-size: 16px;
+    }
+}
+
+.header__logo-btn {
+    display: none;
+
+    @media (max-width: 767.5px) {
+        display   : block;
+        background: transparent;
+        position  : relative;
+
+        &::before {
+            content : url("img/mobile-menu.svg");
+            width   : 16px;
+            height  : 10px;
+            bottom  : 2px;
+            position: absolute;
+            left    : -47px;
+            top     : -12px;
+        }
     }
 }
 
@@ -90,6 +180,11 @@
 
     @media (max-width: 1023.5px) {
         font-size: 0;
+    }
+
+    @media (max-width: 767.5px) {
+        font-size   : 16px;
+        padding-left: 30px;
     }
 
     &::before {
@@ -106,6 +201,50 @@
             left  : 27px;
             bottom: -4px;
         }
+
+        @media (max-width: 767.5px) {
+            bottom: 2px;
+            left  : 0;
+        }
+    }
+}
+
+.header__link--login-mobile {
+    position: relative;
+
+    @media (max-width: 1023.5px) {
+        font-size: 0;
+    }
+
+    @media (max-width: 767.5px) {
+        right   : 56px;
+        position: absolute;
+        top     : 17px;
+    }
+
+    &::before {
+        content          : '';
+        position         : absolute;
+        width            : 20px;
+        height           : 22px;
+        background-image : url("img/login.svg");
+        background-repeat: no-repeat;
+        left             : -30px;
+        bottom           : 0;
+
+        @media (max-width: 1023.5px) {
+            left  : 27px;
+            bottom: -4px;
+        }
+
+        @media (max-width: 767.5px) {
+            background-image: url("img/mobile-login.svg");
+            width           : 14px;
+            height          : 16px;
+            position        : absolute;
+            right           : -104px;
+            top             : -1px;
+        }
     }
 }
 
@@ -117,4 +256,24 @@
     @media (max-width: 1023.5px) {
         margin: 0
     }
+}
+
+.header__link--close-menu {
+    display   : block;
+    background: transparent;
+    position  : relative;
+
+
+    &::before {
+        content : url("img/mobile-close.svg");
+        width   : 12px;
+        height  : 12px;
+        position: absolute;
+        right   : -143px;
+        top     : -14px;
+    }
+}
+
+.header__inner-active .header__nav {
+    display: block;
 }

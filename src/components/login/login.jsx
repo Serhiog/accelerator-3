@@ -63,11 +63,14 @@ const Login = ({ close, handleSetLogin, login }) => {
                             <input required type="password" className="login-password"  {...register("password", { required: true })} ref={passRef} />
                         </label>
                         <a className="login__password-hide" onMouseDown={handleHidePassDown} onMouseUp={handleHidePassUp}></a>
-                        <span className="login__password-text">
+                        <span className="login__password-text login__password-text--notForMobile">
                             <a href="!#" className="login__password-text-link">Забыли пароль?</a>
                         </span>
                     </div>
                     <button className="login__btn" onSubmit={handleSubmit(handleForm)}>Войти</button>
+                    <span className="login__password-text login__password-text--forMobile">
+                            <a href="!#" className="login__password-text-link">Забыли пароль?</a>
+                        </span>
                 </form>
             </div>
         </div >

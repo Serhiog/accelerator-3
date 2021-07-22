@@ -13,6 +13,11 @@
         bottom: 3%;
         left  : 47.5%
     }
+
+    @media (max-width: 767.5px) {
+        bottom: 8%;
+        left  : 41.5%;
+    }
 }
 
 .slider__dots li {
@@ -51,6 +56,10 @@
     transform              : scale(1.6);
     -webkit-font-smoothing : antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    @media (max-width: 767.5px) {
+        font-size: 4px;
+    }
 }
 
 .slider__dots li.slick-active button:before {
