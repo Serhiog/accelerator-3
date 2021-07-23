@@ -12,7 +12,7 @@ const initialState = {
   casco: false,
   insurance: false,
   login: false,
-  width: "",
+  width: ``,
   overflow: false,
 };
 
@@ -59,10 +59,6 @@ export default function rootReducer(state = initialState, action) {
     case ActionType.SET_YEARS_RANGE:
       return extend(state, {
         yearsRange: action.payload,
-      });
-    case ActionType.SET_YEARS_RANGE:
-      return extend(state, {
-        casco: action.payload,
       });
     case ActionType.SET_CASCO:
       return extend(state, {

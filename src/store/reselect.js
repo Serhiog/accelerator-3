@@ -1,6 +1,6 @@
-import { createSelector } from "reselect";
+import {createSelector} from "reselect";
 import {} from "../consts";
-import { prettify, delSpaces,setOnlyNums } from "../utils";
+import {prettify, delSpaces, setOnlyNums} from "../utils";
 
 export const getTotalPrice = (state) => {
   return state.totalPrice;
@@ -31,72 +31,73 @@ export const getCreditPeriod = (state) => {
 };
 
 export const getTotalCreditValue = createSelector(
-  getTotalPrice,
-  getCreditFirstPay,
-  getActualMotherCapital,
-  (totalPrice, firstPay, isCapital) => {
-    return !isCapital
-      ? +totalPrice - +firstPay
-      : +totalPrice - +firstPay - 470000;
-  }
+    getTotalPrice,
+    getCreditFirstPay,
+    getActualMotherCapital,
+    (totalPrice, firstPay, isCapital) => {
+      return !isCapital
+        ? +totalPrice - +firstPay
+        : +totalPrice - +firstPay - 470000;
+    }
 );
 
 export const getCreditPercent = createSelector(
-  getCreditType,
-  getTotalPrice,
-  getCreditFirstPay,
-  getActualCasco,
-  getActualInsurance,
-  (creditType, totalPrice, firstPay, casco, insurance) => {
-    if (creditType === "mortgage") {
-      const percent = totalPrice * 0.15;
-      if (+firstPay <= +percent) {
-        return 9.4;
-      } else {
-        return 8.5;
+    getCreditType,
+    getTotalPrice,
+    getCreditFirstPay,
+    getActualCasco,
+    getActualInsurance,
+    (creditType, totalPrice, firstPay, casco, insurance) => {
+      if (creditType === `mortgage`) {
+        const percent = totalPrice * 0.15;
+        if (+firstPay <= +percent) {
+          return 9.4;
+        } else {
+          return 8.5;
+        }
+      } else if (creditType === `autoCredit`) {
+        if (totalPrice >= 2000000) {
+          if (casco && insurance) {
+            return `3.5`;
+          }
+          if (casco || insurance) {
+            return `8.5`;
+          }
+          return 15;
+        }
+        if (totalPrice < 2000000) {
+          if (casco && insurance) {
+            return `3.5`;
+          }
+          if (casco || insurance) {
+            return `8.5`;
+          }
+          return 16;
+        }
       }
-    } else if (creditType === "autoCredit") {
-      if (totalPrice >= 2000000) {
-        if (casco && insurance) {
-          return "3.5";
-        }
-        if (casco || insurance) {
-          return "8.5";
-        }
-        return 15;
-      }
-      if (totalPrice < 2000000) {
-        if (casco && insurance) {
-          return "3.5";
-        }
-        if (casco || insurance) {
-          return "8.5";
-        }
-        return 16;
-      }
+      return true;
     }
-  }
 );
 
 export const getMonthPayValue = createSelector(
-  getTotalCreditValue,
-  getCreditPercent,
-  getCreditPeriod,
-  (totalPrice, percent, creditPeriod) => {
-    percent = +percent / 1200;
-    creditPeriod = creditPeriod * 12;
-    return prettify(
-      Math.round(
-        parseInt(+totalPrice * +percent) /
+    getTotalCreditValue,
+    getCreditPercent,
+    getCreditPeriod,
+    (totalPrice, percent, creditPeriod) => {
+      percent = +percent / 1200;
+      creditPeriod = creditPeriod * 12;
+      return prettify(
+          Math.round(
+              parseInt(+totalPrice * +percent, 10) /
           (1 - Math.pow(1 + +percent, -creditPeriod))
-      )
-    );
-  }
+          )
+      );
+    }
 );
 
 export const getMonthSalary = createSelector(
-  getMonthPayValue,
-  (totalMonthPay) => {
-    return prettify(Math.round(+delSpaces(setOnlyNums(totalMonthPay)) * 2.222));
-  }
+    getMonthPayValue,
+    (totalMonthPay) => {
+      return prettify(Math.round(+delSpaces(setOnlyNums(totalMonthPay)) * 2.222));
+    }
 );

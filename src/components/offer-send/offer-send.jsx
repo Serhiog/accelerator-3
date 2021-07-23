@@ -1,27 +1,27 @@
-import { connect } from "react-redux"
-import { handlePopup } from "../../store/action"
+import {connect} from "react-redux";
+import {handlePopup} from "../../store/action";
 
 
-const OfferSend = ({ close }) => {
+const OfferSend = ({close}) => {
 
-    const handleCloseBtn = () => {
-        close()
-    }
+  const handleCloseBtn = () => {
+    close();
+  };
 
-    return (
-        <div className="offer-send">
-            <div className="offer-send__inner">
-                <h4 className="offer-send__title">Спасибо за обращение в наш банк.</h4>
-                <div className="offer-send__close" onClick={handleCloseBtn}></div>
-                <p className="offer-send__text">Наш менеджер скоро свяжется с вами
+  return (
+    <div className="offer-send">
+      <div className="offer-send__inner">
+        <h4 className="offer-send__title">Спасибо за обращение в наш банк.</h4>
+        <div className="offer-send__close" onClick={handleCloseBtn}></div>
+        <p className="offer-send__text">Наш менеджер скоро свяжется с вами
                     по указанному номеру телефона.</p>
-            </div>
-        </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
 const mapStateToProps = (state) => ({
-    isPopup: state.isPopup
-})
+  isPopup: state.isPopup
+});
 
-export default connect(mapStateToProps, { handlePopup })(OfferSend)
+export default connect(mapStateToProps, {handlePopup})(OfferSend);

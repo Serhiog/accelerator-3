@@ -1,42 +1,42 @@
 import React from "react";
-import { useState } from "react";
-import { connect } from "react-redux";
-import { handleSetLogin, handleSetWindowWidth, handleBodyOverflow } from "../../store/action"
+import {useState} from "react";
+import {connect} from "react-redux";
+import {handleSetLogin, handleSetWindowWidth, handleBodyOverflow} from "../../store/action";
 
 
-const Header = ({ handleSetLogin, login, handleSetWindowWidth, handleBodyOverflow }) => {
+const Header = ({handleSetLogin, login, handleSetWindowWidth, handleBodyOverflow}) => {
 
 
   const handleLogin = (evt) => {
-    evt.preventDefault()
-    handleSetLogin(!login)
-  }
+    evt.preventDefault();
+    handleSetLogin(!login);
+  };
 
   React.useEffect(() => {
-    window.addEventListener("resize", updateWidthAndHeight);
-    handleSetWindowWidth(window.innerWidth)
-    return () => window.removeEventListener("resize", updateWidthAndHeight);
+    window.addEventListener(`resize`, updateWidthAndHeight);
+    handleSetWindowWidth(window.innerWidth);
+    return () => window.removeEventListener(`resize`, updateWidthAndHeight);
   });
 
   const updateWidthAndHeight = () => {
-    handleSetWindowWidth(window.innerWidth)
+    handleSetWindowWidth(window.innerWidth);
   };
 
-  const [menu, setMenu] = useState(false)
+  const [menu, setMenu] = useState(false);
 
   const handleBurger = () => {
-    setMenu(!menu)
-    handleBodyOverflow(!menu)
-  }
+    setMenu(!menu);
+    handleBodyOverflow(!menu);
+  };
   const handleBurgerClose = () => {
-    setMenu(false)
-    handleBodyOverflow(false)
-  }
+    setMenu(false);
+    handleBodyOverflow(false);
+  };
 
 
   return (
     <header className="header">
-      <div className={menu && "header__inner header__inner-active" || "header__inner"}>
+      <div className={menu && `header__inner header__inner-active` || `header__inner`}>
         <div className="header__logo-container">
           <button className="header__logo-btn" onClick={handleBurger}></button>
           <img src="img/logo.svg" alt="Лига БАНК" className="header__img" width={28}
@@ -70,8 +70,8 @@ const Header = ({ handleSetLogin, login, handleSetWindowWidth, handleBodyOverflo
 
 const mapStateToProps = (state) => ({
   login: state.login,
-})
+});
 
 
-export default connect(mapStateToProps, { handleSetLogin, handleSetWindowWidth, handleBodyOverflow })(Header);
+export default connect(mapStateToProps, {handleSetLogin, handleSetWindowWidth, handleBodyOverflow})(Header);
 
