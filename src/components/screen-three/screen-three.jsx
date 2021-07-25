@@ -5,7 +5,7 @@ const ScreenThree = () => {
         <div className="slider3__inner-wrapper">
           <h2 className="slider3__inner-title">Лига Банк</h2>
           <p className="slider3__inner-text">Всегда рядом</p>
-          <button className="slider__inner_btn">Найти отделение</button>
+          <button className="slider__btn">Найти отделение</button>
         </div>
       </div>
     </section>
