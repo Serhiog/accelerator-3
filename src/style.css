@@ -1889,7 +1889,7 @@ template {
   }
 }
 
-.slider__inner_btn {
+.slider__inner-btn {
   position: relative;
   background: #2c36f2;
   font-family: Roboto-Regular, Helvetica, Arial, sans-serif;
@@ -1904,7 +1904,7 @@ template {
 }
 
 @media (max-width: 1023.5px) {
-  .slider__inner_btn {
+  .slider__inner-btn {
     width: 206px;
     padding: 13px 16px;
     margin-left: 87px;
@@ -1913,7 +1913,7 @@ template {
 }
 
 @media (max-width: 767.5px) {
-  .slider__inner_btn {
+  .slider__inner-btn {
     font-size: 14px;
     width: 188px;
     padding: 16px 31px 11px 31px;
@@ -3387,7 +3387,7 @@ h1 {
           justify-content: center;
 }
 
-.__select {
+.calculator__select {
   position: relative;
   width: 100%;
   height: 40px;
@@ -3396,31 +3396,31 @@ h1 {
 }
 
 @media (max-width: 767.5px) {
-  .__select {
+  .calculator__select {
     margin-bottom: 46px;
   }
 }
 
-.__select[data-state="active"] .__select__title::before {
+.calculator__select[data-state="active"] .calculator__select__title::before {
   -webkit-transform: translate(-3px, -50%) rotate(-45deg);
           transform: translate(-3px, -50%) rotate(-45deg);
 }
 
-.__select[data-state="active"] .__select__title::after {
+.calculator__select[data-state="active"] .calculator__select__title::after {
   -webkit-transform: translate(3px, -50%) rotate(45deg);
           transform: translate(3px, -50%) rotate(45deg);
 }
 
-.__select[data-state="active"] .__select__content {
+.calculator__select[data-state="active"] .calculator__select__content {
   opacity: 1;
 }
 
-.__select[data-state="active"] .__select__label + .__select__input + .__select__label {
+.calculator__select[data-state="active"] .calculator__select__label + .calculator__select__input + .calculator__select__label {
   max-height: 40px;
   border-top-width: 1px;
 }
 
-.__select__title {
+.calculator__select__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3439,7 +3439,7 @@ h1 {
   cursor: pointer;
 }
 
-.__select__title::before, .__select__title::after {
+.calculator__select__title::before, .calculator__select__title::after {
   content: "";
   position: absolute;
   top: 70%;
@@ -3454,19 +3454,19 @@ h1 {
           transform: translate(-3px, -50%) rotate(45deg);
 }
 
-.__select__title::after {
+.calculator__select__title::after {
   -webkit-transform: translate(3px, -50%) rotate(-45deg);
           transform: translate(3px, -50%) rotate(-45deg);
 }
 
 @media (max-width: 767.5px) {
-  .__select__title::after {
+  .calculator__select__title::after {
     top: 71%;
     right: 16px;
   }
 }
 
-.__select__title:hover {
+.calculator__select__title:hover {
   opacity: 0.8;
 }
 
@@ -3492,7 +3492,7 @@ h1 {
   opacity: 0.8;
 }
 
-.__select__content {
+.calculator__select__content {
   position: absolute;
   top: 52px;
   display: -webkit-box;
@@ -3514,20 +3514,20 @@ h1 {
   z-index: 8;
 }
 
-.__select__input {
+.calculator__select__input {
   display: none;
 }
 
-.__select__input:checked + label {
+.calculator__select__input:checked + label {
   background-color: #dedede;
 }
 
-.__select__input:disabled + label {
+.calculator__select__input:disabled + label {
   opacity: 0.6;
   pointer-events: none;
 }
 
-.__select__label {
+.calculator__select__label {
   font-family: Roboto-Regular, Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: #1F1E25;
@@ -3546,11 +3546,11 @@ h1 {
   overflow: hidden;
 }
 
-.__select__label + input + .__select__label {
+.calculator__select__label + input + .calculator__select__label {
   border-top: 0 solid #C7CCD160;
 }
 
-.__select__label:hover {
+.calculator__select__label:hover {
   opacity: 0.8;
 }
 
@@ -3599,38 +3599,38 @@ h1 {
   }
 }
 
-.__select__title {
+.calculator__select__title {
   padding: 28px 23px;
   border-radius: 5px;
 }
 
 @media (max-width: 767.5px) {
-  .__select__title {
+  .calculator__select__title {
     padding: 28px 13px;
     border-radius: 5px;
     letter-spacing: 0.1px;
   }
 }
 
-.__select__title::after {
+.calculator__select__title::after {
   top: 72%;
   right: 24px;
 }
 
 @media (max-width: 767.5px) {
-  .__select__title::after {
+  .calculator__select__title::after {
     top: 74%;
     right: 17px;
   }
 }
 
-.__select__title::before {
+.calculator__select__title::before {
   top: 70%;
   right: 25px;
 }
 
 @media (max-width: 767.5px) {
-  .__select__title::before {
+  .calculator__select__title::before {
     top: 74%;
     right: 17px;
   }

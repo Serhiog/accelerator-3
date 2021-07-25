@@ -33,13 +33,13 @@ const StepOne = ({handleSetCreditType, handleResetInitialValuesMortgage, handleR
   return (
     <>
 
-      <div className="__select" data-state="" ref={select}>
-        <div className="__select__title" data-default="Option 0" onClick={handleSelect} ref={titleRef}>Выберите цель кредита</div>
-        <div className="__select__content">
-          <input id="singleSelect1" className="__select__input" type="radio" name="singleSelect" />
-          <label htmlFor="singleSelect1" className="__select__label" data-name="mortgage" onClick={handleLabel}>Ипотечное кредитование</label>
-          <input id="singleSelect2" className="__select__input" type="radio" name="singleSelect" />
-          <label htmlFor="singleSelect2" className="__select__label" onClick={handleLabel} data-name="autoCredit">Автомобильное кредитование</label>
+      <div className="calculator__select" data-state="" ref={select}>
+        <div className="calculator__select__title" data-default="Option 0" onClick={handleSelect} ref={titleRef}>Выберите цель кредита</div>
+        <div className="calculator__select__content">
+          <input id="singleSelect1" className="calculator__select__input" type="radio" name="singleSelect" />
+          <label htmlFor="singleSelect1" className="calculator__select__label" data-name="mortgage" onClick={handleLabel}>Ипотечное кредитование</label>
+          <input id="singleSelect2" className="calculator__select__input" type="radio" name="singleSelect" />
+          <label htmlFor="singleSelect2" className="calculator__select__label" onClick={handleLabel} data-name="autoCredit">Автомобильное кредитование</label>
         </div>
       </div>
     </>
