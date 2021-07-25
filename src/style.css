@@ -1889,7 +1889,7 @@ template {
   }
 }
 
-.slider__inner-btn {
+.slider__inner_btn {
   position: relative;
   background: #2c36f2;
   font-family: Roboto-Regular, Helvetica, Arial, sans-serif;
@@ -1904,7 +1904,7 @@ template {
 }
 
 @media (max-width: 1023.5px) {
-  .slider__inner-btn {
+  .slider__inner_btn {
     width: 206px;
     padding: 13px 16px;
     margin-left: 87px;
@@ -1913,7 +1913,7 @@ template {
 }
 
 @media (max-width: 767.5px) {
-  .slider__inner-btn {
+  .slider__inner_btn {
     font-size: 14px;
     width: 188px;
     padding: 16px 31px 11px 31px;
