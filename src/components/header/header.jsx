@@ -42,7 +42,7 @@ const Header = ({handleSetLogin, login, handleSetWindowWidth, handleBodyOverflow
           <img src="img/logo.svg" alt="Лига БАНК" className="header__img" width={28}
             height={25} />
           <p className="header__logo-text">ЛИГА Банк</p>
-          <div className=" header__nav-item--enter header__nav-item--mobile">
+          <div className="header__nav-item-mobile">
             {!menu ? <a href="/login" className="header__link header__link--login-mobile" onClick={handleLogin}>Войти в Интернет-банк</a> : <button className="header__link header__link--close-menu" onClick={handleBurgerClose}></button>}
           </div>
         </div>

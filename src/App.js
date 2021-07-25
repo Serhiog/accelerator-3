@@ -7,7 +7,7 @@ import Services from "./components/services/services";
 import MapSection from "./components/map/map";
 import Calculator from "./components/calculator/calculator";
 import OfferSend from "./components/offer-send/offer-send";
-import {connect} from "react-redux";
+import {connect} from "react-redux"
 import Login from "./components/login/login";
 import ReactBody from "react-body";
 
@@ -33,7 +33,7 @@ const App = ({isPopup, login, overflow}) => {
           overlayStyle={{background: `rgba(0, 0, 0, .5)`}}
           open={login}
           lockScroll={true}
-          closeOnDocumentClick={false}
+          closeOnDocumentClick={true}
         >
           {(close) => <Login close={close} />}
         </Popup>

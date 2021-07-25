@@ -24,8 +24,14 @@
     }
 }
 
-.header__nav-item--mobile {
-    display: none;
+
+.header__nav-item-mobile {
+    margin-left: auto;
+    display    : none;
+
+    @media (max-width: 1023.5px) {
+        margin: 0
+    }
 
     @media (max-width: 767.5px) {
         display: block;
@@ -247,8 +253,6 @@
         }
     }
 }
-
-.header__nav-item--contacts {}
 
 .header__nav-item--enter {
     margin-left: auto;

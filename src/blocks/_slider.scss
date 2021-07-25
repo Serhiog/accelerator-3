@@ -1,4 +1,4 @@
-.slider__dots {
+.slider {
     bottom    : -25px;
     display   : block;
     padding   : 0;
@@ -20,7 +20,7 @@
     }
 }
 
-.slider__dots li {
+.slider li {
     position: relative;
     display : inline-block;
     width   : 16px;
@@ -29,7 +29,7 @@
     cursor  : pointer;
 }
 
-.slider__dots li button {
+.slider li button {
     font-size  : 0;
     line-height: 0;
     display    : block;
@@ -43,7 +43,7 @@
     background : transparent;
 }
 
-.slider__dots li button:before {
+.slider li button:before {
     font-family            : 'slick';
     font-size              : 6px;
     line-height            : 20px;
@@ -62,7 +62,7 @@
     }
 }
 
-.slider__dots li.slick-active button:before {
+.slider li.slick-active button:before {
     color: #F6F7FF
 }
 

@@ -40,14 +40,14 @@
     transition      : all 0.3s ease-out;
 }
 
-.services-list-item-link {
+.services-link {
     color       : #4C4B51;
     padding-left: 45px;
     display     : block;
     padding     : 37px 0;
 }
 
-.services-list-link--deposits {
+.services-link--deposits {
     position    : relative;
     padding-left: 45px;
 
@@ -60,7 +60,7 @@
     }
 }
 
-.services-list-link--credits {
+.services-link--credits {
     position    : relative;
     padding-left: 45px;
 
@@ -73,7 +73,7 @@
     }
 }
 
-.services-list-link--insurance {
+.services-link--insurance {
     position    : relative;
     padding-left: 40px;
 
@@ -86,7 +86,7 @@
     }
 }
 
-.services-list-link--online {
+.services-link--online {
     position    : relative;
     padding-left: 30px;
 

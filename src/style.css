@@ -467,12 +467,19 @@ template {
   }
 }
 
-.header__nav-item--mobile {
+.header__nav-item-mobile {
+  margin-left: auto;
   display: none;
 }
 
+@media (max-width: 1023.5px) {
+  .header__nav-item-mobile {
+    margin: 0;
+  }
+}
+
 @media (max-width: 767.5px) {
-  .header__nav-item--mobile {
+  .header__nav-item-mobile {
     display: block;
   }
 }
@@ -1556,7 +1563,7 @@ template {
   }
 }
 
-.slider__dots {
+.slider {
   bottom: -25px;
   display: block;
   padding: 0;
@@ -1569,20 +1576,20 @@ template {
 }
 
 @media (max-width: 1023.5px) {
-  .slider__dots {
+  .slider {
     bottom: 3%;
     left: 47.5%;
   }
 }
 
 @media (max-width: 767.5px) {
-  .slider__dots {
+  .slider {
     bottom: 8%;
     left: 41.5%;
   }
 }
 
-.slider__dots li {
+.slider li {
   position: relative;
   display: inline-block;
   width: 16px;
@@ -1591,7 +1598,7 @@ template {
   cursor: pointer;
 }
 
-.slider__dots li button {
+.slider li button {
   font-size: 0;
   line-height: 0;
   display: block;
@@ -1605,7 +1612,7 @@ template {
   background: transparent;
 }
 
-.slider__dots li button:before {
+.slider li button:before {
   font-family: 'slick';
   font-size: 6px;
   line-height: 20px;
@@ -1622,12 +1629,12 @@ template {
 }
 
 @media (max-width: 767.5px) {
-  .slider__dots li button:before {
+  .slider li button:before {
     font-size: 4px;
   }
 }
 
-.slider__dots li.slick-active button:before {
+.slider li.slick-active button:before {
   color: #F6F7FF;
 }
 
@@ -1882,7 +1889,7 @@ template {
   }
 }
 
-.slider__inner-btn {
+.slider__inner_btn {
   position: relative;
   background: #2c36f2;
   font-family: Roboto-Regular, Helvetica, Arial, sans-serif;
@@ -1897,7 +1904,7 @@ template {
 }
 
 @media (max-width: 1023.5px) {
-  .slider__inner-btn {
+  .slider__inner_btn {
     width: 206px;
     padding: 13px 16px;
     margin-left: 87px;
@@ -1906,7 +1913,7 @@ template {
 }
 
 @media (max-width: 767.5px) {
-  .slider__inner-btn {
+  .slider__inner_btn {
     font-size: 14px;
     width: 188px;
     padding: 16px 31px 11px 31px;
@@ -1976,55 +1983,55 @@ template {
   transition: all 0.3s ease-out;
 }
 
-.services-list-item-link {
+.services-link {
   color: #4C4B51;
   padding-left: 45px;
   display: block;
   padding: 37px 0;
 }
 
-.services-list-link--deposits {
+.services-link--deposits {
   position: relative;
   padding-left: 45px;
 }
 
-.services-list-link--deposits::before {
+.services-link--deposits::before {
   content: url("img/deposits.svg");
   position: absolute;
   left: 91px;
   top: 30px;
 }
 
-.services-list-link--credits {
+.services-link--credits {
   position: relative;
   padding-left: 45px;
 }
 
-.services-list-link--credits::before {
+.services-link--credits::before {
   content: url("img/credits.svg");
   position: absolute;
   left: 87px;
   top: 30px;
 }
 
-.services-list-link--insurance {
+.services-link--insurance {
   position: relative;
   padding-left: 40px;
 }
 
-.services-list-link--insurance::before {
+.services-link--insurance::before {
   content: url("img/insuranse.svg");
   position: absolute;
   left: 73px;
   top: 29px;
 }
 
-.services-list-link--online {
+.services-link--online {
   position: relative;
   padding-left: 30px;
 }
 
-.services-list-link--online::before {
+.services-link--online::before {
   content: url("img/online.svg");
   position: absolute;
   left: 60px;
