@@ -1,12 +1,13 @@
-import {useState} from "react";
-import {YMaps, Map, Placemark} from "react-yandex-maps";
-import {cities} from "../../consts";
+import { useState } from "react";
+import { YMaps, Map, Placemark } from "react-yandex-maps";
+import { cities } from "../../consts";
 import point from "../../img/point.svg";
 import ScrollableAnchor from 'react-scrollable-anchor';
-import {connect} from "react-redux";
-import {useEffect} from "react";
+import { connect } from "react-redux";
+import { useEffect } from "react";
 
-const MapSection = ({width}) => {
+
+const MapSection = ({ width }) => {
 
   const [mapWidth, setMapWidth] = useState();
   const [mapHeight, setMapHeight] = useState();
@@ -30,7 +31,10 @@ const MapSection = ({width}) => {
           <h3 className="map__title">Отделения Лига Банка</h3>
           <YMaps>
             <Map
-              defaultState={{center: [53.870727, 54.903465], zoom: 5}} width={mapWidth} height={mapHeight} >
+              defaultState={{ center: [53.870727, 54.903465], zoom: 5 }}
+              width={mapWidth}
+              height={mapHeight}
+            >
               {cities.map((coordinate, i) => {
                 return <Placemark key={i} geometry={coordinate}
 
