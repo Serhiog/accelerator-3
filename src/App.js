@@ -2,17 +2,17 @@ import React, { Suspense, lazy } from "react";
 import Popup from "reactjs-popup";
 import Footer from "./components/footer/footer";
 import Services from "./components/services/services";
-import MapSection from "./components/map/map";
 import Calculator from "./components/calculator/calculator";
 import OfferSend from "./components/offer-send/offer-send";
 import { connect } from "react-redux";
 import Login from "./components/login/login";
 import ReactBody from "react-body";
 import Loader from "./components/loader/loader";
+import Header from "./components/header/header";
 
 const App = ({ isPopup, login, overflow }) => {
-  const LazyComponentHeder = lazy(() => import("./components/header/header"));
   const LazyComponentSlider = lazy(() => import("./components/slider/slider"));
+  const LazyComponentMap = lazy(() => import("./components/map/map"));
 
   return (
     <>
@@ -40,14 +40,17 @@ const App = ({ isPopup, login, overflow }) => {
           {(close) => <Login close={close} />}
         </Popup>
       )}
+
+      <Header />
       <Suspense fallback={<Loader />}>
-        <LazyComponentHeder />
         <LazyComponentSlider />
-        <Services />
-        <Calculator />
-        <MapSection />
-        <Footer />
       </Suspense>
+      <Services />
+      <Calculator />
+      <Suspense fallback={<Loader />}>
+        <LazyComponentMap />
+      </Suspense>
+      <Footer />
     </>
   );
 };
