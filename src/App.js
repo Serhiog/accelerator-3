@@ -1,17 +1,19 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import Popup from "reactjs-popup";
-import Header from "./components/header/header";
-import Slider from "./components/slider/slider";
 import Footer from "./components/footer/footer";
 import Services from "./components/services/services";
-import MapContainer from "./components/map-container/map-container";
+import MapSection from "./components/map/map";
 import Calculator from "./components/calculator/calculator";
 import OfferSend from "./components/offer-send/offer-send";
 import { connect } from "react-redux";
 import Login from "./components/login/login";
 import ReactBody from "react-body";
+import Loader from "./components/loader/loader";
 
 const App = ({ isPopup, login, overflow }) => {
+  const LazyComponentHeder = lazy(() => import("./components/header/header"));
+  const LazyComponentSlider = lazy(() => import("./components/slider/slider"));
+
   return (
     <>
       <ReactBody className="inverted" if={overflow} />
@@ -38,12 +40,14 @@ const App = ({ isPopup, login, overflow }) => {
           {(close) => <Login close={close} />}
         </Popup>
       )}
-      <Header />
-      <Slider />
-      <Services />
-      <Calculator />
-      <MapContainer />
-      <Footer />
+      <Suspense fallback={<Loader />}>
+        <LazyComponentHeder />
+        <LazyComponentSlider />
+        <Services />
+        <Calculator />
+        <MapSection />
+        <Footer />
+      </Suspense>
     </>
   );
 };

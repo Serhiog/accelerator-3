@@ -4618,4 +4618,13 @@ h1 {
     margin-top: -6px;
   }
 }
+
+.loader__inner {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.loader__inner {
+  width: 400px;
+}
 /*# sourceMappingURL=style.css.map */
