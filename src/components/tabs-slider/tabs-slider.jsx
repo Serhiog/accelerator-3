@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import SliderCarousel from "react-slick";
 import { useEffect, useState } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 const TabsSlider = ({ width }) => {
 
@@ -51,6 +52,10 @@ const TabsSlider = ({ width }) => {
       </div>
     </SliderCarousel>
   );
+};
+
+TabsSlider.propTypes = {
+  width: PropTypes.any,
 };
 
 

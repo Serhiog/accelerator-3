@@ -2,10 +2,12 @@ import {connect} from "react-redux";
 import {getTotalCreditValue, getCreditPercent, getMonthPayValue, getMonthSalary} from "../../store/reselect";
 import OfferSucces from "../offer-succes/offer-succes";
 import OfferError from "../offer-error/offer-error";
+import { creditTypes } from "../../consts";
+import PropTypes from "prop-types";
 
 const Offer = ({finalPriceValue, percent, monthPayValue, monthSalary, setFinalStep, finalStep, setCountForm, countForm, creditType}) => {
 
-  if (creditType === `mortgage` && finalPriceValue < 500000 || creditType === `autoCredit` && finalPriceValue < 200000) {
+  if (creditType === creditTypes.mortgage && finalPriceValue < 500000 || creditType === creditTypes.auto && finalPriceValue < 200000) {
     return (
       <div className="offer">
         <div className="offer__inner">
@@ -22,6 +24,18 @@ const Offer = ({finalPriceValue, percent, monthPayValue, monthSalary, setFinalSt
     </div >);
 
 
+};
+
+Offer.propTypes = {
+  finalPriceValue: PropTypes.any,
+  percent: PropTypes.any,
+  monthPayValue: PropTypes.any,
+  monthSalary: PropTypes.any,
+  setFinalStep: PropTypes.any,
+  finalStep: PropTypes.any,
+  setCountForm: PropTypes.any,
+  countForm: PropTypes.any,
+  creditType: PropTypes.any,
 };
 
 const mapStateToProps = (state) => ({

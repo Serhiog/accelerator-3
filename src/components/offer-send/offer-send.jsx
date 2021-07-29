@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import {handlePopup} from "../../store/action";
-
+import PropTypes from "prop-types";
 
 const OfferSend = ({close}) => {
 
@@ -19,6 +19,13 @@ const OfferSend = ({close}) => {
     </div>
   );
 };
+
+
+
+OfferSend.propTypes = {
+  close: PropTypes.any,
+};
+
 
 const mapStateToProps = (state) => ({
   isPopup: state.isPopup

@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { connect } from "react-redux";
 import { handleSetLogin, handleSetWindowWidth, handleBodyOverflow } from "../../store/action";
+import PropTypes from "prop-types";
 
 const Header = ({ handleSetLogin, login, handleSetWindowWidth, handleBodyOverflow }) => {
 
@@ -64,6 +65,13 @@ const Header = ({ handleSetLogin, login, handleSetWindowWidth, handleBodyOverflo
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  handleSetLogin: PropTypes.any,
+  login: PropTypes.any,
+  handleSetWindowWidth: PropTypes.any,
+  handleBodyOverflow: PropTypes.any,
 };
 
 const mapStateToProps = (state) => ({

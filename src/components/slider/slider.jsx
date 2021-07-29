@@ -8,6 +8,7 @@ import ScreenThree from "../screen-three/screen-three";
 import { useState } from "react";
 import { useEffect } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 const Slider = ({ width }) => {
 
@@ -53,6 +54,11 @@ const Slider = ({ width }) => {
     </SliderCarousel>
   );
 };
+
+Slider.propTypes = {
+  width: PropTypes.any,
+};
+
 
 const mapStateToProps = (state) => ({
   width: state.width,

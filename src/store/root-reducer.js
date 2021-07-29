@@ -1,4 +1,4 @@
-import { ActionType } from "../store/action";
+import { ActionType } from "./action";
 import { extend } from "../utils";
 
 const initialState = {

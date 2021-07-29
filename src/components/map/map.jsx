@@ -5,6 +5,7 @@ import point from "../../img/point.svg";
 import ScrollableAnchor from 'react-scrollable-anchor';
 import { connect } from "react-redux";
 import { useEffect } from "react";
+import PropTypes from "prop-types";
 
 
 const MapSection = ({ width }) => {
@@ -53,6 +54,10 @@ const MapSection = ({ width }) => {
       </section>
     </ScrollableAnchor >
   );
+};
+
+MapSection.propTypes = {
+  width: PropTypes.any,
 };
 
 

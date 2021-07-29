@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const ServicesList = ({ setActiveTab, activeTab }) => {
 
   const handleTab = (evt) => {
@@ -26,5 +28,11 @@ const ServicesList = ({ setActiveTab, activeTab }) => {
     </section>
   );
 };
+
+ServicesList.propTypes = {
+  setActiveTab: PropTypes.any,
+  activeTab: PropTypes.any,
+};
+
 
 export default ServicesList;

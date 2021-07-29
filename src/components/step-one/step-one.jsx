@@ -1,8 +1,10 @@
-import {useRef} from "react";
-import {connect} from "react-redux";
-import {handleSetCreditType, handleResetInitialValuesMortgage, handleResetInitialValuesAutoCredit} from "../../store/action";
+import { useRef } from "react";
+import { connect } from "react-redux";
+import { creditTypes } from "../../consts";
+import { handleSetCreditType, handleResetInitialValuesMortgage, handleResetInitialValuesAutoCredit } from "../../store/action";
+import PropTypes from "prop-types";
 
-const StepOne = ({handleSetCreditType, handleResetInitialValuesMortgage, handleResetInitialValuesAutoCredit}) => {
+const StepOne = ({ handleSetCreditType, handleResetInitialValuesMortgage, handleResetInitialValuesAutoCredit }) => {
 
   const select = useRef();
   const titleRef = useRef();
@@ -18,9 +20,9 @@ const StepOne = ({handleSetCreditType, handleResetInitialValuesMortgage, handleR
   const handleLabel = (evt) => {
     const typeCredit = evt.target.dataset.name;
 
-    if (typeCredit === `mortgage`) {
+    if (typeCredit === creditTypes.mortgage) {
       handleResetInitialValuesMortgage();
-    } else if (typeCredit === `autoCredit`) {
+    } else if (typeCredit === creditTypes.auto) {
       handleResetInitialValuesAutoCredit();
     }
     handleSetCreditType(typeCredit);
@@ -46,8 +48,15 @@ const StepOne = ({handleSetCreditType, handleResetInitialValuesMortgage, handleR
   );
 };
 
+StepOne.propTypes = {
+  handleSetCreditType: PropTypes.any,
+  handleResetInitialValuesMortgage: PropTypes.any,
+  handleResetInitialValuesAutoCredit: PropTypes.any,
+};
+
+
 const mapStateToProps = (state) => ({
   creditType: state.creditType
 });
 
-export default connect(mapStateToProps, {handleSetCreditType, handleResetInitialValuesMortgage, handleResetInitialValuesAutoCredit})(StepOne);
+export default connect(mapStateToProps, { handleSetCreditType, handleResetInitialValuesMortgage, handleResetInitialValuesAutoCredit })(StepOne);

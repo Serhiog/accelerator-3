@@ -1,6 +1,8 @@
-import {prettify} from "../../utils";
+import { creditTypes } from "../../consts";
+import { prettify } from "../../utils";
+import PropTypes from "prop-types";
 
-const OfferSucces = ({finalPriceValue, percent, monthPayValue, monthSalary, setFinalStep, finalStep, setCountForm, countForm, creditType}) => {
+const OfferSucces = ({ finalPriceValue, percent, monthPayValue, monthSalary, setFinalStep, finalStep, setCountForm, countForm, creditType }) => {
 
   const handleSubmitBtn = () => {
     setFinalStep(!finalStep);
@@ -13,11 +15,11 @@ const OfferSucces = ({finalPriceValue, percent, monthPayValue, monthSalary, setF
       <ul className="offer__list">
         <li className="offer__item offer__item--1">
           <span className="offer__item-numer">{prettify(finalPriceValue)}</span>
-          <span className="offer__item-about">Сумма {creditType === `mortgage` && `ипотеки` || creditType === `autoCredit` && `автокредита`}</span>
+          <span className="offer__item-about">Сумма {creditType === creditTypes.mortgage && `ипотеки` || creditType === creditTypes.auto && `автокредита`}</span>
         </li>
         <li className="offer__item offer__item--2">
           <span className="offer__item-numer">
-            {creditType === `mortgage` && percent + `0 %` || creditType === `autoCredit` && percent + `%`}
+            {creditType === creditTypes.mortgage && percent + `0 %` || creditType === creditTypes.auto && percent + `%`}
           </span>
           <span className="offer__item-about">Процентная ставка</span>
         </li>
@@ -39,5 +41,16 @@ const OfferSucces = ({finalPriceValue, percent, monthPayValue, monthSalary, setF
   );
 };
 
+OfferSucces.propTypes = {
+  finalPriceValue: PropTypes.any,
+  percent: PropTypes.any,
+  monthPayValue: PropTypes.any,
+  monthSalary: PropTypes.any,
+  setFinalStep: PropTypes.any,
+  finalStep: PropTypes.any,
+  setCountForm: PropTypes.any,
+  countForm: PropTypes.any,
+  creditType: PropTypes.any,
+};
 
 export default OfferSucces;

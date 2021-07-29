@@ -4,6 +4,7 @@ import loginLogo from "../../img/login-logo.png";
 import {useForm} from "react-hook-form";
 import useLocalStorage from 'react-use-localstorage';
 import {useEffect, useRef} from "react";
+import PropTypes from "prop-types";
 
 const Login = ({close, handleSetLogin, login}) => {
 
@@ -75,6 +76,12 @@ const Login = ({close, handleSetLogin, login}) => {
       </div>
     </div >
   );
+};
+
+Login.propTypes = {
+  close: PropTypes.any,
+  handleSetLogin: PropTypes.any,
+  login: PropTypes.any,
 };
 
 const mapStateToProps = (state) => ({
