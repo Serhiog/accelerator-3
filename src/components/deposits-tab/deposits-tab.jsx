@@ -1,3 +1,5 @@
+import React from "react";
+
 const DepositsTab = () => {
   return (
     <section className="deposit">

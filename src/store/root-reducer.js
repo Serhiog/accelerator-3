@@ -1,5 +1,5 @@
-import { ActionType } from "./action";
-import { extend } from "../utils";
+import {ActionType} from "./action";
+import {extend} from "../utils";
 
 const initialState = {
   creditType: null,

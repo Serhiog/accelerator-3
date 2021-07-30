@@ -1,3 +1,5 @@
+import React from "react";
+
 const InsuranceTab = () => {
   return (
     <section className="insurance">

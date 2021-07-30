@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 import {handlePopup} from "../../store/action";
 import PropTypes from "prop-types";
-
+import React from "react";
 const OfferSend = ({close}) => {
 
   const handleCloseBtn = () => {
@@ -19,7 +19,6 @@ const OfferSend = ({close}) => {
     </div>
   );
 };
-
 
 
 OfferSend.propTypes = {

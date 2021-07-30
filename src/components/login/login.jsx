@@ -5,8 +5,9 @@ import {useForm} from "react-hook-form";
 import useLocalStorage from 'react-use-localstorage';
 import {useEffect, useRef} from "react";
 import PropTypes from "prop-types";
+import React from "react";
 
-const Login = ({close, handleSetLogin, login}) => {
+const Login = ({close, login}) => {
 
   const {register, handleSubmit} = useForm();
   const [name, setName] = useLocalStorage(`dataLogin`, JSON.stringify(`Initial Value`));
@@ -58,7 +59,7 @@ const Login = ({close, handleSetLogin, login}) => {
                         Логин
             <input required type="text" className="login__login" {...register(`login`, {required: true})} ref={loginRef} />
           </label>
-          <div className="login__password-wrapper" >
+          <div data-name={name} className="login__password-wrapper" >
             <label className="login__password-label" >
                             Пароль
               <input required type="password" className="login-password" {...register(`password`, {required: true})} ref={passRef} />

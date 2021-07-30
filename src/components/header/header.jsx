@@ -1,10 +1,10 @@
 import React from "react";
-import { useState } from "react";
-import { connect } from "react-redux";
-import { handleSetLogin, handleSetWindowWidth, handleBodyOverflow } from "../../store/action";
+import {useState} from "react";
+import {connect} from "react-redux";
+import {handleSetLogin, handleSetWindowWidth, handleBodyOverflow} from "../../store/action";
 import PropTypes from "prop-types";
 
-const Header = ({ handleSetLogin, login, handleSetWindowWidth, handleBodyOverflow }) => {
+const Header = ({login, handleSetWindowWidth, handleSetLogin, handleBodyOverflow}) => {
 
   const handleLogin = (evt) => {
     evt.preventDefault();
@@ -79,4 +79,4 @@ const mapStateToProps = (state) => ({
 });
 
 
-export default connect(mapStateToProps, { handleSetLogin, handleSetWindowWidth, handleBodyOverflow })(Header);
+export default connect(mapStateToProps, {handleSetLogin, handleSetWindowWidth, handleBodyOverflow})(Header);

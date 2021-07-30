@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import { connect } from "react-redux";
-import { prettify, delSpaces, setOnlyNums, percentage, prettifyYears } from "../../utils";
-import { handleSetTotalPrice, handleFirstPayDeal, handleMotherCapital, handlePercentRange, handleYearsRange, handleSetCasco, handleSetInsurance } from "../../store/action";
-import { creditTypes } from "../../consts";
+import {useEffect, useState} from "react";
+import {connect} from "react-redux";
+import {prettify, delSpaces, setOnlyNums, percentage, prettifyYears} from "../../utils";
+import {handleSetTotalPrice, handleFirstPayDeal, handleMotherCapital, handlePercentRange, handleYearsRange, handleSetCasco, handleSetInsurance} from "../../store/action";
+import {creditTypes} from "../../consts";
 import PropTypes from "prop-types";
-
-const StepTwo = ({ handleSetTotalPrice, handleFirstPayDeal, totalPrice, firstPay, handleMotherCapital, creditType, percentRange, handlePercentRange, yearsRange, handleYearsRange, handleSetInsurance, handleSetCasco }) => {
+import React from "react";
+const StepTwo = ({totalPrice, firstPay, creditType, percentRange, yearsRange, handleSetTotalPrice, handleFirstPayDeal, handleMotherCapital, handlePercentRange, handleYearsRange, handleSetCasco, handleSetInsurance}) => {
 
 
   const [initilCost, setinitilCost] = useState(2000000);
@@ -131,17 +131,17 @@ const StepTwo = ({ handleSetTotalPrice, handleFirstPayDeal, totalPrice, firstPay
     handleSetInsurance(!insurance);
   };
 
-  const [focused, setFocused] = useState(false)
-  const onFocus = () => setFocused(true)
-  const onBlur = () => setFocused(false)
+  const [focused, setFocused] = useState(false);
+  const onFocus = () => setFocused(true);
+  const onBlur = () => setFocused(false);
 
-  const [focusedPay, setFocusedPay] = useState(false)
-  const onFocusPay = () => setFocusedPay(true)
-  const onBlurPay = () => setFocusedPay(false)
+  const [focusedPay, setFocusedPay] = useState(false);
+  const onFocusPay = () => setFocusedPay(true);
+  const onBlurPay = () => setFocusedPay(false);
 
-  const [focusedYear, setFocusedYear] = useState(false)
-  const onFocusYear = () => setFocusedYear(true)
-  const onBlurYear = () => setFocusedYear(false)
+  const [focusedYear, setFocusedYear] = useState(false);
+  const onFocusYear = () => setFocusedYear(true);
+  const onBlurYear = () => setFocusedYear(false);
 
   return (
     <>
@@ -207,7 +207,7 @@ const StepTwo = ({ handleSetTotalPrice, handleFirstPayDeal, totalPrice, firstPay
 };
 
 StepTwo.propTypes = {
-  handleSetTotalPrice: PropTypes.any,
+  creditType: PropTypes.any,
   handleFirstPayDeal: PropTypes.any,
   totalPrice: PropTypes.any,
   firstPay: PropTypes.any,
@@ -229,4 +229,4 @@ const mapStateToProps = (state) => ({
   yearsRange: state.yearsRange,
 });
 
-export default connect(mapStateToProps, { handleSetTotalPrice, handleFirstPayDeal, handleMotherCapital, handlePercentRange, handleYearsRange, handleSetCasco, handleSetInsurance })(StepTwo);
+export default connect(mapStateToProps, {handleSetTotalPrice, handleFirstPayDeal, handleMotherCapital, handlePercentRange, handleYearsRange, handleSetCasco, handleSetInsurance})(StepTwo);

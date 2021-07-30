@@ -2,9 +2,9 @@ import {connect} from "react-redux";
 import {getTotalCreditValue, getCreditPercent, getMonthPayValue, getMonthSalary} from "../../store/reselect";
 import OfferSucces from "../offer-succes/offer-succes";
 import OfferError from "../offer-error/offer-error";
-import { creditTypes } from "../../consts";
+import {creditTypes} from "../../consts";
 import PropTypes from "prop-types";
-
+import React from "react";
 const Offer = ({finalPriceValue, percent, monthPayValue, monthSalary, setFinalStep, finalStep, setCountForm, countForm, creditType}) => {
 
   if (creditType === creditTypes.mortgage && finalPriceValue < 500000 || creditType === creditTypes.auto && finalPriceValue < 200000) {

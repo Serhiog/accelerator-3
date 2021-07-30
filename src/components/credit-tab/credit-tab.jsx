@@ -1,3 +1,5 @@
+import React from "react";
+
 const CreditTab = () => {
   return (
     <section className="credit">

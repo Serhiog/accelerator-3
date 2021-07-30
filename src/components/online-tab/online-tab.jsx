@@ -1,3 +1,5 @@
+import React from "react";
+
 const OnlineTab = () => {
   return (
     <section className="online">

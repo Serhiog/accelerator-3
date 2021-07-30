@@ -1,18 +1,19 @@
-import React, { Suspense, lazy } from "react";
+import React, {Suspense, lazy} from "react";
 import Popup from "reactjs-popup";
 import Footer from "./components/footer/footer";
 import Services from "./components/services/services";
 import Calculator from "./components/calculator/calculator";
 import OfferSend from "./components/offer-send/offer-send";
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import Login from "./components/login/login";
 import ReactBody from "react-body";
 import Loader from "./components/loader/loader";
 import Header from "./components/header/header";
+import PropTypes from "prop-types";
 
-const App = ({ isPopup, login, overflow }) => {
-  const LazyComponentSlider = lazy(() => import("./components/slider/slider"));
-  const LazyComponentMap = lazy(() => import("./components/map/map"));
+const App = ({isPopup, login, overflow}) => {
+  const LazyComponentSlider = lazy(() => import(`./components/slider/slider`));
+  const LazyComponentMap = lazy(() => import(`./components/map/map`));
 
   return (
     <>
@@ -20,8 +21,8 @@ const App = ({ isPopup, login, overflow }) => {
       {isPopup && (
         <Popup
           position="right center"
-          overlayStyle={{ background: `rgba(0, 0, 0, .5)` }}
-          contentStyle={{ width: `500px` }}
+          overlayStyle={{background: `rgba(0, 0, 0, .5)`}}
+          contentStyle={{width: `500px`}}
           open={isPopup}
           lockScroll={true}
           closeOnDocumentClick={true}
@@ -32,7 +33,7 @@ const App = ({ isPopup, login, overflow }) => {
       {login && (
         <Popup
           position="right center"
-          overlayStyle={{ background: `rgba(0, 0, 0, .5)` }}
+          overlayStyle={{background: `rgba(0, 0, 0, .5)`}}
           open={login}
           lockScroll={true}
           closeOnDocumentClick={true}
@@ -53,6 +54,12 @@ const App = ({ isPopup, login, overflow }) => {
       <Footer />
     </>
   );
+};
+
+App.propTypes = {
+  isPopup: PropTypes.any,
+  login: PropTypes.any,
+  overflow: PropTypes.any,
 };
 
 const mapStateToProps = (state) => ({

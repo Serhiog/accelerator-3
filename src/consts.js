@@ -8,8 +8,8 @@ export const cities = [
 ];
 
 export const creditTypes = {
-  auto: "autoCredit",
-  mortgage: "mortgage",
+  auto: `autoCredit`,
+  mortgage: `mortgage`,
 };
 
 export const creditPercent = {

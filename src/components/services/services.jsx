@@ -1,10 +1,10 @@
 import ScrollableAnchor from 'react-scrollable-anchor';
 import TabsSlider from "../tabs-slider/tabs-slider";
 import OnlyTabs from "../only-tabs/only-tabs";
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import PropTypes from "prop-types";
-
-const Services = ({ width }) => {
+import React from "react";
+const Services = ({width}) => {
 
   return (
     <ScrollableAnchor id={`section1`}>

@@ -5,11 +5,12 @@ import OnlineTab from "../online-tab/online-tab";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SliderCarousel from "react-slick";
-import { useEffect, useState } from "react";
-import { connect } from "react-redux";
+import {useEffect, useState} from "react";
+import {connect} from "react-redux";
 import PropTypes from "prop-types";
+import React from "react";
 
-const TabsSlider = ({ width }) => {
+const TabsSlider = ({width}) => {
 
   const settings = {
     dots: true,
@@ -36,7 +37,7 @@ const TabsSlider = ({ width }) => {
 
   return (
     <SliderCarousel {...settings}
-      style={{ position: `relative`, width: size, margin: `0 auto`, marginBottom: `0` }}
+      style={{position: `relative`, width: size, margin: `0 auto`, marginBottom: `0`}}
     >
       <div>
         <DepositsTab />

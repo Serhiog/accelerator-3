@@ -1,3 +1,5 @@
+import React from "react";
+
 const ScreenTwo = () => {
   return (
     <section className="slider2">

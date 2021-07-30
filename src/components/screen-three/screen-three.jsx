@@ -1,3 +1,6 @@
+import React from "react";
+
+
 const ScreenThree = () => {
   return (
     <section className="slider3">

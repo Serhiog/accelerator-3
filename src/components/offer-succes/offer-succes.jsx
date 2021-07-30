@@ -1,8 +1,8 @@
-import { creditTypes } from "../../consts";
-import { prettify } from "../../utils";
+import {creditTypes} from "../../consts";
+import {prettify} from "../../utils";
 import PropTypes from "prop-types";
-
-const OfferSucces = ({ finalPriceValue, percent, monthPayValue, monthSalary, setFinalStep, finalStep, setCountForm, countForm, creditType }) => {
+import React from "react";
+const OfferSucces = ({finalPriceValue, percent, monthPayValue, monthSalary, setFinalStep, finalStep, setCountForm, countForm, creditType}) => {
 
   const handleSubmitBtn = () => {
     setFinalStep(!finalStep);

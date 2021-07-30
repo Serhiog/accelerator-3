@@ -4,7 +4,7 @@ import DepositsTab from "../deposits-tab/deposits-tab";
 import InsuranceTab from "../insurance-tab/insurance-tab";
 import OnlineTab from "../online-tab/online-tab";
 import ServicesList from "../services-list/services-list";
-
+import React from "react";
 
 const OnlyTabs = () => {
 

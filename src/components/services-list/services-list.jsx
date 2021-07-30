@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-
-const ServicesList = ({ setActiveTab, activeTab }) => {
+import React from "react";
+const ServicesList = ({setActiveTab, activeTab}) => {
 
   const handleTab = (evt) => {
     evt.preventDefault();

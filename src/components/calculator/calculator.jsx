@@ -1,13 +1,14 @@
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import StepOne from "../step-one/step-one";
 import StepTwo from "../step-two/step-two";
 import Offer from "../offer/offer";
 import FinalStep from "../final-step/final-step";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import ScrollableAnchor from 'react-scrollable-anchor';
 import PropTypes from "prop-types";
+import React from "react";
 
-const Calculator = ({ creditType, totalPrice, firstPay, creditPeriod, width }) => {
+const Calculator = ({creditType, totalPrice, firstPay, creditPeriod, width}) => {
 
   const [finalStep, setFinalStep] = useState(false);
   const [countForm, setCountForm] = useState(1);
@@ -40,9 +41,9 @@ const Calculator = ({ creditType, totalPrice, firstPay, creditPeriod, width }) =
 
   return (
     <ScrollableAnchor id={`section2`}>
-      <section className="calculator" style={{ marginBottom: margin }}>
+      <section className="calculator" style={{marginBottom: margin}}>
         <div className="calculator__inner">
-          <div className="calculator__left" style={creditType === null && { marginBottom: `0` } || creditType && { marginBottom: `40px` }}>
+          <div className="calculator__left" style={creditType === null && {marginBottom: `0`} || creditType && {marginBottom: `40px`}}>
             <h3 className="calculator__title">Кредитный калькулятор</h3>
             <p className="calculator__title-about">Шаг 1. Цель кредита</p>
             <form className="calculator__form">

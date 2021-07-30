@@ -1,7 +1,7 @@
-import { creditTypes } from "../../consts";
+import {creditTypes} from "../../consts";
 import PropTypes from "prop-types";
-
-const OfferError = ({ creditType }) => {
+import React from "react";
+const OfferError = ({creditType}) => {
   return (
     <>
       <h4 className="offer__title offer__title--error">Наш банк не выдаёт {creditType === creditTypes.mortgage && `ипотечные  кредиты ` || creditType === creditTypes.auto && `автокредиты `}
