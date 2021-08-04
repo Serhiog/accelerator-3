@@ -11,7 +11,7 @@ const OnlineTab = () => {
                             который всегда под рукой</li>
             <li className="online__inner-left-list-item">Приложение Лига-проездной позволит<br className="online__inner-left-list-item-br" /> вам оплачивать билеты по всему миру</li>
           </ul>
-          <button className="online__inner-left-btn">Узнать подробнее</button>
+          <button tabIndex="0" className="online__inner-left-btn">Узнать подробнее</button>
         </div>
         <div className="online__inner-right"></div>
       </div>

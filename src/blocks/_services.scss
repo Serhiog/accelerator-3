@@ -45,6 +45,18 @@
     padding-left: 45px;
     display     : block;
     padding     : 37px 0;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 0.4;
+    }
+
+    &:focus {
+        border: 1px solid #2C36F2;
+    }
 }
 
 .services-link--deposits {

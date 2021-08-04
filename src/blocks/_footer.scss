@@ -284,6 +284,21 @@
     }
 }
 
+
+.footer__media-link {
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 0.4;
+    }
+
+    &:focus {
+        border: 1px solid #2C36F2;
+    }
+}
+
 .footer__media-links {
     @include flex;
     justify-content: flex-start;
@@ -308,6 +323,18 @@
     color      : #1F1E25;
     white-space: nowrap;
     font-weight: 600;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 0.4;
+    }
+
+    &:focus {
+        border: 1px solid #2C36F2;
+    }
 
     @media (max-width: 1023.5px) {
         font-size: 16px;

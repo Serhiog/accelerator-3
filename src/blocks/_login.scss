@@ -43,14 +43,13 @@
     }
 }
 
-.login__inner {}
-
 .login__close {
     cursor  : pointer;
     float   : right;
     position: absolute;
-    right   : 74px;
-    top     : 63px;
+    right   : 53px;
+    top     : 40px;
+    padding : 20px;
 
     @media (max-width: 1023.5px) {
         right: 107px;

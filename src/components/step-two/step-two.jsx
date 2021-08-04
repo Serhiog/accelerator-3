@@ -1,30 +1,29 @@
-import {useEffect, useState} from "react";
-import {connect} from "react-redux";
-import {prettify, delSpaces, setOnlyNums, percentage, prettifyYears} from "../../utils";
-import {handleSetTotalPrice, handleFirstPayDeal, handleMotherCapital, handlePercentRange, handleYearsRange, handleSetCasco, handleSetInsurance} from "../../store/action";
-import {creditTypes} from "../../consts";
+import { useEffect, useState } from "react";
+import { connect } from "react-redux";
+import { prettify, delSpaces, setOnlyNums, percentage, prettifyYears } from "../../utils";
+import { handleSetTotalPrice, handleFirstPayDeal, handleMotherCapital, handlePercentRange, handleYearsRange, handleSetCasco, handleSetInsurance } from "../../store/action";
+import { creditTypes } from "../../consts";
 import PropTypes from "prop-types";
 import React from "react";
-const StepTwo = ({totalPrice, firstPay, creditType, percentRange, yearsRange, handleSetTotalPrice, handleFirstPayDeal, handleMotherCapital, handlePercentRange, handleYearsRange, handleSetCasco, handleSetInsurance}) => {
 
+const StepTwo = ({ totalPrice, firstPay, creditType, percentRange, yearsRange, handleSetTotalPrice, handleFirstPayDeal, handleMotherCapital, handlePercentRange, handleYearsRange, handleSetCasco, handleSetInsurance }) => {
 
-  const [initilCost, setinitilCost] = useState(2000000);
-  const [firstPays, setFirstPay] = useState(initilCost / 100 * 10);
+  useEffect(()=>{
+    if(creditType === creditTypes.auto){
+      handleFirstPayDeal(400000)
+    }
+  },[creditType])
+
   const [initialCostError, setInitialCostError] = useState(false);
-
-  useEffect(() => {
-    setFirstPay(initilCost / 100 * 10);
-  }, [initilCost]);
 
   const handleTotalCostDec = (evt) => {
     evt.preventDefault();
+    handlePercentRange(0)
     if (creditType === creditTypes.mortgage) {
       if (+totalPrice >= 1300000 && +totalPrice <= 25000000) {
         setInitialCostError(false);
-        setinitilCost(+totalPrice - 100000);
         handleSetTotalPrice(+totalPrice - 100000);
         handleFirstPayDeal((+totalPrice - 100000) / 100 * 10);
-        handlePercentRange(percentage(initilCost, firstPays));
       }
       if (+totalPrice < 1200000) {
         setInitialCostError(true);
@@ -32,10 +31,8 @@ const StepTwo = ({totalPrice, firstPay, creditType, percentRange, yearsRange, ha
     } else if (creditType === creditTypes.auto) {
       if (+totalPrice >= 550000 && +totalPrice <= 5000000) {
         setInitialCostError(false);
-        setinitilCost(+totalPrice - 50000);
         handleSetTotalPrice(+totalPrice - 50000);
-        handleFirstPayDeal((+totalPrice - 50000) / 100 * 10);
-        handlePercentRange(percentage(initilCost, firstPays));
+        handleFirstPayDeal((+totalPrice - 50000) / 100 * 20);
       }
       if (+totalPrice < 500000) {
         setInitialCostError(true);
@@ -46,14 +43,12 @@ const StepTwo = ({totalPrice, firstPay, creditType, percentRange, yearsRange, ha
 
   const handleTotalCostInc = (evt) => {
     evt.preventDefault();
-
+    handlePercentRange(0)
     if (creditType === creditTypes.mortgage) {
       if (+totalPrice >= 1200000 && +totalPrice < 25000000) {
         setInitialCostError(false);
-        setinitilCost(+totalPrice + 100000);
         handleSetTotalPrice(+totalPrice + 100000);
         handleFirstPayDeal((+totalPrice + 100000) / 100 * 10);
-        handlePercentRange(percentage(initilCost, firstPays));
       }
       if (+totalPrice < 1200000) {
         setInitialCostError(true);
@@ -61,10 +56,8 @@ const StepTwo = ({totalPrice, firstPay, creditType, percentRange, yearsRange, ha
     } else if (creditType === creditTypes.auto) {
       if (+totalPrice >= 500000 && +totalPrice < 5000000) {
         setInitialCostError(false);
-        setinitilCost(+totalPrice + 50000);
         handleSetTotalPrice(+totalPrice + 50000);
         handleFirstPayDeal((+totalPrice + 50000) / 100 * 20);
-        handlePercentRange(percentage(initilCost, firstPays));
       }
       if (+totalPrice < 500000) {
         setInitialCostError(true);
@@ -72,39 +65,33 @@ const StepTwo = ({totalPrice, firstPay, creditType, percentRange, yearsRange, ha
     }
   };
 
-  const handleInitCost = (evt) => { // РУЧНОЙ ВВОД ОБЩЕЙ ЦЕНЫ
+  const handleInitCost = (evt) => { 
     setInitialCostError(false);
-    handleSetTotalPrice(delSpaces(setOnlyNums(evt.target.value))); // ЗАПИСЫВАЕМ Р-Т В СТОР
-    setinitilCost(delSpaces(setOnlyNums(evt.target.value))); // ЗАПИСЫВАЕМ Р-Т В USESTATE
-    setPercentOfTotalPrice(percentage(+totalPrice, +firstPays));
+    handlePercentRange(0)
+    handleSetTotalPrice(delSpaces(setOnlyNums(evt.target.value))); 
 
     if (creditType === creditTypes.mortgage) {
-      handleFirstPayDeal(delSpaces(setOnlyNums(evt.target.value)) / 100 * 10); // ЗАПИСЫВАЕМ В СТОР ПЕРВЫЙ ПЛАТЕЖ
+      handleFirstPayDeal(delSpaces(setOnlyNums(evt.target.value)) / 100 * 10);
       if (+delSpaces(setOnlyNums(evt.target.value)) > 25000000 || +delSpaces(setOnlyNums(evt.target.value)) < 1200000) {
         setInitialCostError(true);
       }
     }
     if (creditType === creditTypes.auto) {
-      handleFirstPayDeal(delSpaces(setOnlyNums(evt.target.value)) / 100 * 20); // ЗАПИСЫВАЕМ В СТОР ПЕРВЫЙ ПЛАТЕЖ
+      handleFirstPayDeal(delSpaces(setOnlyNums(evt.target.value)) / 100 * 20); 
       if (+delSpaces(setOnlyNums(evt.target.value)) > 5000000 || +delSpaces(setOnlyNums(evt.target.value)) < 500000) {
         setInitialCostError(true);
       }
     }
   };
 
-  const handleFirstPay = (evt) => { // РУЧНОЙ ВВОД ПЕРВОГО ПАТЕЖА
-    handleFirstPayDeal(delSpaces(setOnlyNums(evt.target.value))); // ЗАПИСЫВАЕМ В СТОР Р-Т ВВОДА ПЕРВОЙ ЦЕНЫ
-    setFirstPay(delSpaces(setOnlyNums(evt.target.value))); // ЗАПИСЫВАЕМ Р-Т В USESTATE
-    setPercentOfTotalPrice(percentage(+totalPrice, +delSpaces(evt.target.value)));
+  const handleFirstPay = (evt) => {
+    handleFirstPayDeal(delSpaces(setOnlyNums(evt.target.value)));
+    handlePercentRange(percentage(+totalPrice, +delSpaces(evt.target.value)));
   };
 
-  const [percentOfTotalPrice, setPercentOfTotalPrice] = useState(0);
-
-
-  const handlePercent = (evt) => { // ПОЛЗУНОК ПЕРВОГО ПАТЕЖА
+  const handlePercent = (evt) => {
     handlePercentRange(+evt.target.value);
-    setPercentOfTotalPrice(+evt.target.value);
-    handleFirstPayDeal(totalPrice / 100 * percentOfTotalPrice);
+    handleFirstPayDeal(totalPrice / 100 * +evt.target.value);
   };
 
   const [capital, setCapital] = useState(false);
@@ -133,15 +120,49 @@ const StepTwo = ({totalPrice, firstPay, creditType, percentRange, yearsRange, ha
 
   const [focused, setFocused] = useState(false);
   const onFocus = () => setFocused(true);
-  const onBlur = () => setFocused(false);
+  const onBlur = () => {
+    setFocused(false)
+  };
 
   const [focusedPay, setFocusedPay] = useState(false);
   const onFocusPay = () => setFocusedPay(true);
-  const onBlurPay = () => setFocusedPay(false);
+
+  const onBlurPay = () => {
+    setFocusedPay(false)
+    if (creditType === creditTypes.mortgage) {
+      if (firstPay < totalPrice * 0.1) {
+        handleFirstPayDeal(totalPrice * 0.1)
+      }
+    }
+    if (creditType === creditTypes.auto) {
+      if (firstPay < totalPrice * 0.2) {
+        handleFirstPayDeal(totalPrice * 0.2)
+      }
+    }
+  };
 
   const [focusedYear, setFocusedYear] = useState(false);
   const onFocusYear = () => setFocusedYear(true);
-  const onBlurYear = () => setFocusedYear(false);
+
+  const onBlurYear = () => {
+    setFocusedYear(false)
+    if (creditType === creditTypes.mortgage) {
+      if (yearsRange < 5) {
+        handleYearsRange(5);
+      }
+      if (yearsRange > 30) {
+        handleYearsRange(30);
+      }
+    }
+    if (creditType === creditTypes.auto) {
+      if (yearsRange < 1) {
+        handleYearsRange(1);
+      }
+      if (yearsRange > 5) {
+        handleYearsRange(5);
+      }
+    }
+  };
 
   return (
     <>
@@ -229,4 +250,4 @@ const mapStateToProps = (state) => ({
   yearsRange: state.yearsRange,
 });
 
-export default connect(mapStateToProps, {handleSetTotalPrice, handleFirstPayDeal, handleMotherCapital, handlePercentRange, handleYearsRange, handleSetCasco, handleSetInsurance})(StepTwo);
+export default connect(mapStateToProps, { handleSetTotalPrice, handleFirstPayDeal, handleMotherCapital, handlePercentRange, handleYearsRange, handleSetCasco, handleSetInsurance })(StepTwo);

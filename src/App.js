@@ -10,8 +10,9 @@ import ReactBody from "react-body";
 import Loader from "./components/loader/loader";
 import Header from "./components/header/header";
 import PropTypes from "prop-types";
+import {handleSetLogin, handlePopup} from "./store/action";
 
-const App = ({isPopup, login, overflow}) => {
+const App = ({isPopup, login, overflow, handleSetLogin, handlePopup}) => {
   const LazyComponentSlider = lazy(() => import(`./components/slider/slider`));
   const LazyComponentMap = lazy(() => import(`./components/map/map`));
 
@@ -26,6 +27,7 @@ const App = ({isPopup, login, overflow}) => {
           open={isPopup}
           lockScroll={true}
           closeOnDocumentClick={true}
+          onClose={()=>handlePopup(false)}
         >
           {(close) => <OfferSend close={close} />}
         </Popup>
@@ -37,6 +39,7 @@ const App = ({isPopup, login, overflow}) => {
           open={login}
           lockScroll={true}
           closeOnDocumentClick={true}
+          onClose={()=>handleSetLogin(!login)}
         >
           {(close) => <Login close={close} />}
         </Popup>
@@ -68,4 +71,4 @@ const mapStateToProps = (state) => ({
   overflow: state.overflow,
 });
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, {handleSetLogin, handlePopup})(App);

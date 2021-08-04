@@ -11,7 +11,7 @@ const InsuranceTab = () => {
             <li className="insurance__inner-left-list-item">Страхование жизни и здоровья</li>
             <li className="insurance__inner-left-list-item">Страхование недвижимости</li>
           </ul>
-          <button className="insurance__inner-left-btn">Узнать подробнее</button>
+          <button tabIndex="0" className="insurance__inner-left-btn">Узнать подробнее</button>
         </div>
         <div className="insurance__inner-right"></div>
       </div>

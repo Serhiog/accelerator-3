@@ -42,24 +42,24 @@ const Header = ({login, handleSetWindowWidth, handleSetLogin, handleBodyOverflow
             height={25} />
           <p className="header__logo-text">ЛИГА Банк</p>
           <div className="header__nav-item-mobile">
-            {!menu ? <a href="/login" className="header__link header__link--login-mobile" onClick={handleLogin}>Войти в Интернет-банк</a> : <button className="header__link header__link--close-menu" onClick={handleBurgerClose}></button>}
+            {!menu ? <a tabIndex="0" href="/login" className="header__link header__link--login-mobile" onClick={handleLogin}>Войти в Интернет-банк</a> : <button className="header__link header__link--close-menu" onClick={handleBurgerClose}></button>}
           </div>
         </div>
         <ul className="header__nav">
           <li className="header__nav-item">
-            <a href="#section1" className="header__link">Услуги</a>
+            <a href="#section1" className="header__link" tabIndex="0">Услуги</a>
           </li>
           <li className="header__nav-item">
-            <a href="#section2" className="header__link">Рассчитать кредит</a>
+            <a href="#section2" className="header__link" tabIndex="0">Рассчитать кредит</a>
           </li>
           <li className="header__nav-item">
-            <a href="!#" className="header__link">Конвертер валют</a>
+            <a href="!#" className="header__link" tabIndex="0">Конвертер валют</a>
           </li>
           <li className="header__nav-item header__nav-item--contacts">
-            <a href="#section3" className="header__link">Контакты</a>
+            <a href="#section3" className="header__link" tabIndex="0">Контакты</a>
           </li>
           <li className="header__nav-item header__nav-item--enter">
-            <a href="/login" className="header__link header__link--login" onClick={handleLogin}>Войти в Интернет-банк</a>
+            <a href="/login" className="header__link header__link--login" tabIndex="0" onClick={handleLogin}>Войти в Интернет-банк</a>
           </li>
         </ul>
       </div>

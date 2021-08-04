@@ -11,7 +11,7 @@ const DepositsTab = () => {
             <li className="deposit__inner-left-list-item">Разнообразные условия</li>
             <li className="deposit__inner-left-list-item">Возможность ежемесячной капитализации или вывод процентов на банковскую карту</li>
           </ul>
-          <button className="deposit__inner-left-btn">Узнать подробнее</button>
+          <button tabIndex="0" className="deposit__inner-left-btn">Узнать подробнее</button>
         </div>
         <div className="deposit__inner-right"></div>
       </div>

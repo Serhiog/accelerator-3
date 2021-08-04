@@ -410,7 +410,7 @@ template {
 }
 
 .inverted {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 @font-face {
@@ -678,6 +678,18 @@ template {
     left: -47px;
     top: -12px;
   }
+}
+
+.header__link:hover {
+  opacity: 0.7;
+}
+
+.header__link:active {
+  opacity: 0.4;
+}
+
+.header__link:focus {
+  border: 1px solid #2C36F2;
 }
 
 .header__link--active {
@@ -1427,6 +1439,18 @@ template {
   }
 }
 
+.footer__media-link:hover {
+  opacity: 0.7;
+}
+
+.footer__media-link:active {
+  opacity: 0.4;
+}
+
+.footer__media-link:focus {
+  border: 1px solid #2C36F2;
+}
+
 .footer__media-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1471,6 +1495,18 @@ template {
   color: #1F1E25;
   white-space: nowrap;
   font-weight: 600;
+}
+
+.footer__list-link:hover {
+  opacity: 0.7;
+}
+
+.footer__list-link:active {
+  opacity: 0.4;
+}
+
+.footer__list-link:focus {
+  border: 1px solid #2C36F2;
 }
 
 @media (max-width: 1023.5px) {
@@ -1988,6 +2024,18 @@ template {
   padding-left: 45px;
   display: block;
   padding: 37px 0;
+}
+
+.services-link:hover {
+  opacity: 0.7;
+}
+
+.services-link:active {
+  opacity: 0.4;
+}
+
+.services-link:focus {
+  border: 1px solid #2C36F2;
 }
 
 .services-link--deposits {
@@ -3109,6 +3157,15 @@ input::-webkit-inner-spin-button {
   position: relative;
   padding: 5px;
   background: transparent;
+  z-index: 2;
+}
+
+.calculator__value-dec:hover {
+  opacity: 0.7;
+}
+
+.calculator__value-dec:active {
+  opacity: 0.4;
 }
 
 .calculator__value-dec::before {
@@ -3122,7 +3179,7 @@ input::-webkit-inner-spin-button {
   .calculator__value-dec::before {
     top: -8px;
     left: 7px;
-    z-index: 100;
+    z-index: 2;
   }
 }
 
@@ -3130,6 +3187,14 @@ input::-webkit-inner-spin-button {
   position: relative;
   padding: 5px;
   background: transparent;
+}
+
+.calculator__value-inc:hover {
+  opacity: 0.7;
+}
+
+.calculator__value-inc:active {
+  opacity: 0.4;
 }
 
 .calculator__value-inc::before {
@@ -4516,8 +4581,9 @@ h1 {
   cursor: pointer;
   float: right;
   position: absolute;
-  right: 74px;
-  top: 63px;
+  right: 53px;
+  top: 40px;
+  padding: 20px;
 }
 
 @media (max-width: 1023.5px) {

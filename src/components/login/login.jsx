@@ -1,5 +1,4 @@
 import {connect} from "react-redux";
-import {handleSetLogin} from "../../store/action";
 import loginLogo from "../../img/login-logo.png";
 import {useForm} from "react-hook-form";
 import useLocalStorage from 'react-use-localstorage';
@@ -7,19 +6,17 @@ import {useEffect, useRef} from "react";
 import PropTypes from "prop-types";
 import React from "react";
 
-const Login = ({close, login}) => {
-
+const Login = ({close, login, handleSetLogin}) => {
+;
   const {register, handleSubmit} = useForm();
   const [name, setName] = useLocalStorage(`dataLogin`, JSON.stringify(`Initial Value`));
 
   const handleCloseBtn = () => {
     close();
-    handleSetLogin(!login);
   };
 
   const handleForm = (data) => {
     setName(JSON.stringify(data));
-    handleSetLogin(!login);
     close();
   };
 
@@ -90,4 +87,4 @@ const mapStateToProps = (state) => ({
   login: state.login
 });
 
-export default connect(mapStateToProps, {handleSetLogin})(Login);
+export default connect(mapStateToProps)(Login);
