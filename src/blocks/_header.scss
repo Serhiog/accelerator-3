@@ -88,6 +88,8 @@
     @include flex;
     margin-bottom: -2px;
     width        : 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
     @media (max-width: 1023.5px) {
         padding-bottom : 2px;

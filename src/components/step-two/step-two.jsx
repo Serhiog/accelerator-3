@@ -172,6 +172,7 @@ const StepTwo = ({ totalPrice, firstPay, creditType, percentRange, yearsRange, h
         <button className="calculator__value-dec" onClick={handleTotalCostDec} />
         <div className="calculator__value-result-wrapper">
           <label htmlFor="total" className="calculator__value-result--value-label">
+            Общая стоимость
             <input id="total" min={creditType === creditTypes.auto && `500000` || creditType === creditTypes.mortgage && `1200000`} max={creditType === creditTypes.auto && `5000000` || creditType === creditTypes.mortgage && `25000000`} type="tel" className="calculator__value-result calculator__value-result--value" value={!focused && prettify(totalPrice) || focused && totalPrice} onChange={handleInitCost} onFocus={onFocus} onBlur={onBlur} />
           </label>
         </div>
@@ -183,6 +184,7 @@ const StepTwo = ({ totalPrice, firstPay, creditType, percentRange, yearsRange, h
       <div className={+firstPay < (totalPrice / 100) * 10 ? `calculator__value-wrapper calculator__value-wrapper--error-2` : `calculator__value-wrapper calculator__value-wrapper--first-pay`}>
         <div className="calculator__value-result-wrapper">
           <label htmlFor="pay" className="calculator__value-result--value-label-pay">
+            Первый платеж
             <input id="pay" step="100000" type="tel" className="calculator__value-result" value={!focusedPay && prettify(firstPay) || focusedPay && firstPay} onChange={handleFirstPay} onFocus={onFocusPay} onBlur={onBlurPay} />
           </label>
           <span className={+firstPay < (totalPrice / 100) * 10 ? `calculator__value-no-error calculator__value-error-2` : `calculator__value-no-error `}>Некорректное значение</span>
@@ -190,6 +192,7 @@ const StepTwo = ({ totalPrice, firstPay, creditType, percentRange, yearsRange, h
       </div>
       <div className="calculator__value-range-wrapper">
         <label htmlFor="payRange" className="calculator__value-result--value-label-pay-range">
+          Выбор срока кредитования
           <input id="payRange" type="range" className="calculator__value-range" min={creditType === creditTypes.mortgage && `10` || creditType === creditTypes.auto && `20`} max="100" step="5" onChange={handlePercent} value={percentRange} />
         </label>
         <span className="calculator__value-range-result" >{creditType === creditTypes.mortgage && `10%` || creditType === creditTypes.auto && `20%`}</span>
@@ -197,11 +200,13 @@ const StepTwo = ({ totalPrice, firstPay, creditType, percentRange, yearsRange, h
       <p className="calculator__value-info">Срок кредитования</p>
       <div className="calculator__value-wrapper calculator__value-wrapper--first-pay">
         <label htmlFor="time" className="calculator__value-result--value-label-time">
+        Выбор срока кредитования
           <input id="time" onChange={handleCreditPeriods} type="tel" className="calculator__value-result-years" value={!focusedYear && prettifyYears(yearsRange) || focusedYear && yearsRange} onFocus={onFocusYear} onBlur={onBlurYear} />
         </label>
       </div>
       <div className="calculator__value-range-wrapper">
         <label htmlFor="time" className="calculator__value-result--value-label-time-range">
+        Выбор срока кредитования
           <input value={yearsRange} type="range" className="calculator__value-range" min={creditType === creditTypes.mortgage && `5` || creditType === creditTypes.auto && `1`} max={creditType === creditTypes.mortgage && `30` || creditType === creditTypes.auto && `5`} step="1" onChange={handleCreditPeriods} />
         </label>
         <span className="calculator__value-range-result">{creditType === creditTypes.mortgage && `5` || creditType === creditTypes.auto && `1`} лет</span>

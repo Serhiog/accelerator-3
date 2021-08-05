@@ -110,6 +110,14 @@
     text-align   : center;
     padding      : 17px 16px;
 
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 0.4;
+    }
+
     @media (max-width: 1023.5px) {
         width         : 206px;
         padding       : 13px 16px;

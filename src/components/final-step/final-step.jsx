@@ -63,12 +63,15 @@ console.log(isPopup);
         </ul>
         <form className="final-step__form" onSubmit={handleSubmit(handleForm)}>
           <label htmlFor="name" className="final-step__input-label">
+            Имя
             <input id="name" required {...register(`name`, {required: true})} ref={nameRef} type="text" className="final-step__input final-step__name" placeholder="ФИО" />
           </label>
           <label htmlFor="tel" className="final-step__input-label-tel">
+            Телефон
             <input htmlFor="tel" required {...register(`tel`, {required: true})} type="number" className="final-step__input final-step__tel" placeholder="Телефон" />
           </label>
           <label htmlFor="email" className="final-step__input-label-email">
+            Email
             <input htmlFor="email" required {...register(`email`, {required: true})} type="text" className="final-step__input final-step__email" placeholder="E-mail" />
           </label>
           <button className="final-step__btn" type="submit">Отправить</button>

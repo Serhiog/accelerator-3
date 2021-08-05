@@ -96,6 +96,14 @@
     padding       : 15px 16px;
     letter-spacing: -1px;
 
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 0.4;
+    }
+
     @media (max-width: 767.5px) {
         font-size: 14px;
         width    : 95%;
