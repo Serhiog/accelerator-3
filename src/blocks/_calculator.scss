@@ -117,8 +117,8 @@
 
 .calculator__value-result--value-label {
     padding-left: 56px;
-    font-size: 0;
-    display: inline-block;
+    font-size   : 0;
+    display     : inline-block;
 }
 
 .calculator__value-result-wrapper {
@@ -322,15 +322,15 @@ input::-webkit-inner-spin-button {
 .calculator__value-wrapper--first-pay {
     @include flex;
     justify-content: center;
-    margin-bottom  : 19px;
+    margin-bottom  : 10px;
     position       : relative;
 
     @media (max-width: 1023.5px) {
-        margin-bottom: 20px;
+        margin-bottom: 11px;
     }
 
     @media (max-width: 767.5px) {
-        margin-bottom: 20px;
+        margin-bottom: 12px;
     }
 }
 
@@ -627,7 +627,6 @@ h1 {
 }
 
 .calculator__select-content {
-    position                  : absolute;
     top                       : 52px;
     display                   : flex;
     flex-direction            : column;
@@ -670,6 +669,9 @@ h1 {
     cursor: pointer;
 
     overflow: hidden;
+    padding-top: 31px;
+    padding-left: 21px;
+    padding-bottom: 29px;
 
     &+input+& {
         border-top: 0 solid #C7CCD160;
@@ -721,12 +723,14 @@ h1 {
 }
 
 .calculator__select-title {
-    padding      : 28px 23px;
-    border-radius: 5px;
+    padding                : 28px 23px;
+    border-top-right-radius: 5px;
+    border-top-left-radius : 5px;
 
     @media (max-width: 767.5px) {
         padding       : 28px 13px;
-        border-radius : 5px;
+        border-top-right-radius: 5px;
+        border-top-left-radius : 5px;
         letter-spacing: 0.1px;
     }
 
@@ -761,19 +765,19 @@ h1 {
 }
 
 .calculator__value-result--value-label-pay-range {
-    width: 100%;
+    width    : 100%;
     font-size: 0;
 }
 
 .calculator__value-result--value-label-time-range {
-    width: 100%;
+    width    : 100%;
     font-size: 0;
 }
 
-.calculator__value-result--value-label-pay{
+.calculator__value-result--value-label-pay {
     font-size: 0;
 }
 
-.calculator__value-result--value-label-time{
-    font-size: 0; 
+.calculator__value-result--value-label-time {
+    font-size: 0;
 }

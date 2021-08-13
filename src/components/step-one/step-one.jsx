@@ -1,25 +1,37 @@
-import {useRef} from "react";
-import {connect} from "react-redux";
-import {creditTypes} from "../../consts";
-import {handleSetCreditType, handleResetInitialValuesMortgage, handleResetInitialValuesAutoCredit} from "../../store/action";
+import { useRef } from "react";
+import { connect } from "react-redux";
+import { creditTypes } from "../../consts";
+import { handleSetCreditType, handleResetInitialValuesMortgage, handleResetInitialValuesAutoCredit } from "../../store/action";
 import React from "react";
 
-const StepOne = ({handleSetCreditType, handleResetInitialValuesMortgage, handleResetInitialValuesAutoCredit}) => {
+const StepOne = ({ handleSetCreditType, handleResetInitialValuesMortgage, handleResetInitialValuesAutoCredit, width }) => {
 
   const select = useRef();
   const titleRef = useRef();
 
   const handleSelect = () => {
+
     if (select.current.getAttribute(`data-state`) === `active`) {
       select.current.setAttribute(`data-state`, ``);
+      select.current.style.marginBottom = "69px"
+      if (width < 768) {
+        select.current.style.marginBottom = "69px"
+      }
     } else {
       select.current.setAttribute(`data-state`, `active`);
+      select.current.style.marginBottom = "174px"
+      if (width < 768) {
+        select.current.style.marginBottom = "167px"
+      }
     }
   };
 
   const handleLabel = (evt) => {
     const typeCredit = evt.target.dataset.name;
-
+    select.current.style.marginBottom = "56px"
+    if (width < 768) {
+      select.current.style.marginBottom = "45px"
+    }
     if (typeCredit === creditTypes.mortgage) {
       handleResetInitialValuesMortgage();
     } else if (typeCredit === creditTypes.auto) {
@@ -48,4 +60,8 @@ const StepOne = ({handleSetCreditType, handleResetInitialValuesMortgage, handleR
   );
 };
 
-export default connect(null, {handleSetCreditType, handleResetInitialValuesMortgage, handleResetInitialValuesAutoCredit})(StepOne);
+const mapStateToProps = (state) => ({
+  width: state.width,
+});
+
+export default connect(mapStateToProps, { handleSetCreditType, handleResetInitialValuesMortgage, handleResetInitialValuesAutoCredit })(StepOne);

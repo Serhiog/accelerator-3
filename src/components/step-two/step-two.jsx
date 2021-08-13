@@ -8,11 +8,11 @@ import React from "react";
 
 const StepTwo = ({ totalPrice, firstPay, creditType, percentRange, yearsRange, handleSetTotalPrice, handleFirstPayDeal, handleMotherCapital, handlePercentRange, handleYearsRange, handleSetCasco, handleSetInsurance }) => {
 
-  useEffect(()=>{
-    if(creditType === creditTypes.auto){
+  useEffect(() => {
+    if (creditType === creditTypes.auto) {
       handleFirstPayDeal(400000)
     }
-  },[creditType])
+  }, [creditType])
 
   const [initialCostError, setInitialCostError] = useState(false);
 
@@ -65,10 +65,10 @@ const StepTwo = ({ totalPrice, firstPay, creditType, percentRange, yearsRange, h
     }
   };
 
-  const handleInitCost = (evt) => { 
+  const handleInitCost = (evt) => {
     setInitialCostError(false);
     handlePercentRange(0)
-    handleSetTotalPrice(delSpaces(setOnlyNums(evt.target.value))); 
+    handleSetTotalPrice(delSpaces(setOnlyNums(evt.target.value)));
 
     if (creditType === creditTypes.mortgage) {
       handleFirstPayDeal(delSpaces(setOnlyNums(evt.target.value)) / 100 * 10);
@@ -77,7 +77,7 @@ const StepTwo = ({ totalPrice, firstPay, creditType, percentRange, yearsRange, h
       }
     }
     if (creditType === creditTypes.auto) {
-      handleFirstPayDeal(delSpaces(setOnlyNums(evt.target.value)) / 100 * 20); 
+      handleFirstPayDeal(delSpaces(setOnlyNums(evt.target.value)) / 100 * 20);
       if (+delSpaces(setOnlyNums(evt.target.value)) > 5000000 || +delSpaces(setOnlyNums(evt.target.value)) < 500000) {
         setInitialCostError(true);
       }
@@ -120,8 +120,28 @@ const StepTwo = ({ totalPrice, firstPay, creditType, percentRange, yearsRange, h
 
   const [focused, setFocused] = useState(false);
   const onFocus = () => setFocused(true);
+
   const onBlur = () => {
     setFocused(false)
+
+    if (creditType === creditTypes.mortgage) {
+      if (totalPrice < 1200000) {
+        initialCostError; handleSetTotalPrice(1200000); setInitialCostError(false); handleFirstPayDeal(120000);
+      }
+      if (totalPrice > 25000000) {
+        setFocused(false)
+        initialCostError; handleSetTotalPrice(25000000); setInitialCostError(false); handleFirstPayDeal(2500000);
+      }
+    }
+    if (creditType === creditTypes.auto) {
+      if (totalPrice < 500000) {
+        initialCostError; handleSetTotalPrice(500000); setInitialCostError(false); handleFirstPayDeal(100000);
+      }
+      if (totalPrice > 5000000) {
+        setFocused(false)
+        initialCostError; handleSetTotalPrice(5000000); setInitialCostError(false); handleFirstPayDeal(1000000);
+      }
+    }
   };
 
   const [focusedPay, setFocusedPay] = useState(false);
@@ -195,18 +215,18 @@ const StepTwo = ({ totalPrice, firstPay, creditType, percentRange, yearsRange, h
           Выбор срока кредитования
           <input id="payRange" type="range" className="calculator__value-range" min={creditType === creditTypes.mortgage && `10` || creditType === creditTypes.auto && `20`} max="100" step="5" onChange={handlePercent} value={percentRange} />
         </label>
-        <span className="calculator__value-range-result" >{creditType === creditTypes.mortgage && `10%` || creditType === creditTypes.auto && `20%`}</span>
+        <span className="calculator__value-range-result" >{percentRange + "%"}</span>
       </div>
       <p className="calculator__value-info">Срок кредитования</p>
       <div className="calculator__value-wrapper calculator__value-wrapper--first-pay">
         <label htmlFor="time" className="calculator__value-result--value-label-time">
-        Выбор срока кредитования
-          <input id="time" onChange={handleCreditPeriods} type="tel" className="calculator__value-result-years" value={!focusedYear && prettifyYears(yearsRange) || focusedYear && yearsRange} onFocus={onFocusYear} onBlur={onBlurYear} />
+          Выбор срока кредитования
+          <input id="time" onChange={handleCreditPeriods} type="tel" className="calculator__value-result-years" value={!focusedYear && yearsRange + " " + prettifyYears(yearsRange) || focusedYear && yearsRange} onFocus={onFocusYear} onBlur={onBlurYear} />
         </label>
       </div>
       <div className="calculator__value-range-wrapper">
         <label htmlFor="time" className="calculator__value-result--value-label-time-range">
-        Выбор срока кредитования
+          Выбор срока кредитования
           <input value={yearsRange} type="range" className="calculator__value-range" min={creditType === creditTypes.mortgage && `5` || creditType === creditTypes.auto && `1`} max={creditType === creditTypes.mortgage && `30` || creditType === creditTypes.auto && `5`} step="1" onChange={handleCreditPeriods} />
         </label>
         <span className="calculator__value-range-result">{creditType === creditTypes.mortgage && `5` || creditType === creditTypes.auto && `1`} лет</span>

@@ -93,7 +93,7 @@
     font-family   : $robo;
     font-size     : 18px;
     letter-spacing: 0.03em;
-    color         : #707C87;
+    color         : black;
     padding-left  : 23px;
 
     @media (max-width: 767.5px) {
@@ -120,11 +120,10 @@
 
 .final-step__input-label {
     width        : 100%;
-    margin-bottom: 30px;
     font-size: 0;
 
     @media (max-width: 767.5px) {
-        margin-bottom: 19px;
+        margin-bottom: 0
     }
 }
 
@@ -198,7 +197,7 @@
 .final-step__tel {
     width        : 300px;
     margin-right : 30px;
-    margin-bottom: 40px;
+
 
     @media (max-width: 1023.5px) {
         width: 324px;
@@ -224,7 +223,7 @@
     @media (max-width: 767.5px) {
         width        : 290px;
         margin-right : 0;
-        margin-bottom: 20px;
+        margin-bottom: 0
     }
 }
 
@@ -244,7 +243,6 @@
 
 .final-step__input-label-email {
     width        : 300px;
-    margin-bottom: 40px;
     font-size: 0;
 
     @media (max-width: 1023.5px) {
@@ -253,6 +251,6 @@
 
     @media (max-width: 767.5px) {
         width        : 290px;
-        margin-bottom: 30px;
+        margin-bottom: 0
     }
 }

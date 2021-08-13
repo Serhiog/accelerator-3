@@ -50,7 +50,7 @@ export const getCreditPercent = createSelector(
     (creditType, totalPrice, firstPay, casco, insurance) => {
       if (creditType === creditTypes.mortgage) {
         const percent = totalPrice * creditPercent.zero;
-        if (+firstPay <= +percent) {
+        if (+firstPay < +percent) {
           return creditPercent.nine;
         } else {
           return creditPercent.eight;

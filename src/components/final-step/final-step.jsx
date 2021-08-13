@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 const FinalStep = ({countForm, creditType, totalPrice, firstPay, creditPeriod, isPopup, handlePopup}) => {
-console.log(isPopup);
+
   const nameRef = useRef();
   const [name, setName] = useLocalStorage(`dataForm`, JSON.stringify(`Initial Value`));
   const {register, handleSubmit} = useForm();

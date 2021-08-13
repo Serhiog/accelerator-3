@@ -27,3 +27,4 @@ export const initialNumbers = {
   middlePercent: 2.222,
   oneThousandHundred: 1200,
 };
+
