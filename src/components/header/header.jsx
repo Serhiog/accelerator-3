@@ -14,10 +14,14 @@ const Header = ({login, handleSetWindowWidth, handleSetLogin, handleBodyOverflow
   React.useEffect(() => {
     window.addEventListener(`resize`, updateWidthAndHeight);
     handleSetWindowWidth(window.innerWidth);
+    // console.log('clientWidth:', document.body.clientWidth);
+    // console.log('innerWidth', window.innerWidth);
     return () => window.removeEventListener(`resize`, updateWidthAndHeight);
-  });
+  }, []);
 
   const updateWidthAndHeight = () => {
+    // console.log('clientWidth:', document.body.clientWidth);
+    // console.log('innerWidth', window.innerWidth);
     handleSetWindowWidth(window.innerWidth);
   };
 

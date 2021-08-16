@@ -1,14 +1,15 @@
 .services {
     margin-bottom: 109px;
-    padding      : 0 99px;
 
-    @media (max-width: 1023.5px) {
+
+    @media (max-width: 1023.5px) and (min-width: 768px) {
         margin-bottom: 0px;
         padding      : 0;
     }
 
     @media (max-width: 767.5px) {
         margin-bottom: 30px;
+        background: rgba(246, 247, 255, 1);
     }
 }
 
