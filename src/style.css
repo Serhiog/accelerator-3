@@ -427,6 +427,12 @@ template {
   src: url("fonts/Roboto-Regular.woff2") format("woff2");
 }
 
+@media (max-width: 1023.5px) and (min-width: 768px) {
+  .header {
+    background: #F6F7FF;
+  }
+}
+
 .header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -443,7 +449,7 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 1370px;
+  width: 100%;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -451,9 +457,9 @@ template {
   padding: 27px 100px 40px 100px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .header__inner {
-    width: 768px;
+    width: 100%;
     padding: 23px 45px 24px 45px;
     background: #f6f7ff;
   }
@@ -461,9 +467,10 @@ template {
 
 @media (max-width: 767.5px) {
   .header__inner {
-    width: 320px;
+    width: 100%;
     padding: 12px 15px 19px 15px;
     position: relative;
+    background: #F6F7FF;
   }
 }
 
@@ -472,7 +479,7 @@ template {
   display: none;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .header__nav-item-mobile {
     margin: 0;
   }
@@ -506,7 +513,7 @@ template {
   margin-right: 110px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .header__logo-container {
     margin-right: 66px;
   }
@@ -523,7 +530,7 @@ template {
   margin-right: 1px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .header__img {
     width: 24px;
     height: 22px;
@@ -550,7 +557,7 @@ template {
   white-space: nowrap;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .header__logo-text {
     font-size: 18px;
   }
@@ -581,14 +588,13 @@ template {
           align-items: center;
   margin-bottom: -2px;
   width: 100%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: nowrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .header__nav {
     padding-bottom: 2px;
     -webkit-box-pack: start;
@@ -620,7 +626,7 @@ template {
   margin-right: 25px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .header__nav-item {
     margin-right: 21px;
   }
@@ -652,7 +658,7 @@ template {
   white-space: nowrap;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .header__link {
     font-size: 14px;
   }
@@ -705,7 +711,7 @@ template {
   position: relative;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .header__link--login {
     font-size: 0;
   }
@@ -729,7 +735,7 @@ template {
   bottom: 0;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .header__link--login::before {
     left: 27px;
     bottom: -4px;
@@ -747,7 +753,7 @@ template {
   position: relative;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .header__link--login-mobile {
     font-size: 0;
   }
@@ -755,9 +761,10 @@ template {
 
 @media (max-width: 767.5px) {
   .header__link--login-mobile {
-    right: 56px;
+    right: 0;
     position: absolute;
     top: 17px;
+    font-size: 0;
   }
 }
 
@@ -772,7 +779,7 @@ template {
   bottom: 0;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .header__link--login-mobile::before {
     left: 27px;
     bottom: -4px;
@@ -794,7 +801,7 @@ template {
   margin-left: auto;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .header__nav-item--enter {
     margin: 0;
   }
@@ -846,7 +853,8 @@ template {
 
 @media (max-width: 767.5px) {
   .section__wrapper {
-    width: 320px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -1071,7 +1079,7 @@ template {
     background-image: url("img/mobile-black-card.png");
     width: 122px;
     top: -77px;
-    right: -16px;
+    right: -17px;
   }
 }
 
@@ -1081,7 +1089,7 @@ template {
 
 @media (max-width: 767.5px) {
   .footer {
-    background: transparent;
+    background: #F6F7FF;
   }
 }
 
@@ -1107,7 +1115,7 @@ template {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 1370px;
+  width: 100%;
   margin: 0 auto;
   padding: 57px 98px;
   background: #F6F7FF;
@@ -1624,7 +1632,7 @@ template {
   left: 664px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .slider {
     bottom: 3%;
     left: 47.5%;
@@ -1689,13 +1697,11 @@ template {
 
 .slick-initialized {
   position: relative;
-  width: 1370px;
   margin-bottom: 59px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .slick-initialized {
-    width: 772px;
     margin: 0 auto;
   }
 }
@@ -1719,7 +1725,7 @@ template {
           justify-content: center;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .slider2__inner {
     background: url("img/tab-slider-2.png") 50%/auto auto no-repeat;
     height: 301px;
@@ -1728,10 +1734,12 @@ template {
 
 @media (max-width: 767.5px) {
   .slider2__inner {
-    background: url("img/mobile-slider-3.png") 50%/auto auto no-repeat;
+    background: url("img/mobile-slider-3.png") 100%/auto auto no-repeat;
     height: 226px;
     display: block;
     padding-top: 1px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -1742,7 +1750,7 @@ template {
   z-index: 1;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .slider2__inner-title {
     font-size: 46px;
   }
@@ -1764,7 +1772,7 @@ template {
   font-size: 22px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .slider2__inner-text {
     font-size: 18px;
   }
@@ -1789,7 +1797,7 @@ template {
   margin-top: -100px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .slider2__inner-wrapper {
     margin-left: -277px;
     margin-top: -86px;
@@ -1832,7 +1840,7 @@ template {
           justify-content: center;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .slider3__inner {
     background: url("img/tab-slider-3.png") 50%/auto auto no-repeat;
     height: 301px;
@@ -1842,10 +1850,12 @@ template {
 
 @media (max-width: 767.5px) {
   .slider3__inner {
-    background: url("img/mobile-slider-2.png") 50%/auto auto no-repeat;
+    background: url("img/mobile-slider-2.png") 100%/auto auto no-repeat;
     height: 226px;
     display: block;
     padding-top: 1px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -1856,7 +1866,7 @@ template {
   z-index: 1;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .slider3__inner-title {
     font-size: 46px;
   }
@@ -1877,7 +1887,7 @@ template {
   margin-bottom: 35px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .slider3__inner-text {
     font-size: 18px;
     padding-left: 87px;
@@ -1904,7 +1914,7 @@ template {
   margin-top: -10px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .slider3__inner-wrapper {
     margin: 0;
   }
@@ -1921,7 +1931,7 @@ template {
   margin-bottom: 14px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .slider3__inner-title {
     margin-bottom: 10px;
     padding-left: 88px;
@@ -1960,7 +1970,7 @@ template {
   opacity: 0.4;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .slider3__inner-btn {
     width: 206px;
     padding: 13px 16px;
@@ -1981,10 +1991,9 @@ template {
 
 .services {
   margin-bottom: 109px;
-  padding: 0 99px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .services {
     margin-bottom: 0px;
     padding: 0;
@@ -1994,6 +2003,7 @@ template {
 @media (max-width: 767.5px) {
   .services {
     margin-bottom: 30px;
+    background: #f6f7ff;
   }
 }
 
@@ -2132,9 +2142,9 @@ template {
           align-items: flex-start;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .deposit__inner {
-    width: 772px;
+    width: 100%;
     padding: 54px 46px;
     padding-bottom: 35px;
   }
@@ -2158,7 +2168,7 @@ template {
   font-weight: 600;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .deposit__inner-left-title {
     font-size: 18px;
     margin-bottom: 23px;
@@ -2187,7 +2197,7 @@ template {
   line-height: 130%;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .deposit__inner-left-list-item {
     font-size: 16px;
     padding-left: 22px;
@@ -2213,7 +2223,7 @@ template {
   margin-bottom: 34px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .deposit__inner-left-list-item:last-child {
     width: 360px;
     margin-bottom: 32px;
@@ -2249,7 +2259,7 @@ template {
   opacity: 0.4;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .deposit__inner-left-btn {
     font-size: 16px;
     letter-spacing: 0px;
@@ -2272,7 +2282,7 @@ template {
   height: 290px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .deposit__inner-right {
     background: url("img/tab-tab-1.png") 0 8px/auto auto no-repeat;
   }
@@ -2294,7 +2304,7 @@ template {
   width: 395px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .deposit__inner-left {
     margin-right: 30px;
   }
@@ -2332,9 +2342,9 @@ template {
           align-items: flex-start;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .credit__inner {
-    width: 772px;
+    width: 100%;
     padding: 54px 46px;
   }
 }
@@ -2358,7 +2368,7 @@ template {
   font-weight: 600;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .credit__inner-left-title {
     font-size: 18px;
     width: 241px;
@@ -2388,7 +2398,7 @@ template {
   margin-bottom: 20px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .credit__inner-left-list-item {
     font-size: 16px;
     padding-left: 22px;
@@ -2413,7 +2423,7 @@ template {
   margin-bottom: 32px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .credit__inner-left-list-item:last-child {
     width: 360px;
     margin-bottom: 31px;
@@ -2437,7 +2447,7 @@ template {
   width: 338px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .credit__inner-left-info {
     font-size: 16px;
   }
@@ -2456,7 +2466,7 @@ template {
   height: 290px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .credit__inner-right {
     background: url("img/tab-tab-2.png") 0 8px/auto auto no-repeat;
   }
@@ -2478,7 +2488,7 @@ template {
   width: 395px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .credit__inner-left {
     margin-right: 28px;
   }
@@ -2521,9 +2531,9 @@ template {
           align-items: flex-start;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .insurance__inner {
-    width: 772px;
+    width: 100%;
     padding: 54px 46px;
   }
 }
@@ -2546,7 +2556,7 @@ template {
   width: 337px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .insurance__inner-left-title {
     font-size: 18px;
     width: 296px;
@@ -2576,7 +2586,7 @@ template {
   margin-bottom: 20px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .insurance__inner-left-list-item {
     font-size: 16px;
     padding-left: 22px;
@@ -2607,7 +2617,7 @@ template {
   margin-bottom: 38px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .insurance__inner-left-list-item:last-child {
     width: 360px;
     margin-bottom: 31px;
@@ -2643,7 +2653,7 @@ template {
   opacity: 0.4;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .insurance__inner-left-btn {
     font-size: 16px;
     letter-spacing: 0px;
@@ -2666,7 +2676,7 @@ template {
   height: 290px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .insurance__inner-right {
     background: url("img/tab-tab-3.png") 0 8px/auto auto no-repeat;
   }
@@ -2688,7 +2698,7 @@ template {
   width: 395px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .insurance__inner-left {
     margin-right: 30px;
   }
@@ -2726,9 +2736,9 @@ template {
           align-items: flex-start;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .online__inner {
-    width: 772px;
+    width: 100%;
     padding: 54px 46px;
   }
 }
@@ -2751,7 +2761,7 @@ template {
   width: 406px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .online__inner-left-title {
     font-size: 18px;
     width: 350px;
@@ -2782,7 +2792,7 @@ template {
   line-height: 131%;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .online__inner-left-list-item {
     font-size: 16px;
     padding-left: 22px;
@@ -2813,7 +2823,7 @@ template {
   margin-bottom: 34px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .online__inner-left-list-item:last-child {
     width: 360px;
     margin-bottom: 31px;
@@ -2849,7 +2859,7 @@ template {
   opacity: 0.4;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .online__inner-left-btn {
     font-size: 16px;
     letter-spacing: 0px;
@@ -2872,7 +2882,7 @@ template {
   height: 290px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .online__inner-right {
     background: url("img/tab-tab-4.png") 0 8px/auto auto no-repeat;
   }
@@ -2894,7 +2904,7 @@ template {
   width: 395px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .online__inner-left {
     margin-right: 30px;
   }
@@ -2920,14 +2930,12 @@ template {
 }
 
 .map__inner {
-  width: 1370px;
   margin: 0 auto;
   padding: 0 100px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .map__inner {
-    width: 772px;
     padding: 37px 46px;
     padding-bottom: 0;
   }
@@ -2935,7 +2943,7 @@ template {
 
 @media (max-width: 767.5px) {
   .map__inner {
-    width: 320px;
+    width: 100%;
     padding: 0;
     padding-top: 19px;
   }
@@ -2950,7 +2958,7 @@ template {
   letter-spacing: 0.1px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .map__title {
     font-size: 32px;
     margin-bottom: 41px;
@@ -2969,7 +2977,7 @@ template {
   margin-bottom: 109px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .map {
     margin-bottom: 80px;
   }
@@ -2985,7 +2993,7 @@ template {
   margin-bottom: 93px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .calculator {
     margin-bottom: 0;
   }
@@ -2998,7 +3006,6 @@ template {
 }
 
 .calculator__inner {
-  width: 1370px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3024,9 +3031,8 @@ template {
           align-items: flex-start;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .calculator__inner {
-    width: 772px;
     padding: 54px 46px;
     padding-bottom: 0;
   }
@@ -3034,7 +3040,7 @@ template {
 
 @media (max-width: 767.5px) {
   .calculator__inner {
-    width: 320px;
+    width: 100%;
     padding: 0 15px;
   }
 }
@@ -3048,7 +3054,7 @@ template {
   letter-spacing: 0.4px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .calculator__title {
     font-size: 32px;
     margin-bottom: 35px;
@@ -3077,7 +3083,7 @@ template {
   padding-top: 103px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .calculator__right {
     padding-top: 0;
     width: 100%;
@@ -3099,7 +3105,7 @@ template {
   letter-spacing: 0.1px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .calculator__value {
     font-size: 18px;
     margin-bottom: 20px;
@@ -3121,7 +3127,7 @@ template {
   padding-left: 69px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .calculator__value-result {
     font-size: 16px;
   }
@@ -3129,6 +3135,13 @@ template {
 
 .calculator__value-result--value {
   padding-left: 0;
+  width: 100%;
+}
+
+@media (max-width: 767.5px) {
+  .calculator__value-result--value {
+    width: 100%;
+  }
 }
 
 .calculator__value-result--value-label {
@@ -3158,7 +3171,7 @@ template {
   right: 278px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .calculator__value-result-year {
     font-size: 16px;
     right: 317px;
@@ -3180,7 +3193,7 @@ template {
   margin-left: -34px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .calculator__value-result-years {
     font-size: 16px;
     padding-left: 6px;
@@ -3279,7 +3292,7 @@ input::-webkit-inner-spin-button {
   position: relative;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .calculator__value-wrapper {
     padding-bottom: 21px;
   }
@@ -3350,7 +3363,7 @@ input::-webkit-inner-spin-button {
   word-spacing: 0.4px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .calculator__value-extra {
     margin-bottom: 21px;
   }
@@ -3385,7 +3398,7 @@ input::-webkit-inner-spin-button {
   position: relative;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .calculator__value-wrapper--first-pay {
     margin-bottom: 11px;
   }
@@ -3532,7 +3545,7 @@ input[type=range]:focus::-ms-fill-upper {
   margin-bottom: 27px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .calculator__value-range-wrapper {
     margin-bottom: 22px;
   }
@@ -3783,7 +3796,7 @@ h1 {
   width: 597px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .calculator__form {
     width: 678px;
   }
@@ -3805,7 +3818,7 @@ h1 {
   margin-bottom: 23px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .calculator__title-about {
     font-size: 18px;
     margin-bottom: 21px;
@@ -3862,7 +3875,7 @@ h1 {
   margin-bottom: 93px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .calculator {
     margin-bottom: 0;
   }
@@ -3893,7 +3906,7 @@ h1 {
   height: 225px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .offer {
     max-width: 100%;
   }
@@ -3910,7 +3923,7 @@ h1 {
   padding-left: 14px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .offer__inner {
     padding-left: 17px;
   }
@@ -3958,6 +3971,12 @@ h1 {
           justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media (max-width: 1023.5px) and (min-width: 768px) {
+  .offer__list {
+    width: 400px;
+  }
 }
 
 @media (max-width: 767.5px) {
@@ -4042,7 +4061,7 @@ h1 {
   line-height: 140%;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .offer__title--error {
     width: 350px;
   }
@@ -4113,7 +4132,7 @@ h1 {
   width: 96%;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .offer--succes .offer__btn {
     width: 97%;
   }
@@ -4139,7 +4158,7 @@ h1 {
   margin-top: 29px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .final-step {
     background: transparent;
     padding: 0;
@@ -4149,8 +4168,10 @@ h1 {
 
 @media (max-width: 767.5px) {
   .final-step {
-    width: 320px;
+    width: 100%;
     margin-top: 46px;
+    background: transparent;
+    padding: 0;
   }
 }
 
@@ -4165,7 +4186,7 @@ h1 {
   margin-bottom: 26px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .final-step__title {
     font-size: 18px;
     margin-bottom: 41px;
@@ -4176,6 +4197,7 @@ h1 {
   .final-step__title {
     font-size: 16px;
     margin-bottom: 62px;
+    white-space: nowrap;
   }
 }
 
@@ -4197,7 +4219,7 @@ h1 {
           align-items: baseline;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .final-step__item {
     font-size: 16px;
   }
@@ -4230,6 +4252,7 @@ h1 {
     font-size: 18px;
     position: absolute;
     top: -24px;
+    white-space: nowrap;
   }
 }
 
@@ -4326,7 +4349,7 @@ h1 {
   opacity: 0.4;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .final-step__btn {
     font-size: 16px;
     width: 100%;
@@ -4371,7 +4394,7 @@ h1 {
 @media (max-width: 767.5px) {
   .final-step__inner {
     padding: 0;
-    padding-right: 30px;
+    padding-right: 0;
   }
 }
 
@@ -4423,7 +4446,7 @@ h1 {
   margin-right: 30px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .final-step__tel {
     width: 324px;
   }
@@ -4431,7 +4454,7 @@ h1 {
 
 @media (max-width: 767.5px) {
   .final-step__tel {
-    width: 290px;
+    width: 100%;
     margin-right: 0;
     margin-bottom: 20px;
   }
@@ -4444,7 +4467,7 @@ h1 {
   font-size: 0;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .final-step__input-label-tel {
     width: 324px;
   }
@@ -4452,18 +4475,18 @@ h1 {
 
 @media (max-width: 767.5px) {
   .final-step__input-label-tel {
-    width: 290px;
+    width: 100%;
     margin-right: 0;
     margin-bottom: 0;
   }
 }
 
 .final-step__email {
-  width: 300px;
+  width: 100%;
   margin-bottom: 40px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .final-step__email {
     width: 324px;
   }
@@ -4471,7 +4494,7 @@ h1 {
 
 @media (max-width: 767.5px) {
   .final-step__email {
-    width: 290px;
+    width: 100%;
     margin-bottom: 30px;
   }
 }
@@ -4481,7 +4504,7 @@ h1 {
   font-size: 0;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .final-step__input-label-email {
     width: 324px;
   }
@@ -4489,7 +4512,7 @@ h1 {
 
 @media (max-width: 767.5px) {
   .final-step__input-label-email {
-    width: 290px;
+    width: 100%;
     margin-bottom: 0;
   }
 }
@@ -4500,7 +4523,7 @@ h1 {
   max-width: 500px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .offer-send {
     width: 678px;
     max-width: none;
@@ -4568,7 +4591,7 @@ h1 {
   top: 30px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .offer-send__close {
     right: -129px;
     top: 35px;
@@ -4610,7 +4633,7 @@ h1 {
   height: 484px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .login {
     width: 678px;
     padding: 53px 88px;
@@ -4663,7 +4686,7 @@ h1 {
   padding: 20px;
 }
 
-@media (max-width: 1023.5px) {
+@media (max-width: 1023.5px) and (min-width: 768px) {
   .login__close {
     right: 107px;
     top: 64px;

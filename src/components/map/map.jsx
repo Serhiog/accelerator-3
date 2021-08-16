@@ -22,7 +22,7 @@ const MapSection = ({width}) => {
       setMapWidth(`678px`); setMapHeight(`462px`);
     }
     if (width < 767) {
-      setMapWidth(`320px`); setMapHeight(`381px`);
+      setMapWidth(`100%`); setMapHeight(`381px`);
     }
   });
 

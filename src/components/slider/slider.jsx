@@ -23,25 +23,24 @@ const Slider = ({width}) => {
     autoplay: true
   };
 
-  const [size, setSize] = useState(`1370px`);
+  const [size, setSize] = useState(`100%`);
   const [margin, setMargin] = useState(`59px`);
 
   useEffect(() => {
-    if (+width > 1023) {
-      setSize(`1370px`); setMargin(`59px`);
+    if (+width >= 1024) {
+      setSize(`100%`); setMargin(`59px`);
     }
     if (+width < 1024) {
-      setSize(`772px`); setMargin(`0`);
+      setSize(`100%`); setMargin(`0`);
     }
     if (+width < 768) {
-      setSize(`320px`); setMargin(`0`);
+      setSize(`100%`); setMargin(`0`);
     }
   });
 
   return (
     <SliderCarousel {...settings}
-      style={{position: `relative`, width: size, margin: `0 auto`, marginBottom: margin}}
-    >
+      style={{position: `relative`, width: size,  margin: `0 auto`, marginBottom: margin}}>
       <div>
         <ScreenOne />
       </div>

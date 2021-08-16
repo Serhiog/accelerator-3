@@ -6,8 +6,8 @@
     background : rgba(246, 247, 255, 1);
     align-items: flex-start;
 
-    @media (max-width: 1023.5px) {
-        width  : 772px;
+    @media (max-width: 1023.5px) and (min-width: 768px) {
+        width: 100%;
         padding: 54px 46px;
     }
 
@@ -27,7 +27,7 @@
     line-height  : 140%;
     width        : 337px;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1023.5px) and (min-width: 768px) {
         font-size    : 18px;
         width        : 296px;
         margin-bottom: 27px;
@@ -53,7 +53,7 @@
     padding-left : 21px;
     margin-bottom: 20px;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1023.5px) and (min-width: 768px) {
         font-size   : 16px;
         padding-left: 22px;
     }
@@ -78,7 +78,7 @@
     &:last-child {
         margin-bottom: 38px;
 
-        @media (max-width: 1023.5px) {
+        @media (max-width: 1023.5px) and (min-width: 768px) {
             width        : 360px;
             margin-bottom: 31px;
         }
@@ -111,7 +111,7 @@
         opacity: 0.4;
     }
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1023.5px) and (min-width: 768px) {
         font-size     : 16px;
         letter-spacing: 0px;
     }
@@ -130,7 +130,7 @@
     width     : 440px;
     height    : 290px;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1023.5px) and (min-width: 768px) {
         background: url("img/tab-tab-3.png") 0 8px /auto auto no-repeat;
     }
 
@@ -148,7 +148,7 @@
 .insurance__inner-left {
     width: 395px;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1023.5px) and (min-width: 768px) {
         margin-right: 30px;
     }
 

@@ -4,12 +4,13 @@ import OnlyTabs from "../only-tabs/only-tabs";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
 import React from "react";
+
 const Services = ({width}) => {
 
   return (
     <ScrollableAnchor id={`section1`}>
       <section className="services">
-        {+width > 1023 && <OnlyTabs />}
+        {+width >= 1024 && <OnlyTabs />}
         {+width < 1024 && <TabsSlider />}
       </section>
     </ScrollableAnchor>

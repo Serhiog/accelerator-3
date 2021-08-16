@@ -1,18 +1,19 @@
-import {useEffect, useRef} from "react";
-import {prettify} from "../../utils";
+import { useEffect, useRef } from "react";
+import { prettify } from "../../utils";
 import useLocalStorage from 'react-use-localstorage';
-import {useForm} from "react-hook-form";
-import {handlePopup} from "../../store/action";
-import {connect} from "react-redux";
-import {creditTypes} from "../../consts";
+import { useForm } from "react-hook-form";
+import { handlePopup } from "../../store/action";
+import { connect } from "react-redux";
+import { creditTypes } from "../../consts";
 import PropTypes from "prop-types";
 import React from "react";
+import InputMask from 'react-input-mask';
 
-const FinalStep = ({countForm, creditType, totalPrice, firstPay, creditPeriod, isPopup, handlePopup}) => {
+const FinalStep = ({ countForm, creditType, totalPrice, firstPay, creditPeriod, isPopup, handlePopup }) => {
 
   const nameRef = useRef();
   const [name, setName] = useLocalStorage(`dataForm`, JSON.stringify(`Initial Value`));
-  const {register, handleSubmit} = useForm();
+  const { register, handleSubmit } = useForm();
 
   const handleForm = (data) => {
     setName(JSON.stringify(data));
@@ -64,15 +65,22 @@ const FinalStep = ({countForm, creditType, totalPrice, firstPay, creditPeriod, i
         <form className="final-step__form" onSubmit={handleSubmit(handleForm)}>
           <label htmlFor="name" className="final-step__input-label">
             Имя
-            <input id="name" required {...register(`name`, {required: true})} ref={nameRef} type="text" className="final-step__input final-step__name" placeholder="ФИО" />
+            <input id="name" required {...register(`name`, { required: true })} ref={nameRef} type="text" className="final-step__input final-step__name" placeholder="ФИО" />
           </label>
           <label htmlFor="tel" className="final-step__input-label-tel">
             Телефон
-            <input htmlFor="tel" required {...register(`tel`, {required: true})} type="number" className="final-step__input final-step__tel" placeholder="Телефон" />
+            <InputMask
+              htmlFor="tel"
+              mask='+79999999999'
+              required {...register(`tel`, { required: true })}
+              className="final-step__input final-step__tel"
+              type="tel"
+              placeholder="Телефон">
+            </InputMask>
           </label>
           <label htmlFor="email" className="final-step__input-label-email">
             Email
-            <input htmlFor="email" required {...register(`email`, {required: true})} type="text" className="final-step__input final-step__email" placeholder="E-mail" />
+            <input htmlFor="email" required {...register(`email`, { required: true })} type="text" className="final-step__input final-step__email" placeholder="E-mail" />
           </label>
           <button className="final-step__btn" type="submit">Отправить</button>
         </form>
@@ -95,4 +103,4 @@ const mapStateToProps = (state) => ({
   isPopup: state.isPopup
 });
 
-export default connect(mapStateToProps, {handlePopup})(FinalStep);
+export default connect(mapStateToProps, { handlePopup })(FinalStep);
