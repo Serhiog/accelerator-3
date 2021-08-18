@@ -6,10 +6,12 @@
     background : rgba(246, 247, 255, 1);
     align-items: flex-start;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         width: 100%;
         padding       : 54px 46px;
         padding-bottom: 35px;
+        display: flex;
+        justify-content: center;
     }
 
     @media (max-width: 767.5px) {
@@ -28,7 +30,7 @@
     line-height  : 140%;
     font-weight  : 600;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         font-size    : 18px;
         margin-bottom: 23px;
     }
@@ -53,7 +55,7 @@
     margin-bottom: 15px;
     line-height  : 130%;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         font-size   : 16px;
         padding-left: 22px;
     }
@@ -75,7 +77,7 @@
     &:last-child {
         margin-bottom: 34px;
 
-        @media (max-width: 1023.5px) and (min-width: 768px) {
+        @media (max-width: 1365.5px) and (min-width: 768px) {
             width        : 360px;
             margin-bottom: 32px;
         }
@@ -108,7 +110,7 @@
         opacity: 0.4;
     }
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         font-size     : 16px;
         letter-spacing: 0px;
     }
@@ -127,7 +129,7 @@
     width     : 440px;
     height    : 290px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         background: url("img/tab-tab-1.png") 0 8px /auto auto no-repeat;
     }
 
@@ -145,7 +147,7 @@
 .deposit__inner-left {
     width: 395px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         margin-right: 30px;
     }
 

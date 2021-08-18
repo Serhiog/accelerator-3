@@ -14,8 +14,9 @@
     margin         : 0 auto;
     padding        : 57px 98px;
     background     : #F6F7FF;
+    flex-wrap: wrap;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         width    : 560px;
         padding  : 61px 0;
         flex-wrap: wrap;
@@ -33,7 +34,7 @@
 }
 
 .footer__wrapper-inner {
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         width  : 772px;
         margin : 0 auto;
         padding: 0 47px;
@@ -54,7 +55,7 @@
     position       : relative;
     margin-right   : 81px;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         margin-right: 245px;
     }
 
@@ -70,7 +71,7 @@
     position  : absolute;
     top       : 1px;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         margin-left: -2px;
     }
 
@@ -93,7 +94,7 @@
     margin-bottom : 14px;
     padding-left  : 37px;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         font-size     : 18px;
         margin-left   : -6px;
         margin-bottom : 23px;
@@ -115,7 +116,7 @@
     color      : #707C87;
     line-height: 140%;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         font-size: 0;
     }
 }
@@ -124,7 +125,7 @@
 
     font-size: 0;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         font-family : $robo;
         font-size   : 12px;
         color       : #707C87;
@@ -145,7 +146,7 @@
     margin-top  : -2px;
     margin-right: 111px;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         order        : 2;
         margin-top   : -11px;
         margin-right : 245px;
@@ -180,7 +181,7 @@
     max-width   : 167px;
     margin-right: 113px;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         order : 1;
         margin: 0;
     }
@@ -214,7 +215,7 @@
         left             : -30px;
         top              : 2px;
 
-        @media (max-width: 1023.5px) {
+        @media (max-width: 1366.5px) {
             top: -2px;
         }
     }
@@ -236,7 +237,7 @@
     max-width   : 122px;
     margin-right: 66px;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         order      : 3;
         margin     : 0;
         padding-top: 24px;
@@ -303,7 +304,7 @@
     @include flex;
     justify-content: flex-start;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         order     : 5;
         margin-top: -26px;
     }
@@ -336,7 +337,7 @@
         border: 1px solid #2C36F2;
     }
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         font-size: 16px;
     }
 
@@ -373,7 +374,7 @@
         right            : 6px;
         top              : 0px;
 
-        @media (max-width: 1023.5px) {
+        @media (max-width: 1366.5px) {
             right: 2px;
         }
     }
@@ -392,7 +393,7 @@
         right            : 5px;
         top              : 2px;
 
-        @media (max-width: 1023.5px) {
+        @media (max-width: 1366.5px) {
             right: -5px;
         }
     }
@@ -411,7 +412,7 @@
         right            : 4px;
         top              : 2px;
 
-        @media (max-width: 1023.5px) {
+        @media (max-width: 1366.5px) {
             right: -11px;
         }
     }

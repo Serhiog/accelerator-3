@@ -1,5 +1,5 @@
-.header{
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+.header {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         background: #F6F7FF
     }
 }
@@ -11,16 +11,19 @@
     margin     : 0 auto;
     padding    : 27px 100px 40px 100px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
-        width     : 100%;
-        padding   : 23px 45px 24px 45px;
-        background: rgba(246, 247, 255, 1);
+
+    @media (max-width: 1365.5px) and (min-width: 768px) {
+        width          : 100%;
+        padding        : 23px 45px 24px 45px;
+        background     : rgba(246, 247, 255, 1);
+        display        : flex;
+        justify-content: center;
     }
 
     @media (max-width: 767.5px) {
-        width   : 100%;
-        padding : 12px 15px 19px 15px;
-        position: relative;
+        width     : 100%;
+        padding   : 12px 15px 19px 15px;
+        position  : relative;
         background: #F6F7FF
     }
 }
@@ -30,7 +33,7 @@
     margin-left: auto;
     display    : none;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         margin: 0
     }
 
@@ -44,7 +47,7 @@
     align-items : flex-end;
     margin-right: 110px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         margin-right: 66px;
     }
 
@@ -57,7 +60,7 @@
 .header__img {
     margin-right: 1px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         width : 24px;
         height: 22px;
     }
@@ -81,7 +84,7 @@
 
     white-space: nowrap;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         font-size: 18px;
     }
 
@@ -93,14 +96,15 @@
 
 .header__nav {
     @include flex;
-    margin-bottom: -2px;
-    width        : 100%;
-    flex-wrap: nowrap;
+    margin-bottom  : -2px;
+    width          : 100%;
+    flex-wrap      : nowrap;
     justify-content: flex-start;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         padding-bottom : 2px;
         justify-content: flex-start;
+        width: auto;
     }
 
     @media (max-width: 767.5px) {
@@ -120,7 +124,7 @@
 .header__nav-item {
     margin-right: 25px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         margin-right: 21px;
     }
 
@@ -151,7 +155,7 @@
     color      : #1F1E25;
     white-space: nowrap;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         font-size: 14px;
     }
 
@@ -201,7 +205,7 @@
 .header__link--login {
     position: relative;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         font-size: 0;
     }
 
@@ -220,7 +224,7 @@
         left             : -30px;
         bottom           : 0;
 
-        @media (max-width: 1023.5px) and (min-width: 768px) {
+        @media (max-width: 1365.5px) and (min-width: 768px) {
             left  : 27px;
             bottom: -4px;
         }
@@ -235,14 +239,14 @@
 .header__link--login-mobile {
     position: relative;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         font-size: 0;
     }
 
     @media (max-width: 767.5px) {
-        right   : 0;
-        position: absolute;
-        top     : 17px;
+        right    : 0;
+        position : absolute;
+        top      : 17px;
         font-size: 0;
     }
 
@@ -256,7 +260,7 @@
         left             : -30px;
         bottom           : 0;
 
-        @media (max-width: 1023.5px) and (min-width: 768px) {
+        @media (max-width: 1365.5px) and (min-width: 768px) {
             left  : 27px;
             bottom: -4px;
         }
@@ -275,7 +279,7 @@
 .header__nav-item--enter {
     margin-left: auto;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         margin: 0
     }
 }

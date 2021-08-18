@@ -23,14 +23,14 @@ const Calculator = ({creditType, totalPrice, firstPay, creditPeriod, width}) => 
         setMargin(`38px`);
       }
     }
-    if (width < 1024 && width >= 768) {
+    if (width < 1366 && width >= 768) {
       if (finalStep) {
         setMargin(`38px`);
       } else {
         setMargin(`0`);
       }
     }
-    if (width > 1023) {
+    if (width > 1366) {
       if (finalStep) {
         setMargin(`107px`);
       } else {

@@ -27,10 +27,10 @@ const Slider = ({width}) => {
   const [margin, setMargin] = useState(`59px`);
 
   useEffect(() => {
-    if (+width >= 1024) {
+    if (+width >= 1366) {
       setSize(`100%`); setMargin(`59px`);
     }
-    if (+width < 1024) {
+    if (+width < 1366) {
       setSize(`100%`); setMargin(`0`);
     }
     if (+width < 768) {
@@ -40,7 +40,7 @@ const Slider = ({width}) => {
 
   return (
     <SliderCarousel {...settings}
-      style={{position: `relative`, width: size,  margin: `0 auto`, marginBottom: margin}}>
+      style={{position: `relative`, width: "100%",  margin: `0 auto`, marginBottom: margin}}>
       <div>
         <ScreenOne />
       </div>

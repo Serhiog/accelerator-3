@@ -10,7 +10,7 @@
     align-items    : center;
     justify-content: center;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         background: url("img/tab-slider-2.png") 50%/auto auto no-repeat;
         height    : 301px;
     }
@@ -32,7 +32,7 @@
     font-weight: 700;
     z-index    : 1;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         font-size: 46px;
     }
 
@@ -50,7 +50,7 @@
     font-family: $robo;
     font-size  : 22px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         font-size: 18px;
 
     }
@@ -71,7 +71,7 @@
     margin-left: -444px;
     margin-top : -100px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         margin-left: -277px;
         margin-top : -86px;
     }

@@ -4,7 +4,7 @@
     padding   : 44px;
     height    : 225px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         max-width: 100%;
     }
 
@@ -17,7 +17,7 @@
     padding-top : 9px;
     padding-left: 14px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         padding-left: 17px;
     }
 
@@ -45,7 +45,7 @@
     justify-content: flex-start;
     flex-wrap      : wrap;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         width: 400px;
     }
 
@@ -126,7 +126,7 @@
 .offer__title--error {
     line-height: 140%;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         width: 350px;
     }
 
@@ -183,7 +183,7 @@
 .offer--succes .offer__btn {
     width: 96%;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         width: 97%;
     }
 

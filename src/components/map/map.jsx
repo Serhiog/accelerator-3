@@ -15,10 +15,10 @@ const MapSection = ({width}) => {
 
 
   useEffect(() => {
-    if (width > 1023) {
+    if (width > 1366) {
       setMapWidth(`1170px`);
       setMapHeight(`462px`);
-    } if (width < 1024 && width > 767) {
+    } if (width < 1366 && width > 767) {
       setMapWidth(`678px`); setMapHeight(`462px`);
     }
     if (width < 767) {
@@ -34,7 +34,7 @@ const MapSection = ({width}) => {
           <YMaps>
             <Map
               defaultState={{center: [53.870727, 54.903465], zoom: 5}}
-              width={mapWidth}
+              width={"100%"}
               height={mapHeight}
             >
               {cities.map((coordinate, i) => {

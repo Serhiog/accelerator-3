@@ -6,12 +6,12 @@ import PropTypes from "prop-types";
 import React from "react";
 
 const Services = ({width}) => {
-
+console.log(width);
   return (
     <ScrollableAnchor id={`section1`}>
       <section className="services">
-        {+width >= 1024 && <OnlyTabs />}
-        {+width < 1024 && <TabsSlider />}
+        {+width >= 1366 && <OnlyTabs />}
+        {+width < 1366 && <TabsSlider />}
       </section>
     </ScrollableAnchor>
   );

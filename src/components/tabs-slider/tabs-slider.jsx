@@ -27,7 +27,7 @@ const TabsSlider = ({width}) => {
   const [size, setSize] = useState(`100%`);
 
   useEffect(() => {
-    if (+width < 1024) {
+    if (+width < 1366) {
       setSize(`100%`);
     }
     if (+width < 768) {

@@ -61,6 +61,7 @@ const FinalStep = ({ countForm, creditType, totalPrice, firstPay, creditPeriod, 
               {creditPeriod} лет
             </span>
           </li>
+          
         </ul>
         <form className="final-step__form" onSubmit={handleSubmit(handleForm)}>
           <label htmlFor="name" className="final-step__input-label">

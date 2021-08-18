@@ -1,7 +1,7 @@
 .calculator {
     margin-bottom: 93px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         margin-bottom: 0;
     }
 
@@ -17,10 +17,10 @@
     @include flex;
     justify-content: space-between;
     flex-wrap      : wrap;
-    padding        : 0 100px;
+    padding        : 0 104px;
     align-items    : flex-start;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         // width         : 772px;
         padding       : 54px 46px;
         padding-bottom: 0;
@@ -40,7 +40,7 @@
     margin-bottom : 56px;
     letter-spacing: 0.4px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         font-size    : 32px;
         margin-bottom: 35px;
     }
@@ -54,7 +54,7 @@
 .calculator__left {
     width: 600px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         //margin-bottom: 40px;
     }
 
@@ -67,7 +67,7 @@
 .calculator__right {
     padding-top: 103px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         padding-top: 0;
         width      : 100%;
     }
@@ -86,7 +86,7 @@
     margin-bottom : 24px;
     letter-spacing: 0.1px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         font-size    : 18px;
         margin-bottom: 20px;
     }
@@ -104,7 +104,7 @@
     color       : #1F1E25;
     padding-left: 69px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         font-size: 16px;
     }
 }
@@ -147,7 +147,7 @@
     color      : #1F1E25;
     right      : 278px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         font-size: 16px;
         right    : 317px;
     }
@@ -165,7 +165,7 @@
     text-align : center;
     margin-left: -34px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         font-size   : 16px;
         padding-left: 6px;
 
@@ -248,7 +248,7 @@ input::-webkit-inner-spin-button {
     margin-bottom: 8px;
     position     : relative;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         padding-bottom: 21px;
     }
 }
@@ -315,7 +315,7 @@ input::-webkit-inner-spin-button {
     display      : inline-block;
     word-spacing : 0.4px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         margin-bottom: 21px;
     }
 
@@ -330,7 +330,7 @@ input::-webkit-inner-spin-button {
     margin-bottom  : 10px;
     position       : relative;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         margin-bottom: 11px;
     }
 
@@ -456,7 +456,7 @@ input[type=range]:focus::-ms-fill-upper {
     flex-wrap    : wrap;
     margin-bottom: 27px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         margin-bottom: 22px;
     }
 
@@ -696,7 +696,7 @@ h1 {
 
     width: 597px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         width: 678px;
     }
 
@@ -715,7 +715,7 @@ h1 {
     letter-spacing: 0.1px;
     margin-bottom : 23px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         font-size    : 18px;
         margin-bottom: 21px;
     }
@@ -764,7 +764,7 @@ h1 {
 .calculator {
     margin-bottom: 93px;
 
-    @media (max-width: 1023.5px) and (min-width: 768px) {
+    @media (max-width: 1365.5px) and (min-width: 768px) {
         margin-bottom: 0;
     }
 }

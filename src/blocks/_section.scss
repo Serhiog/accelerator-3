@@ -2,7 +2,7 @@
     background  : linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027B3 99.79%), #2C36F2;
     padding-left: 151px;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         padding-left: 0;
     }
 }
@@ -13,7 +13,7 @@
     padding   : 0px 300px 0px 0px;
     margin    : 0 auto;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         width  : 768px;
         padding: 0
     }
@@ -40,7 +40,7 @@
     background     : #2C36F2;
     justify-content: space-between;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         padding-bottom: 48px;
     }
 
@@ -54,7 +54,7 @@
 .section__left {
     padding-bottom: 115px;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         padding-bottom: 29px;
         margin-left   : -33px;
     }
@@ -77,7 +77,7 @@
     margin-left   : -33px;
     margin-top    : -7px;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         font-size  : 46px;
         margin-top : -47px;
         margin-left: -51px;
@@ -102,7 +102,7 @@
     width         : 275px;
     margin-left   : -33px;
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         font-size     : 18px;
         margin-left   : -30px;
         margin-top    : -2px;
@@ -141,7 +141,7 @@
         opacity: 0.4;
     }
 
-    @media (max-width: 1023.5px) {
+    @media (max-width: 1366.5px) {
         width    : 206px;
         padding  : 15px 16px;
         font-size: 16px;
@@ -172,7 +172,7 @@
         top              : -138px;
         right            : -325px;
 
-        @media (max-width: 1023.5px) {
+        @media (max-width: 1366.5px) {
             background-image: url("img/tablet-white-card.png");
             top             : -89px;
             right           : -249px;
@@ -189,7 +189,7 @@
         top              : -80px;
         right            : -216px;
 
-        @media (max-width: 1023.5px) {
+        @media (max-width: 1366.5px) {
             background-image: url("img/tablet-black-card.png");
             top             : -44px;
             right           : -164px;
